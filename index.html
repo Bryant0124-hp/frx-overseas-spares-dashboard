@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRX 海外仓备件交互看板</title>
+  <style>
+    :root {
+      --bg: #f5efe6;
+      --paper: rgba(255, 251, 245, 0.88);
+      --panel: rgba(255, 255, 255, 0.72);
+      --line: rgba(47, 72, 88, 0.12);
+      --text: #1f2933;
+      --muted: #5b6b7a;
+      --brand: #1f5b84;
+      --brand-2: #d7982f;
+      --accent: #2f4858;
+      --priority: #f6df84;
+      --priority-ink: #6a4808;
+      --good: #65a30d;
+      --shadow: 0 18px 40px rgba(31, 41, 51, 0.12);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --mono: "Consolas", "SFMono-Regular", monospace;
+      --sans: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(215, 152, 47, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 0%, rgba(31, 91, 132, 0.22), transparent 35%),
+        linear-gradient(180deg, #f8f2ea 0%, #efe5d8 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.24) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.24) 1px, transparent 1px);
+      background-size: 24px 24px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.3), transparent 85%);
+    }
+
+    .page {
+      width: min(1500px, calc(100vw - 32px));
+      margin: 20px auto 28px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: 28px 28px 24px;
+      background:
+        linear-gradient(135deg, rgba(31, 91, 132, 0.96), rgba(47, 72, 88, 0.94)),
+        linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -70px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(246, 223, 132, 0.88), rgba(246, 223, 132, 0.12) 58%, transparent 62%);
+      opacity: 0.9;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 860px;
+      color: rgba(255,255,255,0.84);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hero-meta {
+      min-width: 240px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .hero-meta strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.68);
+    }
+
+    .hero-meta div {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .hero-stats {
+      position: relative;
+      z-index: 1;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 20px;
+      padding: 16px 18px;
+      backdrop-filter: blur(12px);
+      min-height: 108px;
+    }
+
+    .stat-card.priority {
+      background: rgba(246, 223, 132, 0.9);
+      color: var(--priority-ink);
+      border-color: rgba(246, 223, 132, 0.2);
+    }
+
+    .stat-card .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.78;
+    }
+
+    .stat-card .value {
+      margin-top: 10px;
+      font-size: clamp(24px, 2vw, 34px);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-card .note {
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 1.55;
+      opacity: 0.88;
+    }
+
+    .section {
+      border-radius: var(--radius-lg);
+      background: var(--paper);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.55);
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 22px 0;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 18px;
+      padding: 20px 22px 22px;
+    }
+
+    .panel {
+      border-radius: var(--radius-md);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 18px;
+    }
+
+    .warehouse-bars {
+      display: grid;
+      gap: 16px;
+    }
+
+    .warehouse-row {
+      display: grid;
+      grid-template-columns: 120px 1fr 138px 116px;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .warehouse-name {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-weight: 600;
+    }
+
+    .warehouse-tag {
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(31, 91, 132, 0.08);
+      color: var(--brand);
+    }
+
+    .warehouse-tag.priority {
+      background: var(--priority);
+      color: var(--priority-ink);
+    }
+
+    .bar-track {
+      height: 16px;
+      position: relative;
+      border-radius: 999px;
+      overflow: hidden;
+      background: linear-gradient(90deg, rgba(31,91,132,0.08), rgba(47,72,88,0.12));
+    }
+
+    .bar-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--brand), #3b82b7);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18);
+    }
+
+    .bar-fill.priority {
+      background: linear-gradient(90deg, #d7982f, #efb949);
+    }
+
+    .warehouse-value,
+    .warehouse-share {
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .top-list {
+      display: grid;
+      gap: 10px;
+      max-height: 430px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .top-item {
+      display: grid;
+      grid-template-columns: 34px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(31, 91, 132, 0.08);
+    }
+
+    .top-rank {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(31,91,132,0.1), rgba(215,152,47,0.18));
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .top-meta strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .top-meta span {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .top-qty {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .controls {
+      display: grid;
+      gap: 14px;
+      padding: 18px 22px 0;
+    }
+
+    .filters,
+    .subfilters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .chip {
+      border: 0;
+      cursor: pointer;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: rgba(31, 91, 132, 0.08);
+      color: var(--brand);
+      font-weight: 600;
+      transition: transform 120ms ease, background 120ms ease, color 120ms ease, box-shadow 120ms ease;
+    }
+
+    .chip:hover {
+      transform: translateY(-1px);
+    }
+
+    .chip.active {
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      color: white;
+      box-shadow: 0 10px 24px rgba(31, 91, 132, 0.22);
+    }
+
+    .chip.active.priority {
+      background: linear-gradient(135deg, #d7982f, #c78213);
+      color: white;
+    }
+
+    .input,
+    .select {
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid rgba(31,91,132,0.12);
+      background: rgba(255,255,255,0.74);
+      padding: 0 14px;
+      color: var(--text);
+      font: inherit;
+      min-width: 180px;
+      outline: none;
+    }
+
+    .input:focus,
+    .select:focus {
+      border-color: rgba(31,91,132,0.35);
+      box-shadow: 0 0 0 4px rgba(31,91,132,0.08);
+    }
+
+    .action-btn {
+      border: 0;
+      cursor: pointer;
+      height: 44px;
+      padding: 0 16px;
+      border-radius: 14px;
+      font: inherit;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, #d7982f, #b37010);
+      box-shadow: 0 12px 24px rgba(215, 152, 47, 0.24);
+    }
+
+    .action-btn.secondary {
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      box-shadow: 0 12px 24px rgba(31, 91, 132, 0.2);
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 18px;
+      padding: 18px 22px 22px;
+    }
+
+    .table-wrap {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: rgba(255,255,255,0.8);
+    }
+
+    .table-tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.88);
+    }
+
+    .table-tools strong {
+      font-size: 14px;
+    }
+
+    .tiny {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .table-shell {
+      max-height: 760px;
+      overflow: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: linear-gradient(180deg, #214f73, #163a57);
+      color: white;
+      padding: 12px 12px;
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    thead th .sort-indicator {
+      margin-left: 6px;
+      opacity: 0.7;
+      font-size: 11px;
+    }
+
+    tbody td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(47,72,88,0.08);
+      vertical-align: top;
+    }
+
+    tbody tr {
+      cursor: pointer;
+      transition: background 120ms ease, transform 120ms ease;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: rgba(255,255,255,0.68);
+    }
+
+    tbody tr:hover {
+      background: rgba(246, 223, 132, 0.24);
+    }
+
+    tbody tr.selected {
+      background: rgba(31, 91, 132, 0.1);
+      box-shadow: inset 3px 0 0 var(--brand);
+    }
+
+    .cell-main {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .cell-sub {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 28px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(31,91,132,0.08);
+      color: var(--brand);
+      white-space: nowrap;
+    }
+
+    .pill.priority {
+      background: rgba(246,223,132,0.9);
+      color: var(--priority-ink);
+    }
+
+    .pill.generic {
+      background: rgba(101, 163, 13, 0.12);
+      color: #53790d;
+    }
+
+    .right-stack {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .detail-card {
+      padding: 20px;
+      border-radius: 20px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.94), rgba(248,243,235,0.9));
+      border: 1px solid var(--line);
+    }
+
+    .detail-card h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .detail-code {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: rgba(31,91,132,0.08);
+      color: var(--brand);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .detail-grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric {
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+    }
+
+    .metric .label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .metric .data {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .allocation-list {
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .allocation-item {
+      display: grid;
+      grid-template-columns: 110px 1fr 64px 88px;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .allocation-item strong {
+      font-size: 14px;
+    }
+
+    .allocation-track {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(31,91,132,0.08);
+      overflow: hidden;
+    }
+
+    .allocation-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #c78213, #efb949);
+    }
+
+    .allocation-fill.blue {
+      background: linear-gradient(90deg, var(--brand), #3b82b7);
+    }
+
+    .insight-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .insight {
+      display: grid;
+      gap: 6px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid var(--line);
+    }
+
+    .insight strong {
+      font-size: 14px;
+    }
+
+    .insight span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .footer-note {
+      padding: 0 22px 22px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 1180px) {
+      .hero-top,
+      .summary-grid,
+      .dashboard-grid,
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-top {
+        display: grid;
+      }
+
+      .warehouse-row,
+      .allocation-item {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        width: min(100vw - 16px, 1500px);
+        margin: 8px auto 18px;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .section-head,
+      .controls,
+      .summary-grid,
+      .dashboard-grid,
+      .footer-note {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .table-tools {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>FRX 海外仓 1个月备件交互看板</h1>
+          <p>覆盖政策 PDF 中全部备件，结合 FRX 历史 RMA 数据做月度建议备货。页面重点强化悉尼仓与法兰克福仓，支持点击、筛选、搜索、排序和导出当前结果。</p>
+        </div>
+        <div class="hero-meta">
+          <strong>测算基线</strong>
+          <div id="hero-meta"></div>
+        </div>
+      </div>
+      <div class="hero-stats" id="hero-stats"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>四仓总览</h2>
+          <p class="section-subtitle">重点仓权重已上调，金额和数量会实时随筛选结果变化。</p>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <div class="panel">
+          <div class="warehouse-bars" id="warehouse-bars"></div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <strong>高值备件 Top 8</strong>
+            <span class="tiny">按当前筛选结果动态刷新</span>
+          </div>
+          <div class="top-list" id="top-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>交互筛选</h2>
+          <p class="section-subtitle">点击仓库切换视角，也可以叠加章节、区域和关键词筛选。</p>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="filters" id="warehouse-filter"></div>
+        <div class="subfilters">
+          <input class="input" id="search-input" type="search" placeholder="搜索备件名称、料号、版本" />
+          <select class="select" id="chapter-filter"></select>
+          <select class="select" id="region-filter"></select>
+          <select class="select" id="sort-select">
+            <option value="recommended_desc">默认排序：建议月备货量</option>
+            <option value="value_desc">按合计金额从高到低</option>
+            <option value="price_desc">按单价从高到低</option>
+            <option value="name_asc">按名称 A-Z</option>
+          </select>
+          <button class="action-btn secondary" id="reset-btn">重置筛选</button>
+          <button class="action-btn" id="download-btn">导出当前结果 CSV</button>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="table-wrap">
+          <div class="table-tools">
+            <div>
+              <strong id="result-summary">共 0 条</strong>
+              <div class="tiny" id="result-note">点击表格行查看右侧详情</div>
+            </div>
+            <div class="tiny" id="sort-note">当前排序：建议月备货量</div>
+          </div>
+          <div class="table-shell">
+            <table>
+              <thead>
+                <tr>
+                  <th data-sort="name_asc">备件<span class="sort-indicator">↕</span></th>
+                  <th data-sort="recommended_desc">建议月备货量<span class="sort-indicator">↕</span></th>
+                  <th data-sort="value_desc">合计金额<span class="sort-indicator">↕</span></th>
+                  <th data-sort="price_desc">单价<span class="sort-indicator">↕</span></th>
+                  <th data-sort="chapter_asc">章节<span class="sort-indicator">↕</span></th>
+                  <th data-sort="region_asc">区域限定<span class="sort-indicator">↕</span></th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="right-stack">
+          <div class="detail-card" id="detail-card"></div>
+          <div class="panel">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <strong>测算说明</strong>
+            </div>
+            <div class="insight-list">
+              <div class="insight">
+                <strong>覆盖范围</strong>
+                <span>已纳入 PDF 内全部 54 个备件条目，不只限于高频 RMA 件。</span>
+              </div>
+              <div class="insight">
+                <strong>月度建议逻辑</strong>
+                <span>单个备件建议量 = MAX(政策月需求, 历史月均用量)。既保留政策底线，也叠加真实售后消耗。</span>
+              </div>
+              <div class="insight">
+                <strong>分仓策略</strong>
+                <span>欧规、澳规、日规、美规件只投放对应仓；通用件按权重分配，其中悉尼仓和法兰克福仓做优先保障。</span>
+              </div>
+              <div class="insight">
+                <strong>使用方式</strong>
+                <span>你可以直接按仓库筛选后导出当前结果，也可以点击单个备件查看四仓分配数量与金额。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-note">提示：这个页面是单文件本地版，直接双击打开即可。导出的 CSV 只会包含当前筛选后的结果。</div>
+    </section>
+  </div>
+
+  <script id="dataset" type="application/json">{"summary": {"current_machine_count": 172, "frx_projects": ["R2119", "R2502"], "history_months": 16.18, "warehouse_share_basis": {"法兰克福仓": 0.543489190548014, "悉尼仓": 0.15082956259426847, "芝加哥仓": 0.09653092006033184, "日本仓": 0.20915032679738563}, "frx_history_mix": {"法兰克福仓": 0.7329305135951661, "日本仓": 0.08459214501510574, "悉尼仓": 0.14441087613293052, "芝加哥仓": 0.038066465256797584}, "warehouse_totals": {"法兰克福仓": {"qty": 153, "value_usd": 7206.4}, "悉尼仓": {"qty": 76, "value_usd": 5119.0}, "芝加哥仓": {"qty": 20, "value_usd": 2231.2}, "日本仓": {"qty": 43, "value_usd": 2423.7}}}, "rows": [{"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "后轮轮盖", "version": "V1.0.0", "part_code": "172900051Y0050A", "price_usd": 2.5, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 2.5, "sydney_value_usd": 2.5, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 5.0}, {"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "后轮总成", "version": "V1.0.0", "part_code": "1D0024001Y0150B", "price_usd": 67.5, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 67.5, "sydney_value_usd": 67.5, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 135.0}, {"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "行走电机驱动板", "version": "V1.0.0", "part_code": "BZB-QD-003115JB", "price_usd": 38.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 38.0, "sydney_value_usd": 38.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 76.0}, {"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "蘑菇头总成-欧版", "version": "V1.0.0", "part_code": "Q0440001", "price_usd": 700.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "法兰克福仓", "history_qty_sum": 2.0, "history_line_count": 2, "frankfurt_qty": 2, "sydney_qty": 0, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 1400.0, "sydney_value_usd": 0.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 1400.0}, {"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "蘑菇头总成-日版", "version": "V1.0.0", "part_code": "Q0440002", "price_usd": 700.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "日本仓", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 0, "sydney_qty": 0, "chicago_qty": 0, "japan_qty": 2, "frankfurt_value_usd": 0.0, "sydney_value_usd": 0.0, "chicago_value_usd": 0.0, "japan_value_usd": 1400.0, "total_value_usd": 1400.0}, {"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "蘑菇头总成-美版", "version": "V1.0.0", "part_code": "Q0440003", "price_usd": 700.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "芝加哥仓", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 0, "sydney_qty": 0, "chicago_qty": 2, "japan_qty": 0, "frankfurt_value_usd": 0.0, "sydney_value_usd": 0.0, "chicago_value_usd": 1400.0, "japan_value_usd": 0.0, "total_value_usd": 1400.0}, {"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "蘑菇头总成-澳版", "version": "V1.0.0", "part_code": "Q0440004", "price_usd": 700.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "悉尼仓", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 0, "sydney_qty": 2, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 0.0, "sydney_value_usd": 1400.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 1400.0}, {"chapter": "第二章零部件价格表", "source_page": 4, "part_name": "后驱动轮电机", "version": "V1.0.0", "part_code": "QDJ-DJ-003039A", "price_usd": 500.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 500.0, "sydney_value_usd": 500.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 1000.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "割刀电机仓套减震硅胶", "version": "V1.0.0", "part_code": "1D0000571Y0150C", "price_usd": 2.3, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 2.3, "sydney_value_usd": 2.3, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 4.6}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "割台提升丝母组件", "version": "V1.0.0", "part_code": "1D0119000Y0170A", "price_usd": 120.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 120.0, "sydney_value_usd": 120.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 240.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "割刀电机仓总成含螺丝", "version": "V1.0.0", "part_code": "1D0120000Y0170A", "price_usd": 147.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 147.0, "sydney_value_usd": 147.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 294.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "行走电机控制板", "version": "V1.0.0", "part_code": "BZB-KZ-003100JA", "price_usd": 55.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 2.0, "history_line_count": 2, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 55.0, "sydney_value_usd": 55.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 110.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "VCU 控制盒总成", "version": "V1.0.0", "part_code": "BZB-KZ-003214JC", "price_usd": 20.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 20.0, "sydney_value_usd": 20.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 40.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "左割刀电机驱动板无电流环", "version": "V1.0.0", "part_code": "BZB-QD-003142JE", "price_usd": 16.5, "policy_ratio": 0.3, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 5, "recommended_month_qty": 5, "region_lock": "通用", "history_qty_sum": 2.0, "history_line_count": 1, "frankfurt_qty": 3, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 1, "frankfurt_value_usd": 49.5, "sydney_value_usd": 16.5, "chicago_value_usd": 0.0, "japan_value_usd": 16.5, "total_value_usd": 82.5}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "割刀电机", "version": "V1.0.0", "part_code": "QDJ-DJ-003030B", "price_usd": 85.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 5.0, "history_line_count": 3, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 85.0, "sydney_value_usd": 85.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 170.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "割台提升步进电机", "version": "V1.0.0", "part_code": "QDJ-DJ-003038A", "price_usd": 118.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 118.0, "sydney_value_usd": 118.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 236.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "割台提升步进驱动器", "version": "V1.0.0", "part_code": "QDJ-QD-003001A", "price_usd": 75.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 75.0, "sydney_value_usd": 75.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 150.0}, {"chapter": "第二章零部件价格表", "source_page": 5, "part_name": "割台提升限位触发器", "version": "V2.1.0", "part_code": "QXL-XS-003637A", "price_usd": 9.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 9.0, "sydney_value_usd": 9.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 18.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "十字金属刀（1 片装）", "version": "V1.0.0", "part_code": "1D0002382Y0150A", "price_usd": 25.0, "policy_ratio": 2.0, "service_life_months": 2.0, "history_month_qty": 1, "policy_month_qty": 29, "recommended_month_qty": 29, "region_lock": "通用", "history_qty_sum": 13.0, "history_line_count": 7, "frankfurt_qty": 16, "sydney_qty": 5, "chicago_qty": 2, "japan_qty": 6, "frankfurt_value_usd": 400.0, "sydney_value_usd": 125.0, "chicago_value_usd": 50.0, "japan_value_usd": 150.0, "total_value_usd": 725.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "圆形刀盘盘体", "version": "V1.0.0", "part_code": "1D0100061Y0050G", "price_usd": 3.0, "policy_ratio": 1.0, "service_life_months": 12.0, "history_month_qty": 1, "policy_month_qty": 15, "recommended_month_qty": 15, "region_lock": "通用", "history_qty_sum": 15.0, "history_line_count": 11, "frankfurt_qty": 8, "sydney_qty": 3, "chicago_qty": 1, "japan_qty": 3, "frankfurt_value_usd": 24.0, "sydney_value_usd": 9.0, "chicago_value_usd": 3.0, "japan_value_usd": 9.0, "total_value_usd": 45.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "割草电机仓防尘罩", "version": "V1.0.0", "part_code": "1D0100091Y0050G", "price_usd": 5.0, "policy_ratio": 2.0, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 29, "recommended_month_qty": 29, "region_lock": "通用", "history_qty_sum": 4.0, "history_line_count": 2, "frankfurt_qty": 16, "sydney_qty": 5, "chicago_qty": 2, "japan_qty": 6, "frankfurt_value_usd": 80.0, "sydney_value_usd": 25.0, "chicago_value_usd": 10.0, "japan_value_usd": 30.0, "total_value_usd": 145.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "刀盘保护罩左", "version": "V1.0.0", "part_code": "1D0100722Y0170B", "price_usd": 30.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 4.0, "history_line_count": 1, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 30.0, "sydney_value_usd": 30.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 60.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "刀盘保护罩右", "version": "V1.0.0", "part_code": "1D0100732Y0170B", "price_usd": 30.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 4.0, "history_line_count": 1, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 30.0, "sydney_value_usd": 30.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 60.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "智能割草机器人耐久刀片含螺丝（6片装）", "version": "V1.0.0", "part_code": "1D0116000Y0050D", "price_usd": 8.0, "policy_ratio": 2.0, "service_life_months": 2.0, "history_month_qty": 3, "policy_month_qty": 29, "recommended_month_qty": 29, "region_lock": "通用", "history_qty_sum": 40.0, "history_line_count": 18, "frankfurt_qty": 16, "sydney_qty": 5, "chicago_qty": 2, "japan_qty": 6, "frankfurt_value_usd": 128.0, "sydney_value_usd": 40.0, "chicago_value_usd": 16.0, "japan_value_usd": 48.0, "total_value_usd": 232.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "前万向轮含螺丝", "version": "V1.0.0", "part_code": "1D0121000Y0170A", "price_usd": 42.0, "policy_ratio": 0.2, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 3, "recommended_month_qty": 3, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 2, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 84.0, "sydney_value_usd": 42.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 126.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "急停按钮", "version": "V1.0.0", "part_code": "370000544Y0100A", "price_usd": 15.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 15.0, "sydney_value_usd": 15.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 30.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "电源按钮", "version": "V1.0.0", "part_code": "370000584Y0100A", "price_usd": 15.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 15.0, "sydney_value_usd": 15.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 30.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "割盘金属法兰", "version": "V1.0.0", "part_code": "970500015Y0050A", "price_usd": 5.0, "policy_ratio": 0.2, "service_life_months": null, "history_month_qty": 3, "policy_month_qty": 3, "recommended_month_qty": 3, "region_lock": "通用", "history_qty_sum": 48.0, "history_line_count": 14, "frankfurt_qty": 2, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 10.0, "sydney_value_usd": 5.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 15.0}, {"chapter": "第二章零部件价格表", "source_page": 6, "part_name": "十字刀盘割盘内六角圆柱头螺钉（4粒装）", "version": "V1.0.0", "part_code": "S010200402002", "price_usd": 1.5, "policy_ratio": 4.0, "service_life_months": null, "history_month_qty": 2, "policy_month_qty": 58, "recommended_month_qty": 58, "region_lock": "通用", "history_qty_sum": 30.0, "history_line_count": 4, "frankfurt_qty": 31, "sydney_qty": 10, "chicago_qty": 5, "japan_qty": 12, "frankfurt_value_usd": 46.5, "sydney_value_usd": 15.0, "chicago_value_usd": 7.5, "japan_value_usd": 18.0, "total_value_usd": 87.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "防撞条钣金", "version": "V1.0.0", "part_code": "1D0100262Y0150C", "price_usd": 36.8, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 36.8, "sydney_value_usd": 36.8, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 73.6}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "电池仓盖", "version": "V1.0.0", "part_code": "1D0100311Y0150C", "price_usd": 12.0, "policy_ratio": 0.2, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 3, "recommended_month_qty": 3, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 2, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 24.0, "sydney_value_usd": 12.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 36.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "电池仓盖防水胶条(1 袋 6 米，一台用量 1 米)", "version": "V1.0.0", "part_code": "1D0100371Y0150B", "price_usd": 1.2, "policy_ratio": 0.5, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 8, "recommended_month_qty": 8, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 4, "sydney_qty": 2, "chicago_qty": 1, "japan_qty": 1, "frankfurt_value_usd": 4.8, "sydney_value_usd": 2.4, "chicago_value_usd": 1.2, "japan_value_usd": 1.2, "total_value_usd": 9.6}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "防撞条触发器", "version": "V1.0.0", "part_code": "370000374Y0100B", "price_usd": 7.5, "policy_ratio": 0.8, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 12, "recommended_month_qty": 12, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 6, "sydney_qty": 3, "chicago_qty": 1, "japan_qty": 2, "frankfurt_value_usd": 45.0, "sydney_value_usd": 22.5, "chicago_value_usd": 7.5, "japan_value_usd": 15.0, "total_value_usd": 90.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "应急电源适配器转接线", "version": "V1.0.0", "part_code": "370000484Y0130A", "price_usd": 20.5, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 20.5, "sydney_value_usd": 20.5, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 41.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "充电桩电源适配器 ATN", "version": "V2.0.3", "part_code": "370000494Y0130A", "price_usd": 78.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 78.0, "sydney_value_usd": 78.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 156.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "电压转换器", "version": "V1.0.0", "part_code": "370002184Y0100A", "price_usd": 76.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 76.0, "sydney_value_usd": 76.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 152.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "1 度电电池", "version": "V1.0.0", "part_code": "O0040003", "price_usd": 700.0, "policy_ratio": 0.5, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 8, "recommended_month_qty": 8, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 4, "sydney_qty": 2, "chicago_qty": 1, "japan_qty": 1, "frankfurt_value_usd": 2800.0, "sydney_value_usd": 1400.0, "chicago_value_usd": 700.0, "japan_value_usd": 700.0, "total_value_usd": 5600.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "充电桩电源适配器（快充版本）", "version": "V2.0.6", "part_code": "QCD-DQ-003041A", "price_usd": 135.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 135.0, "sydney_value_usd": 135.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 270.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "充电桩电源适配器转接线欧规", "version": "V1.0.0", "part_code": "QXL-XL-003029A", "price_usd": 3.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "法兰克福仓", "history_qty_sum": 2.0, "history_line_count": 2, "frankfurt_qty": 2, "sydney_qty": 0, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 6.0, "sydney_value_usd": 0.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 6.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "充电桩电源适配器转接线美规", "version": "V1.0.0", "part_code": "QXL-XL-003030A", "price_usd": 3.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "芝加哥仓", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 0, "sydney_qty": 0, "chicago_qty": 2, "japan_qty": 0, "frankfurt_value_usd": 0.0, "sydney_value_usd": 0.0, "chicago_value_usd": 6.0, "japan_value_usd": 0.0, "total_value_usd": 6.0}, {"chapter": "第二章零部件价格表", "source_page": 7, "part_name": "充电桩电源适配器转接线澳规", "version": "V1.0.0", "part_code": "QXL-XL-003032A", "price_usd": 3.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "悉尼仓", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 0, "sydney_qty": 2, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 0.0, "sydney_value_usd": 6.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 6.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "充电桩接触刷头总成", "version": "V2.0.3", "part_code": "370000010Y0170B", "price_usd": 112.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 112.0, "sydney_value_usd": 112.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 224.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "延长杆", "version": "V1.0.0", "part_code": "900200950Q0110C", "price_usd": 10.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 10.0, "sydney_value_usd": 10.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 20.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "壁挂基站座", "version": "V1.0.0", "part_code": "900400012Y0050E", "price_usd": 20.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 20.0, "sydney_value_usd": 20.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 40.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "充电头,12v/3a", "version": "V1.0.0", "part_code": "QCD-DQ-003015B", "price_usd": 40.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 40.0, "sydney_value_usd": 40.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 80.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "转接头-澳规", "version": "V1.0.0", "part_code": "QCZ-CZ-003005A", "price_usd": 20.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "悉尼仓", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 0, "sydney_qty": 2, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 0.0, "sydney_value_usd": 40.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 40.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "转接头-欧规", "version": "V1.0.0", "part_code": "QCZ-QT-003001A", "price_usd": 20.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "法兰克福仓", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 2, "sydney_qty": 0, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 40.0, "sydney_value_usd": 0.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 40.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "转接头-英规", "version": "V1.0.0", "part_code": "QCZ-QT-003002A", "price_usd": 20.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "法兰克福仓", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 2, "sydney_qty": 0, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 40.0, "sydney_value_usd": 0.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 40.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "无桩独立电源适配器转接线英规", "version": "V1.0.0", "part_code": "QXL-XL-003031A", "price_usd": 3.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "法兰克福仓", "history_qty_sum": 1.0, "history_line_count": 1, "frankfurt_qty": 2, "sydney_qty": 0, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 6.0, "sydney_value_usd": 0.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 6.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "充电桩电源适配器转接线日规", "version": "V1.0.0", "part_code": "QXL-XL-003033A", "price_usd": 3.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "日本仓", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 0, "sydney_qty": 0, "chicago_qty": 0, "japan_qty": 2, "frankfurt_value_usd": 0.0, "sydney_value_usd": 0.0, "chicago_value_usd": 0.0, "japan_value_usd": 6.0, "total_value_usd": 6.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "DC-LEMO 供电线", "version": "V1.0.0", "part_code": "QXL-XS-003052A", "price_usd": 30.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 11.0, "history_line_count": 7, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 30.0, "sydney_value_usd": 30.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 60.0}, {"chapter": "第二章零部件价格表", "source_page": 8, "part_name": "DC-Type C 转接线", "version": "V1.0.0", "part_code": "QXL-XS-003101A", "price_usd": 10.0, "policy_ratio": 0.1, "service_life_months": null, "history_month_qty": 1, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 8.0, "history_line_count": 6, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 10.0, "sydney_value_usd": 10.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 20.0}, {"chapter": "第三章易损件清单表", "source_page": 9, "part_name": "T 型硅胶塞", "version": "V1.0.0", "part_code": "1D0001951Y0150A", "price_usd": 1.0, "policy_ratio": null, "service_life_months": 12.0, "history_month_qty": 0, "policy_month_qty": 2, "recommended_month_qty": 2, "region_lock": "通用", "history_qty_sum": 0, "history_line_count": 0, "frankfurt_qty": 1, "sydney_qty": 1, "chicago_qty": 0, "japan_qty": 0, "frankfurt_value_usd": 1.0, "sydney_value_usd": 1.0, "chicago_value_usd": 0.0, "japan_value_usd": 0.0, "total_value_usd": 2.0}, {"chapter": "第三章易损件清单表", "source_page": 9, "part_name": "十字金属刀总成（包含转接件和螺丝）（1 片装）", "version": "V1.0.0", "part_code": "1D0088000Y0050A", "price_usd": 30.0, "policy_ratio": null, "service_life_months": 2.0, "history_month_qty": 1, "policy_month_qty": 8, "recommended_month_qty": 8, "region_lock": "通用", "history_qty_sum": 15.0, "history_line_count": 10, "frankfurt_qty": 4, "sydney_qty": 2, "chicago_qty": 1, "japan_qty": 1, "frankfurt_value_usd": 120.0, "sydney_value_usd": 60.0, "chicago_value_usd": 30.0, "japan_value_usd": 30.0, "total_value_usd": 240.0}]}</script>
+  <script>
+    const rawData = JSON.parse(document.getElementById("dataset").textContent);
+    const summary = rawData.summary;
+    const allRows = rawData.rows;
+    const warehouses = ["法兰克福仓", "悉尼仓", "芝加哥仓", "日本仓"];
+    const priorityWarehouses = new Set(["法兰克福仓", "悉尼仓"]);
+    const warehouseQtyField = {
+      "法兰克福仓": "frankfurt_qty",
+      "悉尼仓": "sydney_qty",
+      "芝加哥仓": "chicago_qty",
+      "日本仓": "japan_qty"
+    };
+    const warehouseValueField = {
+      "法兰克福仓": "frankfurt_value_usd",
+      "悉尼仓": "sydney_value_usd",
+      "芝加哥仓": "chicago_value_usd",
+      "日本仓": "japan_value_usd"
+    };
+
+    const state = {
+      warehouse: "全部",
+      chapter: "全部",
+      region: "全部",
+      sort: "recommended_desc",
+      search: "",
+      selectedCode: allRows[0]?.part_code || null
+    };
+
+    const heroMeta = document.getElementById("hero-meta");
+    const heroStats = document.getElementById("hero-stats");
+    const warehouseBars = document.getElementById("warehouse-bars");
+    const topList = document.getElementById("top-list");
+    const warehouseFilter = document.getElementById("warehouse-filter");
+    const chapterFilter = document.getElementById("chapter-filter");
+    const regionFilter = document.getElementById("region-filter");
+    const searchInput = document.getElementById("search-input");
+    const sortSelect = document.getElementById("sort-select");
+    const resetBtn = document.getElementById("reset-btn");
+    const downloadBtn = document.getElementById("download-btn");
+    const tableBody = document.getElementById("table-body");
+    const detailCard = document.getElementById("detail-card");
+    const resultSummary = document.getElementById("result-summary");
+    const resultNote = document.getElementById("result-note");
+    const sortNote = document.getElementById("sort-note");
+
+    function fmtNumber(value) {
+      return new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 0 }).format(value || 0);
+    }
+
+    function fmtQty(value) {
+      return new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(value || 0);
+    }
+
+    function fmtMoney(value) {
+      return new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value || 0);
+    }
+
+    function fmtPercent(value) {
+      return new Intl.NumberFormat("zh-CN", { style: "percent", minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(value || 0);
+    }
+
+    function safeText(value) {
+      return String(value ?? "").replace(/[&<>"]/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;"
+      }[char]));
+    }
+
+    function getDisplayQty(row) {
+      if (state.warehouse === "全部") return row.recommended_month_qty || 0;
+      return row[warehouseQtyField[state.warehouse]] || 0;
+    }
+
+    function getDisplayValue(row) {
+      if (state.warehouse === "全部") return row.total_value_usd || 0;
+      return row[warehouseValueField[state.warehouse]] || 0;
+    }
+
+    function getFilteredRows() {
+      let rows = [...allRows];
+
+      if (state.warehouse !== "全部") {
+        const qtyField = warehouseQtyField[state.warehouse];
+        rows = rows.filter((row) => Number(row[qtyField] || 0) > 0);
+      }
+
+      if (state.chapter !== "全部") {
+        rows = rows.filter((row) => row.chapter === state.chapter);
+      }
+
+      if (state.region !== "全部") {
+        rows = rows.filter((row) => row.region_lock === state.region);
+      }
+
+      if (state.search.trim()) {
+        const keyword = state.search.trim().toLowerCase();
+        rows = rows.filter((row) => [
+          row.part_name,
+          row.part_code,
+          row.version,
+          row.chapter,
+          row.region_lock
+        ].some((value) => String(value || "").toLowerCase().includes(keyword)));
+      }
+
+      const sorters = {
+        recommended_desc: (a, b) => getDisplayQty(b) - getDisplayQty(a) || getDisplayValue(b) - getDisplayValue(a),
+        value_desc: (a, b) => getDisplayValue(b) - getDisplayValue(a) || getDisplayQty(b) - getDisplayQty(a),
+        price_desc: (a, b) => (b.price_usd || 0) - (a.price_usd || 0),
+        name_asc: (a, b) => String(a.part_name).localeCompare(String(b.part_name), "zh-CN"),
+        chapter_asc: (a, b) => String(a.chapter).localeCompare(String(b.chapter), "zh-CN"),
+        region_asc: (a, b) => String(a.region_lock).localeCompare(String(b.region_lock), "zh-CN")
+      };
+
+      rows.sort(sorters[state.sort] || sorters.recommended_desc);
+      return rows;
+    }
+
+    function getWarehouseAgg(rows) {
+      const totals = {};
+      for (const warehouse of warehouses) {
+        const qtyField = warehouseQtyField[warehouse];
+        const valueField = warehouseValueField[warehouse];
+        totals[warehouse] = rows.reduce((acc, row) => {
+          acc.qty += Number(row[qtyField] || 0);
+          acc.value += Number(row[valueField] || 0);
+          return acc;
+        }, { qty: 0, value: 0 });
+      }
+      return totals;
+    }
+
+    function renderHero() {
+      heroMeta.innerHTML = [
+        `机台保有量：<b>${fmtNumber(summary.current_machine_count)}</b> 台`,
+        `FRX项目：<b>${safeText(summary.frx_projects.join(", "))}</b>`,
+        `历史回溯：<b>${summary.history_months}</b> 个月`,
+        `备件条目：<b>${fmtNumber(allRows.length)}</b> 个`
+      ].join("<br />");
+
+      heroStats.innerHTML = warehouses.map((warehouse) => {
+        const total = summary.warehouse_totals[warehouse] || { qty: 0, value_usd: 0 };
+        const priorityClass = priorityWarehouses.has(warehouse) ? "priority" : "";
+        const note = priorityWarehouses.has(warehouse)
+          ? "重点保障仓，分仓权重已上调"
+          : "维持基础覆盖水平";
+        return `
+          <div class="stat-card ${priorityClass}">
+            <div class="eyebrow">${safeText(warehouse)}</div>
+            <div class="value">${fmtQty(total.qty)}</div>
+            <div class="note">月备货数量 | $${fmtMoney(total.value_usd)}<br />${safeText(note)}</div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderWarehouseFilter() {
+      const items = ["全部", ...warehouses];
+      warehouseFilter.innerHTML = items.map((name) => {
+        const active = state.warehouse === name ? "active" : "";
+        const priority = priorityWarehouses.has(name) ? "priority" : "";
+        return `<button class="chip ${active} ${priority}" data-warehouse="${safeText(name)}">${safeText(name)}</button>`;
+      }).join("");
+    }
+
+    function populateSelect(selectEl, values, currentValue) {
+      selectEl.innerHTML = [`<option value="全部">全部</option>`]
+        .concat(values.map((value) => `<option value="${safeText(value)}">${safeText(value)}</option>`))
+        .join("");
+      selectEl.value = currentValue;
+    }
+
+    function renderSummary(rows) {
+      const totals = getWarehouseAgg(rows);
+      const maxValue = Math.max(1, ...warehouses.map((warehouse) => totals[warehouse].value));
+
+      warehouseBars.innerHTML = warehouses.map((warehouse) => {
+        const value = totals[warehouse].value;
+        const qty = totals[warehouse].qty;
+        const ratio = value / maxValue;
+        const shareBasis = summary.warehouse_share_basis[warehouse] || 0;
+        const priorityClass = priorityWarehouses.has(warehouse) ? "priority" : "";
+        return `
+          <div class="warehouse-row">
+            <div class="warehouse-name">
+              <span>${safeText(warehouse)}</span>
+              <span class="warehouse-tag ${priorityClass}">${priorityWarehouses.has(warehouse) ? "重点仓" : "常规仓"}</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill ${priorityClass}" style="width:${Math.max(ratio * 100, value > 0 ? 8 : 0)}%"></div></div>
+            <div class="warehouse-value">
+              <div><b>$${fmtMoney(value)}</b></div>
+              <div class="tiny">${fmtQty(qty)} 件</div>
+            </div>
+            <div class="warehouse-share">${fmtPercent(shareBasis)}</div>
+          </div>
+        `;
+      }).join("");
+
+      const topItems = [...rows]
+        .sort((a, b) => getDisplayValue(b) - getDisplayValue(a))
+        .slice(0, 8);
+
+      topList.innerHTML = topItems.length
+        ? topItems.map((row, index) => `
+            <div class="top-item" data-code="${safeText(row.part_code)}">
+              <div class="top-rank">${index + 1}</div>
+              <div class="top-meta">
+                <strong>${safeText(row.part_name)}</strong>
+                <span>${safeText(row.part_code)}</span>
+              </div>
+              <div class="top-qty">
+                <div><b>$${fmtMoney(getDisplayValue(row))}</b></div>
+                <div class="tiny">${fmtQty(getDisplayQty(row))} 件</div>
+              </div>
+            </div>
+          `).join("")
+        : `<div class="tiny">当前筛选条件下暂无数据。</div>`;
+    }
+
+    function renderTable(rows) {
+      resultSummary.textContent = `共 ${fmtQty(rows.length)} 条备件`;
+      const filteredValue = rows.reduce((acc, row) => acc + getDisplayValue(row), 0);
+      const filteredQty = rows.reduce((acc, row) => acc + getDisplayQty(row), 0);
+      resultNote.textContent = `当前结果合计 ${fmtQty(filteredQty)} 件，$${fmtMoney(filteredValue)}。`;
+
+      const sortLabelMap = {
+        recommended_desc: "建议月备货量",
+        value_desc: "合计金额",
+        price_desc: "单价",
+        name_asc: "名称",
+        chapter_asc: "章节",
+        region_asc: "区域限定"
+      };
+      sortNote.textContent = `当前排序：${sortLabelMap[state.sort] || "建议月备货量"}`;
+
+      if (!rows.length) {
+        tableBody.innerHTML = `<tr><td colspan="6" class="muted">当前筛选条件下没有匹配结果。</td></tr>`;
+        detailCard.innerHTML = `<h3>没有可显示的备件</h3><p class="muted">调整筛选条件后再查看详情。</p>`;
+        return;
+      }
+
+      if (!rows.some((row) => row.part_code === state.selectedCode)) {
+        state.selectedCode = rows[0].part_code;
+      }
+
+      tableBody.innerHTML = rows.map((row) => {
+        const selected = row.part_code === state.selectedCode ? "selected" : "";
+        const regionPill = row.region_lock === "通用"
+          ? `<span class="pill generic">通用</span>`
+          : `<span class="pill priority">${safeText(row.region_lock)}</span>`;
+        return `
+          <tr class="${selected}" data-code="${safeText(row.part_code)}">
+            <td>
+              <span class="cell-main">${safeText(row.part_name)}</span>
+              <span class="cell-sub">${safeText(row.part_code)} | ${safeText(row.version)}</span>
+            </td>
+            <td>
+              <span class="cell-main">${fmtQty(getDisplayQty(row))} 件</span>
+              <span class="cell-sub">政策 ${fmtQty(row.policy_month_qty)} / 历史 ${fmtQty(row.history_month_qty)}</span>
+            </td>
+            <td>
+              <span class="cell-main">$${fmtMoney(getDisplayValue(row))}</span>
+              <span class="cell-sub">总表金额 $${fmtMoney(row.total_value_usd)}</span>
+            </td>
+            <td>
+              <span class="cell-main">$${fmtMoney(row.price_usd)}</span>
+              <span class="cell-sub">单件价格</span>
+            </td>
+            <td>
+              <span class="cell-main">${safeText(row.chapter)}</span>
+              <span class="cell-sub">PDF 第 ${fmtQty(row.source_page)} 页</span>
+            </td>
+            <td>${regionPill}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function renderDetail(rows) {
+      const row = rows.find((item) => item.part_code === state.selectedCode) || rows[0];
+      if (!row) {
+        detailCard.innerHTML = `<h3>没有可显示的备件</h3><p class="muted">当前筛选为空。</p>`;
+        return;
+      }
+
+      const maxQty = Math.max(1, ...warehouses.map((warehouse) => Number(row[warehouseQtyField[warehouse]] || 0)));
+      const allocations = warehouses.map((warehouse) => {
+        const qty = Number(row[warehouseQtyField[warehouse]] || 0);
+        const value = Number(row[warehouseValueField[warehouse]] || 0);
+        const width = qty > 0 ? Math.max((qty / maxQty) * 100, 8) : 0;
+        const blue = priorityWarehouses.has(warehouse) ? "" : "blue";
+        return `
+          <div class="allocation-item">
+            <strong>${safeText(warehouse)}</strong>
+            <div class="allocation-track"><div class="allocation-fill ${blue}" style="width:${width}%"></div></div>
+            <div>${fmtQty(qty)} 件</div>
+            <div>$${fmtMoney(value)}</div>
+          </div>
+        `;
+      }).join("");
+
+      const regionBadge = row.region_lock === "通用"
+        ? `<span class="pill generic">通用件</span>`
+        : `<span class="pill priority">${safeText(row.region_lock)}限定</span>`;
+
+      detailCard.innerHTML = `
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:start;flex-wrap:wrap;">
+          <div>
+            <h3>${safeText(row.part_name)}</h3>
+            <span class="detail-code">${safeText(row.part_code)}</span>
+          </div>
+          <div>${regionBadge}</div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="metric">
+            <span class="label">建议月备货量</span>
+            <span class="data">${fmtQty(row.recommended_month_qty)} 件</span>
+          </div>
+          <div class="metric">
+            <span class="label">合计金额</span>
+            <span class="data">$${fmtMoney(row.total_value_usd)}</span>
+          </div>
+          <div class="metric">
+            <span class="label">政策月度需求</span>
+            <span class="data">${fmtQty(row.policy_month_qty)} 件</span>
+          </div>
+          <div class="metric">
+            <span class="label">历史月均用量</span>
+            <span class="data">${fmtQty(row.history_month_qty)} 件</span>
+          </div>
+          <div class="metric">
+            <span class="label">单价</span>
+            <span class="data">$${fmtMoney(row.price_usd)}</span>
+          </div>
+          <div class="metric">
+            <span class="label">章节 / 页码</span>
+            <span class="data" style="font-size:15px;">${safeText(row.chapter)} / 第 ${fmtQty(row.source_page)} 页</span>
+          </div>
+        </div>
+
+        <div class="allocation-list">
+          <strong style="margin-top:4px;">四仓分配</strong>
+          ${allocations}
+        </div>
+      `;
+    }
+
+    function downloadCsv(rows) {
+      const headers = [
+        "chapter","source_page","part_name","part_code","version","price_usd","policy_ratio","service_life_months",
+        "history_month_qty","policy_month_qty","recommended_month_qty","region_lock",
+        "frankfurt_qty","sydney_qty","chicago_qty","japan_qty",
+        "frankfurt_value_usd","sydney_value_usd","chicago_value_usd","japan_value_usd","total_value_usd"
+      ];
+      const csvRows = [headers.join(",")];
+      for (const row of rows) {
+        csvRows.push(headers.map((key) => {
+          const value = row[key] ?? "";
+          const text = String(value).replace(/"/g, "\"\"");
+          return /[",\n]/.test(text) ? `"${text}"` : text;
+        }).join(","));
+      }
+      const blob = new Blob(["\ufeff" + csvRows.join("\n")], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "frx_spares_filtered.csv";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function render() {
+      renderWarehouseFilter();
+      const rows = getFilteredRows();
+      renderSummary(rows);
+      renderTable(rows);
+      renderDetail(rows);
+    }
+
+    const chapterValues = [...new Set(allRows.map((row) => row.chapter))];
+    const regionValues = [...new Set(allRows.map((row) => row.region_lock))];
+    populateSelect(chapterFilter, chapterValues, state.chapter);
+    populateSelect(regionFilter, regionValues, state.region);
+    renderHero();
+    render();
+
+    warehouseFilter.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-warehouse]");
+      if (!button) return;
+      state.warehouse = button.dataset.warehouse;
+      render();
+    });
+
+    chapterFilter.addEventListener("change", () => {
+      state.chapter = chapterFilter.value;
+      render();
+    });
+
+    regionFilter.addEventListener("change", () => {
+      state.region = regionFilter.value;
+      render();
+    });
+
+    searchInput.addEventListener("input", () => {
+      state.search = searchInput.value;
+      render();
+    });
+
+    sortSelect.addEventListener("change", () => {
+      state.sort = sortSelect.value;
+      render();
+    });
+
+    resetBtn.addEventListener("click", () => {
+      state.warehouse = "全部";
+      state.chapter = "全部";
+      state.region = "全部";
+      state.sort = "recommended_desc";
+      state.search = "";
+      state.selectedCode = allRows[0]?.part_code || null;
+      searchInput.value = "";
+      chapterFilter.value = "全部";
+      regionFilter.value = "全部";
+      sortSelect.value = "recommended_desc";
+      render();
+    });
+
+    downloadBtn.addEventListener("click", () => {
+      downloadCsv(getFilteredRows());
+    });
+
+    document.querySelector("thead").addEventListener("click", (event) => {
+      const th = event.target.closest("th[data-sort]");
+      if (!th) return;
+      state.sort = th.dataset.sort;
+      sortSelect.value = state.sort;
+      render();
+    });
+
+    tableBody.addEventListener("click", (event) => {
+      const row = event.target.closest("tr[data-code]");
+      if (!row) return;
+      state.selectedCode = row.dataset.code;
+      render();
+    });
+
+    topList.addEventListener("click", (event) => {
+      const item = event.target.closest("[data-code]");
+      if (!item) return;
+      state.selectedCode = item.dataset.code;
+      render();
+    });
+  </script>
+</body>
+</html>
