@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FJD Turf Product Navigator</title>
+  <title>FJD 草坪产品导航站</title>
   <style>
     :root {
       --bg: #f2efe8;
@@ -501,6 +501,60 @@
       outline: 2px solid rgba(30, 91, 71, 0.18);
     }
 
+    .product-visual,
+    .detail-visual,
+    .compare-visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.3) 45%, transparent 60%),
+        linear-gradient(135deg, rgba(220, 235, 240, 0.8), rgba(240, 223, 185, 0.78));
+      border: 1px solid rgba(24, 48, 40, 0.06);
+      display: grid;
+      place-items: center;
+    }
+
+    .product-visual {
+      min-height: 192px;
+      padding: 14px;
+    }
+
+    .detail-visual {
+      min-height: 240px;
+      padding: 16px;
+    }
+
+    .compare-visual {
+      min-height: 132px;
+      padding: 12px;
+    }
+
+    .product-visual img,
+    .detail-visual img,
+    .compare-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 16px 24px rgba(24, 48, 40, 0.12));
+    }
+
+    .visual-placeholder {
+      text-align: center;
+      color: var(--green);
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 0 24px;
+    }
+
+    .visual-placeholder strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
     .product-top {
       display: flex;
       justify-content: space-between;
@@ -773,6 +827,10 @@
       color: var(--green);
     }
 
+    .compare-slot .ghost-button {
+      margin-top: auto;
+    }
+
     .compare-meta {
       display: flex;
       flex-wrap: wrap;
@@ -892,30 +950,30 @@
     <section class="hero">
       <div class="hero-top">
         <div>
-          <div class="eyebrow">Interactive Product Site</div>
-          <h1>FJD Turf Product Navigator</h1>
+          <div class="eyebrow">产品可视化站点</div>
+          <h1>FJD 草坪产品导航站</h1>
           <p>
-            A public-facing catalog view for new dealers, golf-course teams, and turf operators.
-            Filter the portfolio by market, audience, and product family to quickly build the right local story.
+            面向新代理商、高尔夫球场团队和草坪作业客户的公开产品展示页。
+            可按市场、客群和产品线快速筛选，直接形成对应地区的销售展示逻辑。
           </p>
           <div class="hero-note">
-            Built from the current internal product catalog structure. Market-fit messaging below is designed for
-            first-pass positioning and commercial conversation, not as a final regional compliance statement.
+            页面基于当前内部产品目录结构整理。以下市场化表述更适合首轮介绍与商务沟通，
+            最终上市规格、合规信息与区域资料仍建议以正式物料为准。
           </div>
         </div>
         <div class="hero-aside">
           <div class="glass-card">
-            <div class="label">Current Lens</div>
-            <div class="big" id="heroMarket">Europe</div>
+            <div class="label">当前市场视角</div>
+            <div class="big" id="heroMarket">欧洲</div>
             <p id="heroStory">
-              Lead with premium robotic mowing, dealer confidence, and visible labor efficiency on golf and sports turf.
+              以高端割草机器人、代理信心和高尔夫/运动草坪的可见效率提升为主线切入。
             </p>
           </div>
           <div class="glass-card">
-            <div class="label">Primary Audience</div>
-            <div class="big" id="heroAudience">Dealers</div>
+            <div class="label">核心客群</div>
+            <div class="big" id="heroAudience">代理商</div>
             <p id="heroAudienceText">
-              Focus on assortment logic, upsell ladders, and bundled solutions that are easy to pitch market by market.
+              强调产品组合逻辑、升级路径和便于不同市场讲解的成套方案。
             </p>
           </div>
         </div>
@@ -923,19 +981,19 @@
       <div class="hero-stats">
         <div class="hero-stat">
           <strong id="countVisible">0</strong>
-          <span>Products matching the current market and audience selection.</span>
+          <span>当前市场与客群筛选下可展示的产品数量。</span>
         </div>
         <div class="hero-stat">
           <strong id="countGolf">0</strong>
-          <span>Golf-priority products in the current view, including mowing, raking, and marking.</span>
+          <span>当前视图中的高尔夫重点产品数量，含割草、划线及作业配套。</span>
         </div>
         <div class="hero-stat">
           <strong id="countCompare">0/3</strong>
-          <span>Products pinned to the compare tray for a quick portfolio conversation.</span>
+          <span>已加入对比栏的产品数量，方便快速形成产品组合讨论。</span>
         </div>
         <div class="hero-stat">
           <strong>18</strong>
-          <span>Distinct product lines available in the current internal product matrix snapshot.</span>
+          <span>当前内部产品矩阵中已整理出的独立产品线数量。</span>
         </div>
       </div>
     </section>
@@ -943,39 +1001,39 @@
     <section class="section">
       <div class="section-head">
         <div class="section-title">
-          <h2>Market Filters</h2>
+          <h2>市场筛选</h2>
           <p>
-            Choose the commercial story first, then narrow the list to the products that best support that pitch.
+            先确定要讲的市场故事，再快速缩小到最适合该场景的产品组合。
           </p>
         </div>
         <div class="section-footnote">
-          Tip: this page works best as a discussion board during dealer onboarding, golf demos, and distributor product selection.
+          提示：这页最适合用于代理培训、高尔夫客户演示和经销商选品会议。
         </div>
       </div>
       <div class="filters">
         <div class="filter-panel">
-          <h3>Choose Market, Audience, and Portfolio Slice</h3>
-          <p>Selecting one lens instantly refreshes the catalog, product detail panel, and compare board.</p>
+          <h3>选择市场、客群与产品切片</h3>
+          <p>切换任一维度后，产品目录、详情面板和对比区都会立即刷新。</p>
 
           <div class="chip-row" id="marketFilters"></div>
           <div class="chip-row" id="audienceFilters"></div>
           <div class="chip-row" id="familyFilters"></div>
 
           <div class="search">
-            <input id="searchInput" type="search" placeholder="Search product line, use case, or product key" />
+            <input id="searchInput" type="search" placeholder="搜索产品线、应用场景或产品 Key" />
           </div>
         </div>
 
         <div class="market-story">
           <div class="market-banner">
-            <strong id="marketBadge">Europe</strong>
-            <h3 id="marketTitle">Build a premium robotic turf entry story.</h3>
+            <strong id="marketBadge">欧洲</strong>
+            <h3 id="marketTitle">打造高端草坪机器人切入故事。</h3>
             <p id="marketDescription">
-              Use compact automation, visible precision, and complete fleet logic to help dealers and golf operators understand where to start first.
+              通过紧凑型自动化、可见精度和完整产品梯队，让代理商与高尔夫客户更容易理解从哪里开始导入。
             </p>
           </div>
           <div class="filter-panel">
-            <h3>What To Lead With</h3>
+            <h3>建议主打点</h3>
             <div class="story-points" id="storyPoints"></div>
           </div>
         </div>
@@ -985,9 +1043,9 @@
     <section class="section">
       <div class="section-head">
         <div class="section-title">
-          <h2>Interactive Catalog</h2>
+          <h2>交互产品目录</h2>
           <p>
-            Click any card to open its detail view. Use Compare to build a tighter shortlist for the current market.
+            点击任意卡片可查看详情；使用“加入对比”可快速形成当前市场下的候选组合。
           </p>
         </div>
       </div>
@@ -995,54 +1053,55 @@
       <div class="dashboard">
         <div class="catalog-panel">
           <div class="catalog-head">
-            <strong id="catalogSummary">Showing all matched products</strong>
-            <strong id="catalogHint">Click a card to focus</strong>
+            <strong id="catalogSummary">当前展示全部匹配产品</strong>
+            <strong id="catalogHint">点击卡片查看详情</strong>
           </div>
           <div class="catalog-grid" id="catalogGrid"></div>
         </div>
 
         <aside class="detail-panel">
           <div class="detail-kicker">
-            <div class="product-family" id="detailFamily">Robotic Mowing</div>
+            <div class="product-family" id="detailFamily">割草机器人</div>
             <div class="product-key" id="detailKey">gaJmF924</div>
           </div>
-          <h3 id="detailName">Small Mower (RTK)</h3>
+          <h3 id="detailName">小型割草机（RTK）</h3>
           <div class="detail-subtitle" id="detailTagline">
-            Precision-first compact robotic mowing for structured turf conversations.
+            以精度为核心的紧凑型机器人割草方案，适合高标准草坪展示与销售沟通。
           </div>
+          <div class="detail-visual" id="detailImage"></div>
 
           <div class="focus-grid">
             <div class="focus-box">
               <strong id="detailGolfScore">0</strong>
-              <span>Golf fit</span>
+              <span>高尔夫适配度</span>
             </div>
             <div class="focus-box">
               <strong id="detailDealerScore">0</strong>
-              <span>Dealer pull</span>
+              <span>代理吸引力</span>
             </div>
             <div class="focus-box">
               <strong id="detailAutomationScore">0</strong>
-              <span>Automation value</span>
+              <span>自动化价值</span>
             </div>
           </div>
 
           <div class="detail-card">
-            <h4>Why It Matters In This Market</h4>
+            <h4>为什么适合这个市场</h4>
             <div class="detail-list" id="detailWhy"></div>
           </div>
 
           <div class="detail-card">
-            <h4>Best-Fit Audiences</h4>
+            <h4>最适配客群</h4>
             <div class="tag-row" id="detailAudiences"></div>
           </div>
 
           <div class="detail-card">
-            <h4>Suggested Use Scenes</h4>
+            <h4>推荐应用场景</h4>
             <div class="tag-row" id="detailApplications"></div>
           </div>
 
           <div class="detail-card">
-            <h4>Dealer Pitch Angle</h4>
+            <h4>推荐销售话术方向</h4>
             <div class="detail-list" id="detailPitch"></div>
           </div>
         </aside>
@@ -1052,27 +1111,27 @@
     <section class="section">
       <div class="section-head">
         <div class="section-title">
-          <h2>Compare and Launch</h2>
-          <p>Pin up to three products and use the launch guidance to shape a cleaner public-facing sales conversation.</p>
+          <h2>产品对比与对外讲法</h2>
+          <p>最多可固定 3 个产品进行对比，并结合右侧建议话术快速形成更清晰的对外介绍逻辑。</p>
         </div>
       </div>
       <div class="compare-section">
         <div class="compare-board">
-          <h3>Shortlist Board</h3>
+          <h3>候选组合看板</h3>
           <p class="detail-subtitle">
-            A fast side-by-side view for dealer onboarding, golf demos, and regional starter portfolios.
+            适合代理培训、高尔夫演示和区域首批导入组合的快速并排查看。
           </p>
           <div class="compare-grid" id="compareGrid"></div>
         </div>
 
         <div class="launch-board">
-          <h3>Recommended Public Narrative</h3>
+          <h3>建议对外叙事</h3>
           <div class="launch-steps" id="launchSteps"></div>
         </div>
       </div>
       <div class="footer-note">
-        Notes: the product list below is based on the current internal catalog snapshot linked by the source document.
-        Region-specific launch timing, regulatory status, and detailed specification sheets should still be confirmed before final distributor publication.
+        说明：下方产品列表基于当前内部产品目录快照整理。
+        不同区域的上市节奏、认证状态与详细规格，仍建议在正式对外发布前再次确认。
       </div>
     </section>
   </div>
@@ -1081,87 +1140,87 @@
     const markets = [
       {
         id: "europe",
-        label: "Europe",
-        title: "Build a premium robotic turf entry story.",
-        description: "Use compact automation, visible precision, and complete fleet logic to help dealers and golf operators understand where to start first.",
-        hero: "Lead with premium robotic mowing, dealer confidence, and visible labor efficiency on golf and sports turf.",
+        label: "欧洲",
+        title: "先讲高端机器人草坪方案，再扩展到完整产品线。",
+        description: "适合从高精度割草、整洁展示和代理导入效率切入，帮助客户快速理解 FJD 在草坪自动化上的价值。",
+        hero: "以高端割草机器人、代理信心和高尔夫/运动草坪的可见效率提升为主线切入。",
         points: [
-          "Start with precise robotic mowing lines, then expand into full golf-course workflow coverage.",
-          "Bundle compact robotic units with dealer-friendly product tiers to simplify channel education.",
-          "Show sustainability and energy readiness early, especially when discussing premium site upgrades."
+          "先用高精度割草机器人建立第一印象，再延展到高尔夫全流程作业场景。",
+          "重点强调紧凑型机器人与中型产品的梯度组合，方便代理快速搭建展示方案。",
+          "在高端站点项目中，可同步带出能源与系统化升级能力。"
         ],
         launch: [
-          ["Lead product story", "Start with robotic mowing and visible precision products that make premium automation easy to understand."],
-          ["Dealer message", "Position the range as an expandable portfolio: compact entry products first, heavier turf solutions next."],
-          ["Golf message", "Anchor the conversation around cleaner fairways, safer labor allocation, and consistent course presentation."]
+          ["主打产品线", "先用机器人割草产品打开话题，让客户快速理解自动化价值。"],
+          ["代理沟通方向", "强调产品梯度清晰，可从入门小型机器人逐步升级到更大草坪场景。"],
+          ["高尔夫沟通方向", "聚焦球场观感、人工优化和日常维护一致性。"]
         ]
       },
       {
         id: "north-america",
-        label: "North America",
-        title: "Show scale, labor relief, and fleet versatility.",
-        description: "Mix compact robotic products with larger turf equipment to support golf, sports turf, and broader grounds operations.",
-        hero: "Tell a labor-efficiency story with product range depth, mixed-site coverage, and strong golf-course relevance.",
+        label: "北美",
+        title: "强调覆盖规模、人工替代与整套产品宽度。",
+        description: "将紧凑型机器人与更大作业能力的设备一起展示，更适合高尔夫、运动场和综合草坪运营客户。",
+        hero: "用更完整的产品宽度、混合作业能力和高尔夫相关性，讲清楚人工效率提升的价值。",
         points: [
-          "Present the portfolio as a full operational toolbox for golf, sports fields, and municipal turf.",
-          "Use compare mode to show how compact mowing products ladder into bigger turf machines.",
-          "Highlight line marking and support equipment as add-on margin drivers for dealers."
+          "把整站讲成完整草坪运营工具箱，而不是单一机型展示。",
+          "通过对比区说明小型机器人如何升级到中大型草坪设备。",
+          "划线设备和配套作业产品可作为代理附加利润点。"
         ],
         launch: [
-          ["Lead product story", "Open with broader fleet capability and practical labor savings instead of a single hero SKU."],
-          ["Dealer message", "Show how one account can grow from robotic mowing into line marking, bunker care, and infrastructure."],
-          ["Golf message", "Emphasize fairway consistency, bunker workflow improvement, and reduced manual intervention."]
+          ["主打产品线", "从整套能力与规模覆盖切入，而不是只讲单一明星机型。"],
+          ["代理沟通方向", "说明单个客户可从机器人割草逐步扩展到划线、球场作业与配套系统。"],
+          ["高尔夫沟通方向", "突出球道一致性、作业流程效率和人工干预下降。"]
         ]
       },
       {
         id: "anz",
-        label: "Australia & NZ",
-        title: "Frame the portfolio around golf performance and site autonomy.",
-        description: "Prioritize golf-ready mowing, bunker management, and practical all-day automation stories for high-visibility turf sites.",
-        hero: "Lead with golf relevance, scalable robotic coverage, and operation-friendly bundles for clubs and distributors.",
+        label: "澳新",
+        title: "围绕高尔夫表现与球场自动化进行产品组织。",
+        description: "优先展示高尔夫相关的割草、沙坑和日常维护效率产品，更适合俱乐部和分销客户理解价值。",
+        hero: "以高尔夫场景、可扩展机器人覆盖和适合经销打包的产品组合为核心叙事。",
         points: [
-          "Golf is the strongest storytelling anchor: mowing quality, bunker workflow, and line presentation matter immediately.",
-          "High-cut and mid-size products help connect compact robotics with broader course-maintenance routines.",
-          "Energy and charging infrastructure gives the portfolio a stronger premium systems narrative."
+          "高尔夫是最强切入场景，割草观感、沙坑作业和线条呈现都很直观。",
+          "高割版和中型产品很适合承接小型机器人到球场大场景的过渡。",
+          "能源与配套系统能让整站更像完整解决方案而不只是设备目录。"
         ],
         launch: [
-          ["Lead product story", "Bring golf-course outcomes to the front: presentation quality, smoother daily routines, and easier staffing."],
-          ["Dealer message", "Package mowing, bunker support, and charging into a higher-value solution set."],
-          ["Golf message", "Recommend a phased rollout: start near visible turf zones, then expand to broader course coverage."]
+          ["主打产品线", "把球场观感、日常效率和人员配置优化放在最前面。"],
+          ["代理沟通方向", "推荐按割草、球场作业、能源配套打包成更高客单方案。"],
+          ["高尔夫沟通方向", "建议先从可见度最高的草坪区域导入，再逐步扩大覆盖。"]
         ]
       },
       {
         id: "japan",
-        label: "Japan",
-        title: "Use precision, compactness, and controlled automation.",
-        description: "Lean into products that communicate quiet operation, clean positioning, and compact site suitability without losing professional ambition.",
-        hero: "Lead with compact precision, reliable repeatability, and products that feel manageable for early dealer adoption.",
+        label: "日本",
+        title: "突出精致、紧凑和可控的自动化体验。",
+        description: "更适合从小型高精度机器人切入，强调整洁、稳定和可控导入，而不是一开始就讲过宽的组合。",
+        hero: "以紧凑精致、重复稳定和便于首批代理导入的产品结构作为主要卖点。",
         points: [
-          "Compact robotic products are the easiest entry point for first dealer conversations.",
-          "Vision, RTK, and small-platform products create a clean precision narrative for premium turf sites.",
-          "Use high-clarity product segmentation to prevent the portfolio from feeling too complex."
+          "小型机器人最适合作为代理的首轮切入产品。",
+          "Vision、RTK 与小平台机型更容易形成高精度、轻量化叙事。",
+          "通过更清晰的产品分段，避免整站显得复杂难懂。"
         ],
         launch: [
-          ["Lead product story", "Open with compact automation and visible precision, then expand into broader turf operations."],
-          ["Dealer message", "Keep the assortment clean and structured: compact entry, advanced compact, then specialty support."],
-          ["Golf message", "Focus on repeatability, finish quality, and the ability to start with controlled pilots."]
+          ["主打产品线", "先讲紧凑自动化和可见精度，再补充到更大草坪场景。"],
+          ["代理沟通方向", "保持产品结构清楚：入门紧凑型、升级紧凑型、专项配套。"],
+          ["高尔夫沟通方向", "重点突出重复性、修剪质感和可先做小范围试点。"]
         ]
       },
       {
         id: "global",
-        label: "Global",
-        title: "Show the whole turf automation ecosystem.",
-        description: "Use this view when presenting the full internal catalog or when one website needs to support multiple regions at once.",
-        hero: "Use the full portfolio view to show breadth, then filter down to the local shortlist during sales conversations.",
+        label: "全球",
+        title: "用整套草坪自动化生态讲清产品宽度。",
+        description: "适合做集团层面或多区域共用的公开展示，再在实际销售中按地区继续下钻筛选。",
+        hero: "先展示完整产品生态，再在现场演示时快速切到地区和客户的本地化组合。",
         points: [
-          "Start broad, then quickly narrow to the local market lens so the catalog never feels overwhelming.",
-          "Use product families to explain the ecosystem: mowing, marking, golf operations, and infrastructure.",
-          "Pin three products to compare whenever you want a cleaner shortlist for a dealer or end-user demo."
+          "先讲全，再缩小到具体市场，网站会更像一块动态展示板。",
+          "用产品线解释生态：割草、划线、高尔夫作业、基础配套。",
+          "把 3 个产品固定到对比区，是最快形成 shortlist 的方式。"
         ],
         launch: [
-          ["Lead product story", "Present FJD as a connected turf automation portfolio rather than isolated products."],
-          ["Dealer message", "Filter by region and audience live during the conversation to make the website feel tailored."],
-          ["Golf message", "Build bundles around visible results: turf finish, bunker quality, field presentation, and easier maintenance routines."]
+          ["主打产品线", "把 FJD 讲成一整套草坪自动化产品生态，而不是若干单品。"],
+          ["代理沟通方向", "现场根据地区与客群切换筛选，让网页更像定制化销售工具。"],
+          ["高尔夫沟通方向", "围绕草坪观感、沙坑质量、场地呈现和维护效率搭建组合。"]
         ]
       }
     ];
@@ -1169,126 +1228,130 @@
     const audiences = [
       {
         id: "dealer",
-        label: "Dealers",
-        text: "Focus on assortment logic, upsell ladders, and bundled solutions that are easy to pitch market by market."
+        label: "代理商",
+        text: "重点展示产品梯度、升级路径和便于不同市场销售的打包逻辑。"
       },
       {
         id: "golf",
-        label: "Golf Courses",
-        text: "Prioritize fairway presentation, bunker workflow, clean route automation, and visible course-quality upgrades."
+        label: "高尔夫球场",
+        text: "重点突出球道观感、沙坑作业、自动路线与整体球场呈现升级。"
       },
       {
         id: "sports-turf",
-        label: "Sports Turf",
-        text: "Highlight repeatability, clean field presentation, marking precision, and routine-labor reduction."
+        label: "运动草坪",
+        text: "强调重复作业能力、场地观感、划线精度和日常人工优化。"
       },
       {
         id: "commercial-landscape",
-        label: "Commercial Landscape",
-        text: "Use practical mowing efficiency, simpler maintenance routines, and scalable robotic deployment stories."
+        label: "商用景观",
+        text: "突出割草效率、维护简化和可扩展机器人部署。"
       }
     ];
 
     const families = [
-      { id: "all", label: "All Products" },
-      { id: "robotic-mowing", label: "Robotic Mowing" },
-      { id: "mid-large-turf", label: "Mid & Large Turf" },
-      { id: "line-marking", label: "Line Marking" },
-      { id: "golf-operations", label: "Golf Operations" },
-      { id: "infrastructure", label: "Infrastructure" }
+      { id: "all", label: "全部产品" },
+      { id: "robotic-mowing", label: "割草机器人" },
+      { id: "mid-large-turf", label: "中大型草坪设备" },
+      { id: "line-marking", label: "划线机器人" },
+      { id: "golf-operations", label: "高尔夫作业类" },
+      { id: "infrastructure", label: "基础设施配套" }
     ];
 
     const products = [
       {
         id: "2R8bsWK2",
         key: "2R8bsWK2",
-        name: "Mini Line Marking Robot",
+        name: "迷你划线机器人（PaintMaster Mini）",
         family: "line-marking",
-        tagline: "Compact field presentation automation for schools, clubs, and training sites.",
+        image: "assets/paintmaster-mini.webp",
+        tagline: "适合学校、俱乐部和训练场的轻量级自主划线方案。",
         audiences: ["dealer", "golf", "sports-turf"],
         markets: ["europe", "north-america", "anz", "japan", "global"],
         golf: 72,
         dealer: 83,
         automation: 80,
-        applications: ["Training grounds", "Club facilities", "School fields"],
+        applications: ["训练场", "俱乐部场地", "校园球场"],
         why: [
-          "Adds a highly visible automation story even when customers are not ready for a full mowing rollout.",
-          "Useful cross-sell item for dealers building sports and club portfolios.",
-          "Works well in markets where presentation quality is a strong first impression."
+          "即使客户暂时不准备导入整套割草机器人，也能先用它展示自动化的可见效果。",
+          "适合作为代理在运动场和俱乐部客户中的交叉销售产品。",
+          "在重视场地呈现与效率提升的市场中很容易建立第一印象。"
         ],
         pitch: [
-          "Pitch as a fast proof-of-automation product with obvious visual output.",
-          "Bundle with turf maintenance products to increase dealer basket value.",
-          "Ideal for clubs and operators that care about presentation consistency."
+          "建议作为“看得见效果”的自动化入门产品来讲。",
+          "可与草坪维护产品一起打包，提高代理客单价。",
+          "很适合对场地观感要求高的俱乐部和运营方。"
         ]
       },
       {
         id: "9kBRtdbl",
         key: "9kBRtdbl",
-        name: "Radar Small Mower",
+        name: "雷达小割",
         family: "robotic-mowing",
-        tagline: "Compact robotic mowing with a clear autonomy-led entry story.",
+        image: "assets/fr4000.webp",
+        tagline: "以自主作业为核心卖点的紧凑型机器人割草产品。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "anz", "japan", "global"],
         golf: 78,
         dealer: 82,
         automation: 88,
-        applications: ["Entrance lawns", "Club surrounds", "Compact turf zones"],
+        applications: ["入口草坪", "俱乐部周边", "紧凑草坪区域"],
         why: [
-          "Gives smaller sites a first step into automation without needing a heavy equipment conversation.",
-          "Useful as an entry portfolio anchor for dealers who need a simple robotic lead product.",
-          "Fits clean, compact site storytelling in Europe and Japan."
+          "让客户可以先从小场景切入自动化，而不必一开始就讲重型设备。",
+          "适合作为代理的机器人割草入门主推机型。",
+          "在欧洲和日本这类偏好精致紧凑方案的市场中更容易理解。"
         ],
         pitch: [
-          "Position as the approachable automation starting point.",
-          "Use it to open conversations around recurring labor relief and compact-site management.",
-          "Works well as a stepping stone toward mid-size robotic turf products."
+          "建议作为自动化第一步产品来讲。",
+          "重点强调稳定巡航、人工减负和紧凑场地适配能力。",
+          "也适合作为通往中型草坪机器人的过渡机型。"
         ]
       },
       {
         id: "AFtGRyA7",
         key: "AFtGRyA7",
-        name: "Mid Mower (RM21P)",
+        name: "中割（RM21P）",
         family: "mid-large-turf",
-        tagline: "Mid-size turf coverage for sites that need more capacity than compact robotic lines.",
+        image: "assets/rm21.webp",
+        tagline: "适合比小型机器人覆盖更大区域的中型草坪作业方案。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "north-america", "anz", "global"],
         golf: 85,
         dealer: 88,
         automation: 76,
-        applications: ["Golf roughs", "Sports campus turf", "Broader managed grounds"],
+        applications: ["高尔夫长草区", "运动园区草坪", "大面积管理草坪"],
         why: [
-          "Bridges the gap between compact robotics and larger fleet discussions.",
-          "Important when the market expects visible area coverage rather than only entry-level automation.",
-          "Supports broader golf and commercial grounds narratives."
+          "能很好承接小型机器人和更大设备之间的产品梯度。",
+          "在需要更强覆盖而不只是入门自动化的市场中很关键。",
+          "适合高尔夫和商用草坪场景下的中等级别导入。"
         ],
         pitch: [
-          "Use as a next-step product after compact robotic engagement.",
-          "Frame it as a capacity answer for larger managed turf areas.",
-          "Pair with bunker or line-marking products for a broader turf operations proposal."
+          "建议作为小型机器人之后的升级方案来讲。",
+          "重点强调覆盖效率和更大区域的作业能力。",
+          "可与沙坑或划线产品一起讲成更完整的运营方案。"
         ]
       },
       {
         id: "EqDJpt7X",
         key: "EqDJpt7X",
-        name: "Bunker Rake",
+        name: "平沙机",
         family: "golf-operations",
-        tagline: "Golf-course support equipment that makes the portfolio feel purpose-built for clubs.",
+        image: "",
+        tagline: "强化高尔夫专业属性的球场作业设备。",
         audiences: ["dealer", "golf"],
         markets: ["north-america", "anz", "europe", "global"],
         golf: 96,
         dealer: 84,
         automation: 62,
-        applications: ["Bunkers", "Golf course maintenance", "Premium course presentation"],
+        applications: ["沙坑", "球场维护", "高端球场呈现"],
         why: [
-          "Immediately strengthens golf-specific credibility in distributor and club conversations.",
-          "Pairs naturally with fairway and rough mowing discussions.",
-          "Useful as a premium-support product in golf-first markets like ANZ."
+          "能立刻提升整站在高尔夫客户面前的专业可信度。",
+          "非常适合与球道和长草区割草产品一起讲成球场解决方案。",
+          "在澳新等高尔夫优先市场里更容易成为加分项。"
         ],
         pitch: [
-          "Pitch as the product that proves the portfolio understands real golf operations.",
-          "Use it to move the conversation beyond simple mowing.",
-          "Bundle with robotic mowing for a higher-value golf package."
+          "建议作为“我们真正理解球场作业”的证明型产品来讲。",
+          "它能把沟通从单一割草扩展到完整球场维护。",
+          "适合与机器人割草产品打包成更高价值组合。"
         ]
       },
       {
@@ -1296,321 +1359,335 @@
         key: "FCwcJE4r",
         name: "FL3000",
         family: "golf-operations",
-        tagline: "A turf operations platform that broadens the portfolio beyond core mowing products.",
+        image: "assets/fl3000.webp",
+        tagline: "让产品组合从单一割草设备扩展到更完整草坪平台的关键机型。",
         audiences: ["dealer", "golf", "sports-turf"],
         markets: ["north-america", "anz", "europe", "global"],
         golf: 74,
         dealer: 76,
         automation: 66,
-        applications: ["Site operations", "Premium turf support", "Fleet portfolio expansion"],
+        applications: ["场地运营", "高端草坪配套", "产品矩阵扩展"],
         why: [
-          "Useful when dealers want to show depth instead of a single-product catalog.",
-          "Strengthens the image of a complete turf technology platform.",
-          "Supports broader public-site storytelling even when exact product specs are discussed later."
+          "适合给代理展示产品宽度，而不是只看单一明星机型。",
+          "让整站更像完整草坪科技平台而不是单个目录。",
+          "当客户希望先高层理解产品线时，它很适合做补充。"
         ],
         pitch: [
-          "Present as a broader turf platform option inside the ecosystem.",
-          "Keep the public narrative high level and move into specs during sales follow-up.",
-          "Use in portfolios where dealer breadth matters."
+          "建议放在产品生态讲法里，而不是单独作为第一主推。",
+          "公开网页上先高层说明价值，详细规格可在后续销售资料中展开。",
+          "适合需要强调产品宽度的代理组合。"
         ]
       },
       {
         id: "JX7LxaIR",
         key: "JX7LxaIR",
-        name: "Large Turf Mower",
+        name: "大型割草机",
         family: "mid-large-turf",
-        tagline: "For markets that expect visible scale, coverage, and heavier-capacity turf operations.",
+        image: "assets/z42p.webp",
+        tagline: "适合需要更大覆盖范围与更强作业能力的草坪场景。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["north-america", "anz", "global"],
         golf: 82,
         dealer: 80,
         automation: 58,
-        applications: ["Large turf areas", "Golf perimeters", "Municipal grounds"],
+        applications: ["大面积草坪", "高尔夫外围区域", "市政场地"],
         why: [
-          "Important in markets where bigger sites dominate the sales conversation.",
-          "Rounds out the portfolio for distributors who serve mixed account sizes.",
-          "Adds scale to the catalog when compact robotics alone looks too narrow."
+          "当目标市场以大面积场地为主时，这类产品必不可少。",
+          "能补全代理对于不同客户体量的产品覆盖能力。",
+          "让整站不只停留在紧凑型机器人，而是覆盖更大作业尺度。"
         ],
         pitch: [
-          "Use as proof the lineup can handle both compact automation and larger site demands.",
-          "Frame it around coverage and operational confidence.",
-          "Works best when paired with robotic entry products in the same presentation."
+          "建议作为“既有自动化，也能覆盖大场景”的证明机型来讲。",
+          "重点强调作业范围、场景容量和商业覆盖面。",
+          "与小型机器人搭配展示时，产品梯度会更完整。"
         ]
       },
       {
         id: "KEnTXt7j",
         key: "KEnTXt7j",
-        name: "Professional Line Marking Robot",
+        name: "专业划线机器人（PaintMaster Pro）",
         family: "line-marking",
-        tagline: "High-visibility sports and club presentation equipment for premium facility operators.",
+        image: "assets/paintmaster-pro.webp",
+        tagline: "适用于高标准运动场和俱乐部场地的专业级自主划线设备。",
         audiences: ["dealer", "sports-turf", "golf"],
         markets: ["europe", "north-america", "anz", "global"],
         golf: 58,
         dealer: 78,
         automation: 84,
-        applications: ["Sports complexes", "Tournament sites", "Club presentation zones"],
+        applications: ["运动综合体", "赛事场地", "俱乐部场地"],
         why: [
-          "Adds a professional operations angle to sports and club portfolios.",
-          "Useful for dealers who sell into schools, academies, and premium turf venues.",
-          "Makes the website feel more complete and application-rich."
+          "能为运动草坪和俱乐部产品组合增加明显的专业化标签。",
+          "适合代理切入学校、学院和高标准场地客户。",
+          "让整站场景覆盖看起来更完整、更有应用深度。"
         ],
         pitch: [
-          "Lead with repeatability, clean presentation, and labor savings.",
-          "Use it as a specialist product that upgrades the credibility of the broader range.",
-          "Especially useful for sports turf and club-focused channel partners."
+          "重点讲重复精度、呈现质量与人工节省。",
+          "适合作为提升整个产品组合专业形象的专项设备。",
+          "在运动草坪和俱乐部渠道里尤其有吸引力。"
         ]
       },
       {
         id: "KxhOksLW",
         key: "KxhOksLW",
-        name: "Medium Turf Mower",
+        name: "中型割草机",
         family: "mid-large-turf",
-        tagline: "A practical middle step between compact robotic products and large-capacity turf machinery.",
+        image: "assets/rcm01.webp",
+        tagline: "承上启下的中型草坪设备，适合多种面积级别场景。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "north-america", "anz", "global"],
         golf: 81,
         dealer: 84,
         automation: 64,
-        applications: ["Course surrounds", "Managed turf zones", "Mixed grounds portfolios"],
+        applications: ["球场周边", "管理型草坪", "混合场景组合"],
         why: [
-          "Makes the product ladder easier for distributors to explain.",
-          "Useful in mixed portfolios where one size of mower is not enough.",
-          "Supports phased adoption stories for golf and commercial sites."
+          "能让代理更容易讲清产品梯度与覆盖层级。",
+          "在一个产品目录要覆盖多种场地面积时非常实用。",
+          "适合高尔夫和商用草坪场景下的阶段式导入。"
         ],
         pitch: [
-          "Use as a scalable coverage option after compact robotic entry.",
-          "Explain it as the flexible middle of the turf fleet.",
-          "Good fit for dealers who want one catalog to cover multiple property sizes."
+          "建议作为小型机器人之后的灵活扩展产品来讲。",
+          "重点突出适应性和中间层级的覆盖能力。",
+          "适合希望一个产品目录服务多类客户的代理。"
         ]
       },
       {
         id: "VCPjNPwk",
         key: "VCPjNPwk",
-        name: "Small Mower (MS200 Kit)",
+        name: "小型割草机（MS200 套件）",
         family: "robotic-mowing",
-        tagline: "A compact package format that helps entry-level channel conversations move faster.",
+        image: "assets/fv2000.png",
+        tagline: "更易打包讲解的小型机器人割草套件型产品。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "japan", "global"],
         golf: 70,
         dealer: 79,
         automation: 82,
-        applications: ["Entry projects", "Compact properties", "Pilot deployments"],
+        applications: ["入门项目", "紧凑型场地", "试点部署"],
         why: [
-          "Helps reduce complexity in early-stage dealer conversations.",
-          "Works well when customers want a neat starter package rather than a custom fleet answer.",
-          "Fits pilot-site launches and first automation demos."
+          "有助于降低代理首轮讲解的复杂度。",
+          "适合那些更偏好“整套入门包”而不是自由搭配方案的客户。",
+          "也很适合做首批试点或样板场景。"
         ],
         pitch: [
-          "Use as a packaged entry point into the robotic mowing category.",
-          "Great for dealers building a low-friction demo offer.",
-          "Best positioned as a simple first step before broader portfolio expansion."
+          "建议作为小型机器人割草的打包入门方案来讲。",
+          "很适合代理设计低门槛演示方案。",
+          "适合作为后续扩展到更多产品线的第一步。"
         ]
       },
       {
         id: "a1g2ix5N",
         key: "a1g2ix5N",
-        name: "Radar Small Mower High-Cut",
+        name: "雷达小割高割版",
         family: "robotic-mowing",
-        tagline: "Compact automation with a stronger fit for higher-cut turf presentation needs.",
+        image: "assets/fr4000.webp",
+        tagline: "适合高割草坪呈现需求的紧凑型机器人方案。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["anz", "north-america", "global"],
         golf: 83,
         dealer: 77,
         automation: 84,
-        applications: ["Golf surrounds", "Feature lawns", "Higher-cut turf zones"],
+        applications: ["高尔夫周边区域", "展示草坪", "高割草坪区"],
         why: [
-          "Useful for golf and premium turf customers who need a compact product without a low-cut story.",
-          "Adds a more nuanced option inside the small robotic range.",
-          "Particularly helpful in golf-led portfolios for ANZ."
+          "适合需要紧凑自动化、但不希望围绕低割逻辑来讲的客户。",
+          "能让小型机器人产品线看起来更有细分能力。",
+          "在高尔夫优先市场中更容易与球场需求对上。"
         ],
         pitch: [
-          "Pitch as the small robotic option for presentation-sensitive higher-cut turf.",
-          "Use it to show dealers that the lineup is not one-size-fits-all.",
-          "Pairs well with bunker and mid-size products in golf proposals."
+          "建议作为面向高割场景的小型机器人方案来讲。",
+          "重点说明它不是单一机型，而是更细化的场景适配产品。",
+          "适合与平沙机和中型割草产品一起形成高尔夫组合。"
         ]
       },
       {
         id: "dwxRAHrO",
         key: "dwxRAHrO",
-        name: "Mid Mower (FRX)",
+        name: "中割（FRX）",
         family: "mid-large-turf",
-        tagline: "A strong central product for golf, premium turf, and serious dealer portfolios.",
+        image: "assets/frx.webp",
+        tagline: "高尔夫与高端草坪场景中的核心中型机器人机型。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "north-america", "anz", "global"],
         golf: 91,
         dealer: 92,
         automation: 79,
-        applications: ["Golf roughs", "Club routes", "Premium managed turf"],
+        applications: ["高尔夫长草区", "俱乐部线路", "高端管理草坪"],
         why: [
-          "One of the clearest portfolio anchors for golf-relevant turf coverage.",
-          "Useful as a hero product when compact robotics alone feel too lightweight.",
-          "Strong bridge between dealer ambition and practical site coverage."
+          "它是高尔夫相关草坪覆盖中最容易成为主推的核心机型之一。",
+          "当小型机器人显得偏轻时，FRX 很适合作为主角产品。",
+          "在代理组合与实际覆盖场景之间具有很好的承接力。"
         ],
         pitch: [
-          "Lead with this in golf-heavy regions when you want one strong turf hero product.",
-          "Use compare mode with RTK or Vision small mowers to show a full range ladder.",
-          "Bundle with bunker rake and charging infrastructure for premium system positioning."
+          "在高尔夫占主导的区域，可直接把它作为主推机型来讲。",
+          "可与 RTK、Vision 等小型产品一起展示完整产品梯度。",
+          "也适合与平沙机、能源配套一起讲成高端系统方案。"
         ]
       },
       {
         id: "fNPEfQHK",
         key: "fNPEfQHK",
-        name: "Small Mower (Thor)",
+        name: "小型割草机（Thor）",
         family: "robotic-mowing",
-        tagline: "A compact robotic option that helps the lineup feel broader and more tiered.",
+        image: "assets/fv2000.png",
+        tagline: "帮助小型机器人产品线形成更多层级感的紧凑机型。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "north-america", "global"],
         golf: 74,
         dealer: 75,
         automation: 80,
-        applications: ["Pilot zones", "Club grounds", "Dealer demo sites"],
+        applications: ["试点区域", "俱乐部草坪", "代理演示场地"],
         why: [
-          "Useful for tiering the compact mowing story when the audience wants options.",
-          "Good for dealer demos and lighter-entry projects.",
-          "Adds range depth without shifting away from robotics."
+          "适合用来扩展小型机器人产品层级，而不让目录看起来过窄。",
+          "在代理演示和轻量化项目中会更容易被理解。",
+          "能增加紧凑型机器人线的选择深度。"
         ],
         pitch: [
-          "Use to show portfolio depth inside the small robotic segment.",
-          "Position as a practical compact-site option with a straightforward story.",
-          "Pair with RTK, Vision, or ALVA lines depending on the market narrative."
+          "建议作为小型机器人产品线中的补充层级来展示。",
+          "重点突出轻量、易讲解和适合演示部署。",
+          "可根据市场逻辑与 RTK、Vision 或 ALVA 系列一起展示。"
         ]
       },
       {
         id: "gaJmF924",
         key: "gaJmF924",
-        name: "Small Mower (RTK)",
+        name: "小型割草机（RTK）",
         family: "robotic-mowing",
-        tagline: "Precision-first compact robotic mowing for structured turf conversations.",
+        image: "assets/fr4000.webp",
+        tagline: "以高精度和高价值感为核心的小型机器人割草方案。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "japan", "north-america", "global"],
         golf: 88,
         dealer: 90,
         automation: 95,
-        applications: ["Golf presentation zones", "Premium lawns", "Structured turf layouts"],
+        applications: ["高尔夫展示区", "高端草坪", "规则化草坪路线"],
         why: [
-          "A strong precision-led hero product for premium market storytelling.",
-          "Easy for dealers to use when positioning technical differentiation inside compact robotics.",
-          "Useful as a flagship small robotic mower in Europe and Japan."
+          "非常适合用来建立高端精度型机器人产品的市场印象。",
+          "代理也更容易围绕技术差异化来讲解其价值。",
+          "在欧洲和日本市场都适合作为小型机器人主推机型。"
         ],
         pitch: [
-          "Lead with precision, repeatability, and high-value compact-site automation.",
-          "Use as a premium step-up option in the small robotic range.",
-          "Compare against Vision or FRX to show expansion from compact to broader turf coverage."
+          "建议围绕高精度、稳定重复与高价值紧凑自动化来讲。",
+          "适合作为小型机器人中的升级主推产品。",
+          "与 Vision 或 FRX 对比展示时，产品梯度会非常清晰。"
         ]
       },
       {
         id: "oEOTLHSn",
         key: "oEOTLHSn",
-        name: "Small Mower (Vision)",
+        name: "小型割草机（Vision）",
         family: "robotic-mowing",
-        tagline: "A high-appeal robotic mower for markets that respond to intelligent autonomy stories.",
+        image: "assets/fv2000.png",
+        tagline: "更适合强调智能化和现代感的小型机器人割草机型。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "japan", "anz", "global"],
         golf: 84,
         dealer: 86,
         automation: 92,
-        applications: ["Visible premium turf", "Demo installs", "Compact golf areas"],
+        applications: ["高可见度草坪", "演示安装", "紧凑球场区域"],
         why: [
-          "Helps the public site feel current, modern, and automation-forward.",
-          "Strong fit when dealers need a compelling premium compact product story.",
-          "Useful in markets that respond well to visible intelligence and autonomy positioning."
+          "它能让整个网站的产品感觉更现代、更偏智能化。",
+          "当代理需要一个容易打动客户的高端紧凑型产品时很适合。",
+          "在偏好智能叙事的市场中会更容易获得兴趣。"
         ],
         pitch: [
-          "Present as a modern, premium robotic mowing offer.",
-          "Use in dealer onboarding when you want a future-forward first impression.",
-          "Works well beside RTK and ALVA lines to show a multi-tier compact range."
+          "建议作为更智能、更现代的小型机器人机型来展示。",
+          "适合在代理首轮介绍中制造未来感印象。",
+          "与 RTK、ALVA 系列放在一起时能形成清晰的多层级紧凑产品线。"
         ]
       },
       {
         id: "qEV6YQeG",
         key: "qEV6YQeG",
-        name: "Solar Energy Charging Station",
+        name: "光储能充电站",
         family: "infrastructure",
-        tagline: "Infrastructure that upgrades the portfolio from products to a complete automation system.",
+        image: "",
+        tagline: "让整套草坪自动化方案从单机走向系统化的重要基础设施。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "anz", "japan", "global"],
         golf: 69,
         dealer: 81,
         automation: 90,
-        applications: ["Sustainability story", "Premium sites", "Energy-ready deployments"],
+        applications: ["可持续叙事", "高端项目", "能源型部署"],
         why: [
-          "Adds premium system thinking to the public-facing product story.",
-          "Useful for dealers who want higher-value project bundles.",
-          "Supports sustainability-oriented messaging in Europe and premium golf sites."
+          "能把整站从“设备列表”升级成“完整系统方案”。",
+          "适合代理用于提高高端项目的整体客单价。",
+          "在重视可持续与系统化升级的项目中更容易体现价值。"
         ],
         pitch: [
-          "Pitch as the infrastructure layer that makes the automation portfolio feel complete.",
-          "Use mainly in premium bundled proposals rather than as a standalone lead product.",
-          "Ideal for golf clubs and flagship deployments that want a future-ready image."
+          "建议作为系统层配套来讲，而不是单独作为第一主推产品。",
+          "适合在高端 bundled 方案中补充完整性和未来感。",
+          "尤其适合高尔夫俱乐部与旗舰展示项目。"
         ]
       },
       {
         id: "qWojDFPN",
         key: "qWojDFPN",
-        name: "ALVA Small Mower",
+        name: "ALVA 小割",
         family: "robotic-mowing",
-        tagline: "Compact robotic mowing with a clean premium-ready portfolio position.",
+        image: "assets/fv2000.png",
+        tagline: "适合高端紧凑场景的小型机器人割草方案。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["europe", "anz", "global"],
         golf: 79,
         dealer: 80,
         automation: 85,
-        applications: ["Clubs", "Compact premium turf", "Dealer showpiece installs"],
+        applications: ["俱乐部场景", "高端紧凑草坪", "代理展示样板"],
         why: [
-          "Keeps the compact robotic category broad and commercially flexible.",
-          "Useful for markets where dealers want multiple options in the same category.",
-          "Supports a premium small-site turf narrative."
+          "有助于让小型机器人品类更丰富、更灵活。",
+          "适合那些希望在同一类目下提供多种选择的市场。",
+          "能支持更高端的小场景草坪叙事。"
         ],
         pitch: [
-          "Use as another strong small robotic option inside a premium assortment.",
-          "Frame it as part of a laddered compact product family.",
-          "Works well in golf and premium landscaped-site storytelling."
+          "建议作为高端紧凑型小割的一个补充方案来讲。",
+          "适合放入小型产品梯队中，增强产品线层次感。",
+          "在高尔夫与高端景观场景里更容易与客户产生共鸣。"
         ]
       },
       {
         id: "xXezrZXE",
         key: "xXezrZXE",
-        name: "ALVA Small Mower High-Cut",
+        name: "ALVA 小割高割版",
         family: "robotic-mowing",
-        tagline: "High-cut compact robotic mowing for premium turf zones with presentation-sensitive finish.",
+        image: "assets/fv2000.png",
+        tagline: "更适合高割和高观感草坪区域的小型机器人机型。",
         audiences: ["dealer", "golf"],
         markets: ["anz", "north-america", "global"],
         golf: 86,
         dealer: 78,
         automation: 84,
-        applications: ["Golf surrounds", "Premium turf zones", "Feature landscapes"],
+        applications: ["高尔夫周边", "高端草坪区域", "展示景观带"],
         why: [
-          "Useful for golf sites where compact automation is needed without a short-cut positioning angle.",
-          "Strengthens the lineup's golf relevance inside the small robotic family.",
-          "Especially suitable for premium-club storytelling."
+          "适合那些需要自动化、但又对高割观感有要求的球场客户。",
+          "能加强小型机器人在高尔夫场景中的适配度。",
+          "在高端俱乐部叙事中更容易成为亮点。"
         ],
         pitch: [
-          "Pitch as the compact high-cut answer for premium presentation zones.",
-          "Use it when golf customers want automation but care deeply about finish style.",
-          "Best shown alongside FRX or bunker support products."
+          "建议作为紧凑型高割方案来讲。",
+          "重点说明它适合对草坪观感要求更高的客户。",
+          "与 FRX 或平沙机组合展示时，高尔夫场景会更完整。"
         ]
       },
       {
         id: "ye82l0Pt",
         key: "ye82l0Pt",
-        name: "Small Mower (RGM01)",
+        name: "小割（RGM01）",
         family: "robotic-mowing",
-        tagline: "A clean entry product for compact-site robotic mowing conversations.",
+        image: "assets/fv2000.png",
+        tagline: "适合紧凑场景导入的入门级机器人割草机型。",
         audiences: ["dealer", "golf", "commercial-landscape"],
         markets: ["japan", "europe", "global"],
         golf: 68,
         dealer: 73,
         automation: 77,
-        applications: ["Entry automation", "Pilot projects", "Compact turf areas"],
+        applications: ["入门自动化", "试点项目", "紧凑草坪区域"],
         why: [
-          "Useful when the public catalog needs a simpler entry product in the compact mowing tier.",
-          "Helps dealers show a fuller compact assortment.",
-          "Fits structured pilot-style launches."
+          "适合在公开目录中承担更简单直观的入门角色。",
+          "能帮助代理补全小型割草产品线的完整度。",
+          "也很适合做首轮试点和基础导入项目。"
         ],
         pitch: [
-          "Use as a straightforward compact robotic entry point.",
-          "Keep the public narrative simple and move into positioning detail during sales follow-up.",
-          "Useful for pilot projects and starter dealer programs."
+          "建议作为更简单直接的小型机器人入门产品来讲。",
+          "公开网页先讲场景价值，详细差异可在后续资料里补充。",
+          "很适合做试点项目和首批代理导入。"
         ]
       }
     ];
@@ -1635,12 +1712,29 @@
 
     const marketById = Object.fromEntries(markets.map(item => [item.id, item]));
     const audienceById = Object.fromEntries(audiences.map(item => [item.id, item]));
+    const familyLabelById = Object.fromEntries(families.map(item => [item.id, item.label]));
 
-    function capitalizeFamily(familyId) {
-      return familyId
-        .split("-")
-        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-        .join(" ");
+    function getFamilyLabel(familyId) {
+      return familyLabelById[familyId] || familyId;
+    }
+
+    function renderVisual(product, className) {
+      if (product.image) {
+        return `
+          <div class="${className}">
+            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          </div>
+        `;
+      }
+
+      return `
+        <div class="${className}">
+          <div class="visual-placeholder">
+            <strong>${getFamilyLabel(product.family)}</strong>
+            ???????????????????????
+          </div>
+        </div>
+      `;
     }
 
     function createChip(target, items, activeId, onClick) {
@@ -1726,8 +1820,8 @@
       document.getElementById("countCompare").textContent = `${state.compare.length}/3`;
       document.getElementById("catalogSummary").textContent =
         filtered.length > 0
-          ? `Showing ${filtered.length} products for ${marketById[state.market].label} · ${audienceById[state.audience].label}`
-          : "No products match the current filter";
+          ? `????? ${filtered.length} ??? ? ${marketById[state.market].label} ? ${audienceById[state.audience].label}`
+          : "?????????????";
 
       catalogGrid.innerHTML = "";
 
@@ -1736,10 +1830,10 @@
         empty.className = "product-card";
         empty.innerHTML = `
           <div class="product-top">
-            <div class="product-family family-robotic-mowing">No Match</div>
+            <div class="product-family family-robotic-mowing">????</div>
           </div>
-          <h3>Try a broader filter</h3>
-          <div class="product-sub">Switch market, audience, or search terms to restore the catalog view.</div>
+          <h3>???????</h3>
+          <div class="product-sub">??????????????????????????</div>
         `;
         catalogGrid.appendChild(empty);
         return;
@@ -1752,8 +1846,9 @@
         const card = document.createElement("article");
         card.className = `product-card${selected}`;
         card.innerHTML = `
+          ${renderVisual(product, "product-visual")}
           <div class="product-top">
-            <div class="product-family ${familyClass}">${capitalizeFamily(product.family)}</div>
+            <div class="product-family ${familyClass}">${getFamilyLabel(product.family)}</div>
             <div class="product-key">${product.key}</div>
           </div>
           <div>
@@ -1761,16 +1856,16 @@
             <div class="product-sub">${product.tagline}</div>
           </div>
           <div class="mini-metrics">
-            <div class="metric"><strong>${product.golf}</strong><span>Golf Fit</span></div>
-            <div class="metric"><strong>${product.dealer}</strong><span>Dealer Pull</span></div>
-            <div class="metric"><strong>${product.automation}</strong><span>Automation</span></div>
+            <div class="metric"><strong>${product.golf}</strong><span>?????</span></div>
+            <div class="metric"><strong>${product.dealer}</strong><span>?????</span></div>
+            <div class="metric"><strong>${product.automation}</strong><span>?????</span></div>
           </div>
           <div class="tag-row">
             ${product.applications.slice(0, 3).map(item => `<span class="tag">${item}</span>`).join("")}
           </div>
           <div class="product-actions">
-            <button class="button" type="button">${compared ? "Pinned To Compare" : "Compare"}</button>
-            <button class="ghost-button" type="button">Focus</button>
+            <button class="button" type="button">${compared ? "?????" : "????"}</button>
+            <button class="ghost-button" type="button">????</button>
           </div>
         `;
 
@@ -1792,11 +1887,12 @@
       const familyClass = `family-${product.family}`;
       const familyEl = document.getElementById("detailFamily");
       familyEl.className = `product-family ${familyClass}`;
-      familyEl.textContent = capitalizeFamily(product.family);
+      familyEl.textContent = getFamilyLabel(product.family);
 
       document.getElementById("detailKey").textContent = product.key;
       document.getElementById("detailName").textContent = product.name;
       document.getElementById("detailTagline").textContent = product.tagline;
+      document.getElementById("detailImage").innerHTML = renderVisual(product, "detail-visual");
       document.getElementById("detailGolfScore").textContent = product.golf;
       document.getElementById("detailDealerScore").textContent = product.dealer;
       document.getElementById("detailAutomationScore").textContent = product.automation;
@@ -1838,24 +1934,25 @@
         const slot = document.createElement("div");
         if (!product) {
           slot.className = "compare-slot empty";
-          slot.textContent = "Pin a product from the catalog to compare it here.";
+          slot.textContent = "????????????????????????";
           compareGrid.appendChild(slot);
           continue;
         }
 
         slot.className = "compare-slot";
         slot.innerHTML = `
-          <div class="product-family family-${product.family}">${capitalizeFamily(product.family)}</div>
+          ${renderVisual(product, "compare-visual")}
+          <div class="product-family family-${product.family}">${getFamilyLabel(product.family)}</div>
           <h4>${product.name}</h4>
           <div class="compare-meta">
             <span class="tag">${marketById[state.market].label}</span>
             ${product.audiences.map(id => `<span class="tag">${audienceById[id].label}</span>`).join("")}
           </div>
-          <div class="compare-line"><strong>Golf fit:</strong> ${product.golf}</div>
-          <div class="compare-line"><strong>Dealer pull:</strong> ${product.dealer}</div>
-          <div class="compare-line"><strong>Automation value:</strong> ${product.automation}</div>
-          <div class="compare-line"><strong>Use scenes:</strong> ${product.applications.join(", ")}</div>
-          <button class="ghost-button" type="button">Remove</button>
+          <div class="compare-line"><strong>??????</strong>${product.golf}</div>
+          <div class="compare-line"><strong>??????</strong>${product.dealer}</div>
+          <div class="compare-line"><strong>??????</strong>${product.automation}</div>
+          <div class="compare-line"><strong>?????</strong>${product.applications.join("?")}</div>
+          <button class="ghost-button" type="button">????</button>
         `;
 
         slot.querySelector("button").addEventListener("click", () => {
