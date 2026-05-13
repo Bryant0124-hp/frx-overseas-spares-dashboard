@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FJD FAE RMA备件看板</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <h1>FJD FAE RMA备件看板</h1>
+      <p>按区域负责人做一级筛选，按海外仓与国内仓做二级筛选，查看每个项目号下每个备件的发货仓、发送数量与关联 RMA 情况。</p>
+      <div id="heroMeta" class="hero-meta"></div>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>筛选器</h2>
+        <label>一级筛选：区域负责人
+          <select id="ownerFilter"></select>
+        </label>
+        <label>二级筛选：仓别
+          <select id="warehouseFilter"></select>
+        </label>
+        <label>关键词
+          <input id="keywordFilter" type="text" placeholder="项目号 / 备件 / 发货仓 / RMA单号">
+        </label>
+        <div class="action-row">
+          <button id="resetBtn" class="ghost" type="button">重置</button>
+          <button id="downloadBtn" class="primary" type="button">导出当前 CSV</button>
+        </div>
+        <div class="note" id="sourceNote"></div>
+      </aside>
+
+      <main class="content">
+        <section id="metrics" class="metrics"></section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>项目号卡片</h2>
+            <p id="resultSummary"></p>
+          </div>
+          <div id="projectGrid" class="project-grid"></div>
+          <div id="emptyState" class="empty">当前筛选条件下没有匹配结果。</div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>聚合明细</h2>
+            <p>每一行对应“负责人 + 仓别 + 发货仓 + 项目号 + 备件”的聚合结果。</p>
+          </div>
+          <div class="table-wrap">
+            <table class="detail-table">
+              <thead>
+                <tr>
+                  <th>区域负责人</th>
+                  <th>仓别</th>
+                  <th>发货仓</th>
+                  <th>项目号</th>
+                  <th>备件名称</th>
+                  <th>发送数量</th>
+                  <th>RMA单数</th>
+                  <th>SN数</th>
+                  <th>最近RMA时间</th>
+                  <th>关联RMA</th>
+                </tr>
+              </thead>
+              <tbody id="detailBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

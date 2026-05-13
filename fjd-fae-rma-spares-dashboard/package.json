@@ -1,0 +1,10 @@
+{
+  "name": "fjd-fae-rma-spares-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node -e \"console.log('Static interactive dashboard is ready')\"",
+    "serve": "node -e \"import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path'; const root=process.cwd(); const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml; charset=utf-8'}; http.createServer((req,res)=>{ const clean=(req.url==='/'?'/index.html':req.url.split('?')[0]); const file=path.join(root,clean); if(!file.startsWith(root)){ res.statusCode=403; return res.end('forbidden'); } fs.readFile(file,(err,data)=>{ if(err){ res.statusCode=404; return res.end('not found'); } res.setHeader('Content-Type', mime[path.extname(file)]||'application/octet-stream'); res.end(data); }); }).listen(4173,()=>console.log('http://localhost:4173'));\""
+  }
+}
