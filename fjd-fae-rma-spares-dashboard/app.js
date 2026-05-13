@@ -66,7 +66,9 @@ function filterProjectCards() {
 function filterDetailRows(cards) {
   const keys = new Set(
     cards.flatMap((card) =>
-      card.items.map((item) => [item.owner, item.warehouseGroup, item.warehouseName, item.projectCode, item.partName].join('|'))
+      card.items.map((item) =>
+        [item.owner, item.warehouseGroup, item.warehouseName, item.projectCode, item.partName].join('|')
+      )
     )
   );
 
@@ -85,7 +87,9 @@ function renderHero() {
   ].map((text) => `<span class="chip">${text}</span>`).join('');
 
   els.sourceNote.textContent =
-    `当前有 ${source.unmatchedWarehouseRowCount} 行未在 header 文件中匹配到发货仓，页面中已保留为“未匹配仓库”。`;
+    source.unmatchedWarehouseRowCount > 0
+      ? `当前仍有 ${source.unmatchedWarehouseRowCount} 行未在原始 header 数据中匹配到发货仓，页面不会再做推断，只保留为“未匹配（原始数据未写明发货仓）”。`
+      : '当前所有看板明细均已按原始 Odoo / header 数据写明具体发货仓，页面不包含任何推断仓库。';
 }
 
 function renderMetrics(cards, rows) {
@@ -168,7 +172,8 @@ function renderDetailTable(rows) {
 function renderSummary(cards, rows) {
   const projectCount = new Set(cards.map((card) => card.projectCode)).size;
   const totalQty = rows.reduce((sum, row) => sum + Number(row.qty), 0);
-  els.resultSummary.textContent = `当前筛选命中 ${projectCount} 个项目号，${rows.length} 行聚合明细，发送备件总数量 ${qtyText(totalQty)}。`;
+  els.resultSummary.textContent =
+    `当前筛选命中 ${projectCount} 个项目号，${rows.length} 行聚合明细，发送备件总数量 ${qtyText(totalQty)}。`;
 }
 
 function downloadCsv(rows) {
@@ -212,8 +217,12 @@ function refresh() {
 }
 
 async function boot() {
-  const response = await fetch('./data/dashboard-data.json');
-  state.data = await response.json();
+  if (window.__dashboardData) {
+    state.data = window.__dashboardData;
+  } else {
+    const response = await fetch('./data/dashboard-data.json');
+    state.data = await response.json();
+  }
 
   fillSelect(els.ownerFilter, state.data.filters.owners);
   fillSelect(els.warehouseFilter, state.data.filters.warehouseGroups);

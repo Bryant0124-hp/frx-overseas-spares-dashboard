@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-13 20:07:11",
+  "generatedAt": "2026-05-13 23:08:31",
   "source": {
     "workbookPath": "C:\\Users\\haocheng.peng\\Documents\\Playground\\odoo-rma-export\\output\\rma_project_serial_export\\rma_product_serial_table_with_reason.xlsx",
     "headersPath": "C:\\Users\\haocheng.peng\\Documents\\Playground\\odoo-rma-export\\output\\_tmp_multi_owner_raw\\combined_rma_headers.csv",
     "rawRowCount": 840,
-    "projectCardCount": 53,
-    "detailRowCount": 507,
-    "unmatchedWarehouseRowCount": 40
+    "projectCardCount": 43,
+    "detailRowCount": 493,
+    "unmatchedWarehouseRowCount": 0
   },
   "filters": {
     "owners": [
@@ -61,9 +61,9 @@
       "owner": "Haochen.Peng亚太",
       "warehouseGroup": "国内仓",
       "projectCode": "R2119",
-      "totalQty": 92.0,
-      "partCount": 30,
-      "rmaCount": 54,
+      "totalQty": 125.0,
+      "partCount": 32,
+      "rmaCount": 60,
       "warehouses": [
         "Fuzhou",
         "Shenzhen"
@@ -173,6 +173,26 @@
           ],
           "reasons": [
             "客户的FR4000受潮导致充电桩插头无法使用，已与客户远程确认，因受潮导致。现为客户发送充电桩插头。"
+          ]
+        },
+        {
+          "owner": "Haochen.Peng亚太",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2119",
+          "partName": "充电桩头",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-31 02:46:16",
+          "rmaNames": [
+            "RM260331002"
+          ],
+          "serials": [
+            "FJDFL300025C0051FY"
+          ],
+          "reasons": [
+            "客户FL3000充电桩指示灯亮红无法充电。为客户重新发送充电桩头。"
           ]
         },
         {
@@ -363,17 +383,20 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2119",
           "partName": "割草机90MM左前轮组件",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2025-11-10 03:02:51",
+          "qty": 2.0,
+          "rmaCount": 2,
+          "serialCount": 2,
+          "latestDate": "2026-03-24 00:00:54",
           "rmaNames": [
-            "RM251110002"
+            "RM251110002",
+            "RM260324002"
           ],
           "serials": [
-            "FJDFR40002470185FY"
+            "FJDFR40002470185FY",
+            "FJDFR40002520026FY"
           ],
           "reasons": [
+            "客户FR4000前轮出现松动，轴承与底壳之间左右晃动，并有很大间隙。前轮位置距离充电桩电机低约5毫米，导致充电针无法插入。必须手动将其推入才能充电。现为客户发送最新前轮",
             "客户反馈运输时充电桩顶棚受损，且前轮脱落。现为客户更换前轮及充电桩顶棚。"
           ]
         },
@@ -467,7 +490,7 @@
             "FJDFV200024B0030FY"
           ],
           "reasons": [
-            "发给顾客的小割螺丝长短不一样，\n顾客在安装长螺栓时刀片对比其他短螺栓的安装不牢固 所以选择拧紧，导致滑丝。",
+            "发给顾客的小割螺丝长短不一样， 顾客在安装长螺栓时刀片对比其他短螺栓的安装不牢固 所以选择拧紧，导致滑丝。",
             "因客户产品机型过旧。现给客户更换最新的金属法兰 刀盘以及耐久刀片",
             "客户割刀刀盘出现裂痕，轮胎同时也出现裂痕。为客户更换刀盘以及轮胎。",
             "客户蘑菇头无法使用且刀盘损坏。为客户更换蘑菇头以及刀盘",
@@ -532,6 +555,32 @@
           "warehouseGroup": "国内仓",
           "warehouseName": "Shenzhen",
           "projectCode": "R2119",
+          "partName": "小割维护底盘总成",
+          "qty": 30.0,
+          "rmaCount": 3,
+          "serialCount": 3,
+          "latestDate": "2026-03-30 09:35:14",
+          "rmaNames": [
+            "RM260330003",
+            "RM260330005",
+            "RM260330008"
+          ],
+          "serials": [
+            "FJDFR400025B0701FY",
+            "FJDFR400025B0704FY",
+            "FJDFR400025B0707FY"
+          ],
+          "reasons": [
+            "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接口 部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆维 修",
+            "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接向 部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维 修",
+            "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘知 部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维 修"
+          ]
+        },
+        {
+          "owner": "Haochen.Peng亚太",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2119",
           "partName": "小型割草机控制模块",
           "qty": 1.0,
           "rmaCount": 1,
@@ -553,19 +602,22 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2119",
           "partName": "控制板",
-          "qty": 2.0,
-          "rmaCount": 2,
-          "serialCount": 2,
-          "latestDate": "2025-11-13 03:58:53",
+          "qty": 3.0,
+          "rmaCount": 3,
+          "serialCount": 3,
+          "latestDate": "2026-03-22 16:07:43",
           "rmaNames": [
             "RM251029001",
-            "RM251113003"
+            "RM251113003",
+            "RM260323001"
           ],
           "serials": [
             "FJDFR40002470158FY",
-            "FJDFR400024C0326FY"
+            "FJDFR400024C0326FY",
+            "FJDFR40002540178FY"
           ],
           "reasons": [
+            "客户FJDFR40002540178FY，VCU板子坏了通信不良。前FAE Carter并未及时为客户发送备件，特此为客户发送VCU板卡进行更换。",
             "客户数控板常亮，但是蘑菇头灯不亮。经与研发排查，需要为客户更换VCU板卡。",
             "客户车机为24年老版本车机，VCU驱动板和功率板出现问题，导致客户行走电机，割刀电机，电池故障均出现报错。现为客户更换VCU驱动板和功率板。"
           ]
@@ -749,48 +801,29 @@
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
+      "warehouseGroup": "海外仓",
       "projectCode": "R2119",
-      "totalQty": 35.0,
-      "partCount": 5,
-      "rmaCount": 8,
+      "totalQty": 145.0,
+      "partCount": 3,
+      "rmaCount": 18,
       "warehouses": [
-        "未匹配"
+        "Frankfurt",
+        "Japan",
+        "Sydney Warehouse"
       ],
       "items": [
         {
           "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Sydney Warehouse",
           "projectCode": "R2119",
-          "partName": "充电桩头",
+          "partName": "割草机90MM左前轮组件",
           "qty": 1.0,
           "rmaCount": 1,
           "serialCount": 1,
-          "latestDate": "2026-03-31 02:46:16",
+          "latestDate": "2026-03-23 23:41:43",
           "rmaNames": [
-            "RM260331002"
-          ],
-          "serials": [
-            "FJDFL300025C0051FY"
-          ],
-          "reasons": [
-            "客户FL3000充电桩指示灯亮红无法充电。为客户重新发送充电桩头。"
-          ]
-        },
-        {
-          "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2119",
-          "partName": "割草机90MM左前轮组件",
-          "qty": 2.0,
-          "rmaCount": 2,
-          "serialCount": 1,
-          "latestDate": "2026-03-24 00:00:54",
-          "rmaNames": [
-            "RM260324001",
-            "RM260324002"
+            "RM260324001"
           ],
           "serials": [
             "FJDFR40002520026FY"
@@ -801,54 +834,8 @@
         },
         {
           "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2119",
-          "partName": "小割维护底盘总成",
-          "qty": 30.0,
-          "rmaCount": 3,
-          "serialCount": 3,
-          "latestDate": "2026-03-30 09:35:14",
-          "rmaNames": [
-            "RM260330003",
-            "RM260330005",
-            "RM260330008"
-          ],
-          "serials": [
-            "FJDFR400025B0701FY",
-            "FJDFR400025B0704FY",
-            "FJDFR400025B0707FY"
-          ],
-          "reasons": [
-            "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接口\n部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆维\n修",
-            "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接向\n部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维\n修",
-            "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘知\n部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维\n修"
-          ]
-        },
-        {
-          "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2119",
-          "partName": "控制板",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-22 16:07:43",
-          "rmaNames": [
-            "RM260323001"
-          ],
-          "serials": [
-            "FJDFR40002540178FY"
-          ],
-          "reasons": [
-            "客户FJDFR40002540178FY，VCU板子坏了通信不良。前FAE Carter并未及时为客户发送备件，特此为客户发送VCU板卡进行更换。"
-          ]
-        },
-        {
-          "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Frankfurt",
           "projectCode": "R2119",
           "partName": "智能割草机器人",
           "qty": 1.0,
@@ -864,20 +851,7 @@
           "reasons": [
             "客户FR4000摄像头模组出现问题，避障失败，其次版本为老结构，硬件出现故障。特此为客户发送一台最新版FR4000"
           ]
-        }
-      ]
-    },
-    {
-      "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "海外仓",
-      "projectCode": "R2119",
-      "totalQty": 143.0,
-      "partCount": 1,
-      "rmaCount": 16,
-      "warehouses": [
-        "Japan"
-      ],
-      "items": [
+        },
         {
           "owner": "Haochen.Peng亚太",
           "warehouseGroup": "海外仓",
@@ -944,11 +918,11 @@
             "FR4000生产日期为24年6月顾客开箱使用后VCU板异常，整车电机报错，相同生产批次两台退回重发。本次是由丰疆国际的订单退货由FE走退换新机流程。",
             "刀盘转接件塑料热熔化，割刀电机无法使用",
             "无法正常充电，",
-            "日本SEKIDO小割FR4000三台小割硬件均出现问题。同产品组与销售沟通，为客户走整机换件申请。\n3/17  FJDFR400024C0283FY 板子故障(无法解除Stop状态)\n5/8  FJDFR400024C0276FY 充电异常\n6/2  FJDFR40002470191FY 行走电机异常(轮轴磨损严重，电机保护塑料盖板有融化痕迹)",
+            "日本SEKIDO小割FR4000三台小割硬件均出现问题。同产品组与销售沟通，为客户走整机换件申请。 3/17 FJDFR400024C0283FY 板子故障(无法解除Stop状态) 5/8 FJDFR400024C0276FY 充电异常 6/2 FJDFR40002470191FY 行走电机异常(轮轴磨损严重，电机保护塑料盖板有融化痕迹)",
             "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机",
             "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。",
-            "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。\n坏件处置建议",
-            "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。\n坏件处置建议\n发回日本仓，九月由FAE前去维修。\n坏件现状\n无法使用结构问题。"
+            "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。 坏件处置建议",
+            "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。 坏件处置建议 发回日本仓，九月由FAE前去维修。 坏件现状 无法使用结构问题。"
           ]
         }
       ]
@@ -1189,7 +1163,7 @@
             "FJLQ10322621946ZC"
           ],
           "reasons": [
-            "客户4台大割+捡球机的前轮爆胎及捡球机前轮破损,需要更换。由于螺母没有上架料\n号,因此需要工厂一同寄送料号为S020161200004的6个螺母,和料号为\n280132562Y0030A的12块垫片",
+            "客户4台大割+捡球机的前轮爆胎及捡球机前轮破损,需要更换。由于螺母没有上架料 号,因此需要工厂一同寄送料号为S020161200004的6个螺母,和料号为 280132562Y0030A的12块垫片",
             "客户两个前轮存在不同程度的漏气，需要更换2个前轮"
           ]
         },
@@ -1232,7 +1206,7 @@
           ],
           "reasons": [
             "客户八月份到货大割，充电器发生异常，无法正常重点并冒烟，有难闻气味。经FAE远程排查，为客户走换件流程，后续旧设备由杨阳出差时从客户处带回分析。",
-            "远程排查视频：https://fjdynamics.feishu.cn/minutes/obcnrzi1nolv44i2uax4w729?from=from_copylink\n充电器使用一个多月发生异常，无法正常供电。\n与陈登慧、魏志伟共同确认车机本体电池无异常(代理用自己的充电器可以正常供电)。\n由于终端客户现场没有万用表，充电器具体异常原因需代理带回公司后进一步拆机分析或寄回我司与生产厂家共同分析。\n已验证确认异常充电器的现象：\n1.没有输出电流\n2.充电器与电池协议能正常握手\n3.充电器接入时，电池指示灯能正常显示充电状态代表协议握手成功\n4.充电器在充电时风扇不转，CAN线等线束均已经检查没有松动"
+            "远程排查视频：https://fjdynamics.feishu.cn/minutes/obcnrzi1nolv44i2uax4w729?from=from_copylink 充电器使用一个多月发生异常，无法正常供电。 与陈登慧、魏志伟共同确认车机本体电池无异常(代理用自己的充电器可以正常供电)。 由于终端客户现场没有万用表，充电器具体异常原因需代理带回公司后进一步拆机分析或寄回我司与生产厂家共同分析。 已验证确认异常充电器的现象： 1.没有输出电流 2.充电器与电池协议能正常握手 3.充电器接入时，电池指示灯能正常显示充电状态代表协议握手成功 4.充电器在充电时风扇不转，CAN线等线束均已经检查没有松动"
           ]
         },
         {
@@ -1382,7 +1356,7 @@
             "FJLQ10322621946ZC"
           ],
           "reasons": [
-            "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。\n球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
+            "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。 球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
           ]
         },
         {
@@ -1469,7 +1443,7 @@
             "FJLQ10322621944ZC"
           ],
           "reasons": [
-            "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。\n球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
+            "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。 球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
           ]
         },
         {
@@ -1672,9 +1646,9 @@
       "owner": "Haochen.Peng亚太",
       "warehouseGroup": "国内仓",
       "projectCode": "R2502",
-      "totalQty": 14.0,
-      "partCount": 5,
-      "rmaCount": 7,
+      "totalQty": 20.0,
+      "partCount": 7,
+      "rmaCount": 9,
       "warehouses": [
         "Shenzhen"
       ],
@@ -1724,6 +1698,26 @@
           "warehouseGroup": "国内仓",
           "warehouseName": "Shenzhen",
           "projectCode": "R2502",
+          "partName": "割刀电机",
+          "qty": 2.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-28 09:58:10",
+          "rmaNames": [
+            "RM260328004"
+          ],
+          "serials": [
+            "FJDFRXC0025A0069FY"
+          ],
+          "reasons": [
+            "客户FRX割刀部分出现异响，割刀无法正常运转。现为客户发送割刀电机"
+          ]
+        },
+        {
+          "owner": "Haochen.Peng亚太",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2502",
           "partName": "星型刀片配件",
           "qty": 6.0,
           "rmaCount": 3,
@@ -1743,6 +1737,26 @@
             "客户车为旧版车机，刀片以及护手板均出现不同程度损坏及磨损。现为客户发送最新版护手板，星型刀片以及金属法兰",
             "非售后原因，因机器是早期发货机器，配件不全，经项目组姚政和销售协商后同意给客户补发，销售目前在现场协助市场组拍摄P2与果园相关事项，由AE协助发货",
             "非售后原因，因机器是早期发货机器，配件不全，经项目组姚政和销售协商后同意给客户补发，销售目前在现场协助市场组拍摄P2与果园相关事项，由AE协助发货."
+          ]
+        },
+        {
+          "owner": "Haochen.Peng亚太",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2502",
+          "partName": "星形刀片",
+          "qty": 4.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-25 13:12:12",
+          "rmaNames": [
+            "RM260325009"
+          ],
+          "serials": [
+            "FJDFRXC0025C0134FY"
+          ],
+          "reasons": [
+            "瑞典客户RoboService在测试FRX过程中用圆型刀片效果不佳，多次出现堵转情况，现为客户发送星型刀片以供测试，看能否效果得到改善。"
           ]
         },
         {
@@ -1783,59 +1797,6 @@
           ],
           "reasons": [
             "客户FRX安装新部件后仍出现问题，与研发讨论后需要给客户发送VCU驱动板，割刀驱动板。"
-          ]
-        }
-      ]
-    },
-    {
-      "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2502",
-      "totalQty": 6.0,
-      "partCount": 2,
-      "rmaCount": 2,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2502",
-          "partName": "割刀电机",
-          "qty": 2.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-28 09:58:10",
-          "rmaNames": [
-            "RM260328004"
-          ],
-          "serials": [
-            "FJDFRXC0025A0069FY"
-          ],
-          "reasons": [
-            "客户FRX割刀部分出现异响，割刀无法正常运转。现为客户发送割刀电机"
-          ]
-        },
-        {
-          "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2502",
-          "partName": "星形刀片",
-          "qty": 4.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-25 13:12:12",
-          "rmaNames": [
-            "RM260325009"
-          ],
-          "serials": [
-            "FJDFRXC0025C0134FY"
-          ],
-          "reasons": [
-            "瑞典客户RoboService在测试FRX过程中用圆型刀片效果不佳，多次出现堵转情况，现为客户发送星型刀片以供测试，看能否效果得到改善。"
           ]
         }
       ]
@@ -1889,7 +1850,7 @@
             "FJDRLM012510004FY"
           ],
           "reasons": [
-            "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下\n地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT\n香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室\n收件人：Wendy\n电话：+852 9814 0563"
+            "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下 地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT 香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室 收件人：Wendy 电话：+852 9814 0563"
           ]
         },
         {
@@ -1952,7 +1913,7 @@
             "FJDRLM012510004FY"
           ],
           "reasons": [
-            "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下\n地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT\n香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室\n收件人：Wendy\n电话：+852 9814 0563"
+            "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下 地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT 香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室 收件人：Wendy 电话：+852 9814 0563"
           ]
         },
         {
@@ -2084,46 +2045,14 @@
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2503",
-      "totalQty": 1.0,
-      "partCount": 1,
-      "rmaCount": 1,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Haochen.Peng亚太",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "硬平膜压力变送器",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-23 06:01:22",
-          "rmaNames": [
-            "RM260323006"
-          ],
-          "serials": [
-            "FJDRLM0225A0241FY"
-          ],
-          "reasons": [
-            "澳洲客户Malcolm Oosterbeek的RLM02发现无缺漆提醒，经过@Jingtian.Chen开会排查确认，客户压力传感器有问题，给客户补发一个"
-          ]
-        }
-      ]
-    },
-    {
-      "owner": "Haochen.Peng亚太",
       "warehouseGroup": "海外仓",
       "projectCode": "R2503",
-      "totalQty": 3.0,
-      "partCount": 3,
-      "rmaCount": 3,
+      "totalQty": 4.0,
+      "partCount": 4,
+      "rmaCount": 4,
       "warehouses": [
-        "Japan"
+        "Japan",
+        "Sydney Warehouse"
       ],
       "items": [
         {
@@ -2184,6 +2113,26 @@
           ],
           "reasons": [
             "RLM01顾客开箱后使用一个月作业转场途中机器突然死机，无法上电，远程排查后DCDC电压转换器短路无法使用。"
+          ]
+        },
+        {
+          "owner": "Haochen.Peng亚太",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Sydney Warehouse",
+          "projectCode": "R2503",
+          "partName": "硬平膜压力变送器",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-23 06:01:22",
+          "rmaNames": [
+            "RM260323006"
+          ],
+          "serials": [
+            "FJDRLM0225A0241FY"
+          ],
+          "reasons": [
+            "澳洲客户Malcolm Oosterbeek的RLM02发现无缺漆提醒，经过@Jingtian.Chen开会排查确认，客户压力传感器有问题，给客户补发一个"
           ]
         }
       ]
@@ -2300,9 +2249,9 @@
       "owner": "Jackson.Lv澳新",
       "warehouseGroup": "国内仓",
       "projectCode": "R2119",
-      "totalQty": 545.0,
+      "totalQty": 548.0,
       "partCount": 43,
-      "rmaCount": 41,
+      "rmaCount": 42,
       "warehouses": [
         "Fuzhou",
         "Shenzhen"
@@ -2356,7 +2305,7 @@
             "FJDFR40002580584FY"
           ],
           "reasons": [
-            "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮，            和高工一起排查之后发现是充电桩里的板子损坏。"
+            "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮， 和高工一起排查之后发现是充电桩里的板子损坏。"
           ]
         },
         {
@@ -2469,7 +2418,7 @@
             "FJDFR40002580584FY"
           ],
           "reasons": [
-            "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮，            和高工一起排查之后发现是充电桩里的板子损坏。"
+            "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮， 和高工一起排查之后发现是充电桩里的板子损坏。"
           ]
         },
         {
@@ -2512,7 +2461,7 @@
           ],
           "reasons": [
             "客户的充电桩适配器损坏",
-            "法国客户的充电桩适配器 和  AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
+            "法国客户的充电桩适配器 和 AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
           ]
         },
         {
@@ -2550,7 +2499,7 @@
             "给客户配备金属法兰",
             "给新西兰客户寄的一些刀盘和刀片",
             "销售通知想让客户割盘更加贴近地面，需要寄送一个刀盘转接件以及内六角圆柱头螺钉，由于法兰克福仓库没有库存，只能从国内发货。",
-            "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+            "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
           ]
         },
         {
@@ -2570,7 +2519,7 @@
             "FJDFR400024C0324FY"
           ],
           "reasons": [
-            "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+            "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
           ]
         },
         {
@@ -2637,7 +2586,7 @@
             "FJDFR40002560474FY"
           ],
           "reasons": [
-            "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘，  刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
+            "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘， 刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
             "客户的刀片损坏，需要寄送新型的加厚刀片，法兰克福仓没有货，只能从国内发"
           ]
         },
@@ -2672,25 +2621,28 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2119",
           "partName": "割台t升降丝母组件总成",
-          "qty": 52.0,
-          "rmaCount": 4,
-          "serialCount": 5,
-          "latestDate": "2025-10-09 03:13:15",
+          "qty": 54.0,
+          "rmaCount": 5,
+          "serialCount": 6,
+          "latestDate": "2026-03-26 14:38:21",
           "rmaNames": [
             "RM250711010",
             "RM250909004",
             "RM250911014",
-            "RM251009008"
+            "RM251009008",
+            "RM260326017"
           ],
           "serials": [
             "FJDFR40002450051FY",
             "FJDFR40002460130FY",
+            "FJDFR40002470254FY",
             "FJDFR40002550308FY",
             "FJDFV20002510004FY",
             "FJDFV20002510007FY"
           ],
           "reasons": [
             "客户备件损坏",
+            "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。",
             "小割刀盘升降有噪音，硬件已更新，给客户发送新硬件解决噪音问题。",
             "给客户配备金属法兰",
             "销售联系需要给客户发货"
@@ -2774,21 +2726,24 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2119",
           "partName": "割草电机仓防尘罩",
-          "qty": 2.0,
-          "rmaCount": 2,
-          "serialCount": 2,
-          "latestDate": "2025-11-05 06:50:01",
+          "qty": 3.0,
+          "rmaCount": 3,
+          "serialCount": 3,
+          "latestDate": "2026-03-26 14:38:21",
           "rmaNames": [
             "RM251020008",
-            "RM251105007"
+            "RM251105007",
+            "RM260326017"
           ],
           "serials": [
+            "FJDFR40002470254FY",
             "FJDFR400024C0324FY",
             "FJDFR40002510011FY"
           ],
           "reasons": [
             "客户的防尘罩在清洗过程中发现破损",
-            "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+            "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。",
+            "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
           ]
         },
         {
@@ -2808,7 +2763,7 @@
             "FJDFR400024C0324FY"
           ],
           "reasons": [
-            "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+            "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
           ]
         },
         {
@@ -2831,7 +2786,7 @@
           ],
           "reasons": [
             "给客户配备金属法兰",
-            "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+            "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
           ]
         },
         {
@@ -2919,12 +2874,12 @@
             "FJDFR40002560474FY"
           ],
           "reasons": [
-            "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘，  刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
+            "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘， 刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
             "客户的刀盘和刀片坏了，外加一个星型刀片给客户测试",
             "客户的刀盘掉落，需要发金属法兰，外加小割刀盘和 刀片以及配套的螺丝",
             "法国客户的刀片和蘑菇头损坏，",
             "给新西兰客户寄的一些刀盘和刀片",
-            "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+            "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
           ]
         },
         {
@@ -2944,7 +2899,7 @@
             "FJDFR400024C0324FY"
           ],
           "reasons": [
-            "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+            "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
           ]
         },
         {
@@ -2966,7 +2921,7 @@
             "FJDFR40002560474FY"
           ],
           "reasons": [
-            "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘，  刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
+            "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘， 刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
             "客户的刀片损坏，需要寄送新型的加厚刀片，法兰克福仓没有货，只能从国内发"
           ]
         },
@@ -3139,7 +3094,7 @@
             "FJDFR40002450089FY"
           ],
           "reasons": [
-            "法国客户的充电桩适配器 和  AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
+            "法国客户的充电桩适配器 和 AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
           ]
         },
         {
@@ -3207,7 +3162,7 @@
           ],
           "reasons": [
             "客户的FR4000后轮和行走电机损坏",
-            "法国客户的充电桩适配器 和  AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。",
+            "法国客户的充电桩适配器 和 AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。",
             "西班牙客户机器滑鞘了，需要寄送一个后轮，一个电机，两个 隔套"
           ]
         },
@@ -3306,7 +3261,7 @@
             "FJDFR40002580584FY"
           ],
           "reasons": [
-            "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮，            和高工一起排查之后发现是充电桩里的板子损坏。"
+            "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮， 和高工一起排查之后发现是充电桩里的板子损坏。"
           ]
         },
         {
@@ -3336,104 +3291,11 @@
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2119",
-      "totalQty": 5.0,
-      "partCount": 4,
-      "rmaCount": 2,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2119",
-          "partName": "割台t升降丝母组件总成",
-          "qty": 2.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 14:38:21",
-          "rmaNames": [
-            "RM260326017"
-          ],
-          "serials": [
-            "FJDFR40002470254FY"
-          ],
-          "reasons": [
-            "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。"
-          ]
-        },
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2119",
-          "partName": "割草机90MM右前轮组件",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 09:01:05",
-          "rmaNames": [
-            "RM260326014"
-          ],
-          "serials": [
-            "FJDFR40002450089FY"
-          ],
-          "reasons": [
-            "客户的两个FR4000前轮损坏，需要寄送新的。"
-          ]
-        },
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2119",
-          "partName": "割草机90MM左前轮组件",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 09:01:05",
-          "rmaNames": [
-            "RM260326014"
-          ],
-          "serials": [
-            "FJDFR40002450089FY"
-          ],
-          "reasons": [
-            "客户的两个FR4000前轮损坏，需要寄送新的。"
-          ]
-        },
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2119",
-          "partName": "割草电机仓防尘罩",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 14:38:21",
-          "rmaNames": [
-            "RM260326017"
-          ],
-          "serials": [
-            "FJDFR40002470254FY"
-          ],
-          "reasons": [
-            "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。"
-          ]
-        }
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
       "warehouseGroup": "海外仓",
       "projectCode": "R2119",
-      "totalQty": 10.0,
-      "partCount": 7,
-      "rmaCount": 5,
+      "totalQty": 12.0,
+      "partCount": 9,
+      "rmaCount": 6,
       "warehouses": [
         "Frankfurt"
       ],
@@ -3476,6 +3338,46 @@
           ],
           "reasons": [
             "客户的RTK基站转接线，供电线，适配器损坏，需要给客户寄送新的。"
+          ]
+        },
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Frankfurt",
+          "projectCode": "R2119",
+          "partName": "割草机90MM右前轮组件",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-26 09:01:05",
+          "rmaNames": [
+            "RM260326014"
+          ],
+          "serials": [
+            "FJDFR40002450089FY"
+          ],
+          "reasons": [
+            "客户的两个FR4000前轮损坏，需要寄送新的。"
+          ]
+        },
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Frankfurt",
+          "projectCode": "R2119",
+          "partName": "割草机90MM左前轮组件",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-26 09:01:05",
+          "rmaNames": [
+            "RM260326014"
+          ],
+          "serials": [
+            "FJDFR40002450089FY"
+          ],
+          "reasons": [
+            "客户的两个FR4000前轮损坏，需要寄送新的。"
           ]
         },
         {
@@ -3590,9 +3492,9 @@
       "owner": "Jackson.Lv澳新",
       "warehouseGroup": "国内仓",
       "projectCode": "R2304",
-      "totalQty": 35.0,
-      "partCount": 24,
-      "rmaCount": 23,
+      "totalQty": 36.0,
+      "partCount": 25,
+      "rmaCount": 24,
       "warehouses": [
         "Fuzhou",
         "Shenzhen"
@@ -3719,6 +3621,26 @@
           ],
           "reasons": [
             "因客户将二代RM21机器借给销售Mason进行demo使用，经mason和项目组讨论，走RMA将二代车升级成三代车。"
+          ]
+        },
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2304",
+          "partName": "割草电机",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-23 06:41:58",
+          "rmaNames": [
+            "RM260323008"
+          ],
+          "serials": [
+            "FJLQ10322621921ZC"
+          ],
+          "reasons": [
+            "澳洲客户Brandon Vickers的Z42P大割割草电机出现堵塞错误，拉通@Alluka.Liu @Allen.Yu确认，客户割草电机故障，为其补发一个割草电机"
           ]
         },
         {
@@ -4096,67 +4018,15 @@
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2304",
-      "totalQty": 2.0,
-      "partCount": 2,
-      "rmaCount": 2,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "割草电机",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-23 06:41:58",
-          "rmaNames": [
-            "RM260323008"
-          ],
-          "serials": [
-            "FJLQ10322621921ZC"
-          ],
-          "reasons": [
-            "澳洲客户Brandon Vickers的Z42P大割割草电机出现堵塞错误，拉通@Alluka.Liu @Allen.Yu确认，客户割草电机故障，为其补发一个割草电机"
-          ]
-        },
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "隔膜泵",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-04-01 03:56:50",
-          "rmaNames": [
-            "RM260401005"
-          ],
-          "serials": [
-            "FJLQ10324C02461ZC"
-          ],
-          "reasons": [
-            "澳洲客户 Dirk Streefkerk 反馈，其 RM21 划线套件中的泵无法正常喷涂。经 Jackson 核实确认，将为客户重新补发一套泵；客户故障泵将寄回，以便后续分析故障原因。"
-          ]
-        }
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
       "warehouseGroup": "海外仓",
       "projectCode": "R2304",
-      "totalQty": 13.0,
-      "partCount": 11,
-      "rmaCount": 12,
+      "totalQty": 14.0,
+      "partCount": 12,
+      "rmaCount": 13,
       "warehouses": [
         "Frankfurt",
-        "Sydney"
+        "Sydney",
+        "Sydney Warehouse"
       ],
       "items": [
         {
@@ -4381,6 +4251,26 @@
           "reasons": [
             "客户充电桩的充电器损坏，导致RM21充电出现问题，更换新的充电器。"
           ]
+        },
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Sydney Warehouse",
+          "projectCode": "R2304",
+          "partName": "隔膜泵",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-04-01 03:56:50",
+          "rmaNames": [
+            "RM260401005"
+          ],
+          "serials": [
+            "FJLQ10324C02461ZC"
+          ],
+          "reasons": [
+            "澳洲客户 Dirk Streefkerk 反馈，其 RM21 划线套件中的泵无法正常喷涂。经 Jackson 核实确认，将为客户重新补发一套泵；客户故障泵将寄回，以便后续分析故障原因。"
+          ]
         }
       ]
     },
@@ -4456,9 +4346,9 @@
       "owner": "Jackson.Lv澳新",
       "warehouseGroup": "国内仓",
       "projectCode": "R2502",
-      "totalQty": 29.0,
-      "partCount": 12,
-      "rmaCount": 7,
+      "totalQty": 31.0,
+      "partCount": 14,
+      "rmaCount": 8,
       "warehouses": [
         "Fuzhou",
         "Shenzhen"
@@ -4501,7 +4391,7 @@
             "FJDFRX0002550004FY"
           ],
           "reasons": [
-            "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄   充电桩， 充电桩电源线  ，适配器， 充电桩海外没有库存，所以从国内发"
+            "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄 充电桩， 充电桩电源线 ，适配器， 充电桩海外没有库存，所以从国内发"
           ]
         },
         {
@@ -4521,7 +4411,7 @@
             "FJDFRX0002550004FY"
           ],
           "reasons": [
-            "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄   充电桩， 充电桩电源线  ，适配器， 充电桩海外没有库存，所以从国内发"
+            "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄 充电桩， 充电桩电源线 ，适配器， 充电桩海外没有库存，所以从国内发"
           ]
         },
         {
@@ -4583,7 +4473,7 @@
             "FJDFRX0002550004FY"
           ],
           "reasons": [
-            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
+            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
           ]
         },
         {
@@ -4611,6 +4501,26 @@
           "warehouseGroup": "国内仓",
           "warehouseName": "Shenzhen",
           "projectCode": "R2502",
+          "partName": "步进电机",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-26 08:03:23",
+          "rmaNames": [
+            "RM260326003"
+          ],
+          "serials": [
+            "FJDFRX0002570023FY"
+          ],
+          "reasons": [
+            "韩国客户反馈FRX升降电机有时候无法上升，和电气高工确认是驱动器和电机通讯问题，需要寄送新的升降电机给客户，为了防止驱动器也有问题，给客户寄驱动器备用，韩国客户从国内发货。"
+          ]
+        },
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2502",
           "partName": "电机控制板",
           "qty": 1.0,
           "rmaCount": 1,
@@ -4623,7 +4533,27 @@
             "FJDFRX0002550004FY"
           ],
           "reasons": [
-            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
+            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
+          ]
+        },
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2502",
+          "partName": "电机驱动器",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-26 08:03:23",
+          "rmaNames": [
+            "RM260326003"
+          ],
+          "serials": [
+            "FJDFRX0002570023FY"
+          ],
+          "reasons": [
+            "韩国客户反馈FRX升降电机有时候无法上升，和电气高工确认是驱动器和电机通讯问题，需要寄送新的升降电机给客户，为了防止驱动器也有问题，给客户寄驱动器备用，韩国客户从国内发货。"
           ]
         },
         {
@@ -4643,7 +4573,7 @@
             "FJDFRX0002550004FY"
           ],
           "reasons": [
-            "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄   充电桩， 充电桩电源线  ，适配器， 充电桩海外没有库存，所以从国内发"
+            "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄 充电桩， 充电桩电源线 ，适配器， 充电桩海外没有库存，所以从国内发"
           ]
         },
         {
@@ -4685,7 +4615,7 @@
             "FJDFRX0002570023FY"
           ],
           "reasons": [
-            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。",
+            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。",
             "韩国客户反馈FRX原本电量70% 充电一晚上结果变0%，在姚工的建议下给客户发送一个ATN的充电适配器"
           ]
         },
@@ -4706,60 +4636,7 @@
             "FJDFRX0002550004FY"
           ],
           "reasons": [
-            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
-          ]
-        }
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2502",
-      "totalQty": 2.0,
-      "partCount": 2,
-      "rmaCount": 1,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2502",
-          "partName": "步进电机",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 08:03:23",
-          "rmaNames": [
-            "RM260326003"
-          ],
-          "serials": [
-            "FJDFRX0002570023FY"
-          ],
-          "reasons": [
-            "韩国客户反馈FRX升降电机有时候无法上升，和电气高工确认是驱动器和电机通讯问题，需要寄送新的升降电机给客户，为了防止驱动器也有问题，给客户寄驱动器备用，韩国客户从国内发货。"
-          ]
-        },
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2502",
-          "partName": "电机驱动器",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 08:03:23",
-          "rmaNames": [
-            "RM260326003"
-          ],
-          "serials": [
-            "FJDFRX0002570023FY"
-          ],
-          "reasons": [
-            "韩国客户反馈FRX升降电机有时候无法上升，和电气高工确认是驱动器和电机通讯问题，需要寄送新的升降电机给客户，为了防止驱动器也有问题，给客户寄驱动器备用，韩国客户从国内发货。"
+            "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
           ]
         }
       ]
@@ -4768,9 +4645,9 @@
       "owner": "Jackson.Lv澳新",
       "warehouseGroup": "国内仓",
       "projectCode": "R2503",
-      "totalQty": 6.0,
-      "partCount": 6,
-      "rmaCount": 6,
+      "totalQty": 7.0,
+      "partCount": 7,
+      "rmaCount": 7,
       "warehouses": [
         "Fuzhou",
         "Shenzhen"
@@ -4895,64 +4772,11 @@
           "reasons": [
             "客户反馈RLM01无法正常回流，需要使用吸枪来增加负压才能进行回流。与硬件组谢剑林一起协助客户排查，发现泵内部的鼓膜堵塞。又因为由于客户是前十台机器，没有发送过备用泵，所以补上。"
           ]
-        }
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2503",
-      "totalQty": 3.0,
-      "partCount": 3,
-      "rmaCount": 2,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "10寸平板",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-24 08:33:29",
-          "rmaNames": [
-            "RM260324008"
-          ],
-          "serials": [
-            "FJDRLM012580345FY"
-          ],
-          "reasons": [
-            "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个\n\n澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
-          ]
         },
         {
           "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "RTK基站",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-24 08:33:29",
-          "rmaNames": [
-            "RM260324008"
-          ],
-          "serials": [
-            "FJDRLM012580345FY"
-          ],
-          "reasons": [
-            "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个\n\n澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
-          ]
-        },
-        {
-          "owner": "Jackson.Lv澳新",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
           "projectCode": "R2503",
           "partName": "隔膜泵总成",
           "qty": 1.0,
@@ -4975,14 +4799,55 @@
       "owner": "Jackson.Lv澳新",
       "warehouseGroup": "海外仓",
       "projectCode": "R2503",
-      "totalQty": 2.0,
-      "partCount": 2,
-      "rmaCount": 2,
+      "totalQty": 4.0,
+      "partCount": 4,
+      "rmaCount": 3,
       "warehouses": [
         "Frankfurt",
-        "Sydney"
+        "Sydney",
+        "Sydney Warehouse"
       ],
       "items": [
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Sydney Warehouse",
+          "projectCode": "R2503",
+          "partName": "10寸平板",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-24 08:33:29",
+          "rmaNames": [
+            "RM260324008"
+          ],
+          "serials": [
+            "FJDRLM012580345FY"
+          ],
+          "reasons": [
+            "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个 澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
+          ]
+        },
+        {
+          "owner": "Jackson.Lv澳新",
+          "warehouseGroup": "海外仓",
+          "warehouseName": "Sydney Warehouse",
+          "projectCode": "R2503",
+          "partName": "RTK基站",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-24 08:33:29",
+          "rmaNames": [
+            "RM260324008"
+          ],
+          "serials": [
+            "FJDRLM012580345FY"
+          ],
+          "reasons": [
+            "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个 澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
+          ]
+        },
         {
           "owner": "Jackson.Lv澳新",
           "warehouseGroup": "海外仓",
@@ -5250,7 +5115,7 @@
             "FJDZ42P23200079FL"
           ],
           "reasons": [
-            "客户反馈大割(Z42P)的1904 SIM卡插入后，无法侦测。尝试加厚SIM厚度，依然无法读到SIM卡。和项管沟通后，给更换1904。\n发货前，请确认1904系统刷到大割最新版本。"
+            "客户反馈大割(Z42P)的1904 SIM卡插入后，无法侦测。尝试加厚SIM厚度，依然无法读到SIM卡。和项管沟通后，给更换1904。 发货前，请确认1904系统刷到大割最新版本。"
           ]
         },
         {
@@ -5376,7 +5241,7 @@
             "FJDFR40002470247FY"
           ],
           "reasons": [
-            "客户反馈割台底部有零件松脱，且出现噪音。经结构工程师判断应该是割草电机螺丝，因割草电机发热，孔烫坏了。\n根据结构工程师提供的维修物料，安排物料寄发更换。"
+            "客户反馈割台底部有零件松脱，且出现噪音。经结构工程师判断应该是割草电机螺丝，因割草电机发热，孔烫坏了。 根据结构工程师提供的维修物料，安排物料寄发更换。"
           ]
         },
         {
@@ -5450,7 +5315,7 @@
             "FJRM2124900105FY"
           ],
           "reasons": [
-            "客户反馈设备开启融合模式后，RTK会无法进入固定解。\n经排查为疑似副天线故障，导致航向数据异常，设导致设备无法进入固定解。寄发售后备件进行更换。"
+            "客户反馈设备开启融合模式后，RTK会无法进入固定解。 经排查为疑似副天线故障，导致航向数据异常，设导致设备无法进入固定解。寄发售后备件进行更换。"
           ]
         },
         {
@@ -5482,12 +5347,12 @@
             "FJRM2124B00207FY"
           ],
           "reasons": [
-            "原单据 RM250701004， 因DHL发错件，经销管确认，重新提单。\n原单据备注：“客户反馈蘑菇头和天线的线束断裂，经罗雨确认后，给与售后换件。”",
-            "客户反馈LiDAR建图异常和摄像头没有影像，以及遥控器频繁断联问题。\n经与研发、PO、FAE leader 沟通后，同意更换售后换件。",
+            "原单据 RM250701004， 因DHL发错件，经销管确认，重新提单。 原单据备注：“客户反馈蘑菇头和天线的线束断裂，经罗雨确认后，给与售后换件。”",
+            "客户反馈LiDAR建图异常和摄像头没有影像，以及遥控器频繁断联问题。 经与研发、PO、FAE leader 沟通后，同意更换售后换件。",
             "客户反馈蘑菇头和天线的线束断裂，经罗雨确认后，给与售后换件。",
             "客户反馈设备使用时频繁出现通讯线束故障、传感器异常和遥控器断联问题。经研发排查后判断为蘑菇头内USB以太网模块故障导致，寄发蘑菇头模块进行更换维修。",
-            "客户反馈通讯线束异常。经排查确认为A3到1904通讯异常。\n客户先用新机的蘑菇头进行更换，目前已能正常作业。和PO沟通后补寄一颗蘑菇头进行替换。",
-            "客户反馈通讯线束故障，A3无法识别，经排查线束后，确认为蘑菇头问题。\n给以售后换件。",
+            "客户反馈通讯线束异常。经排查确认为A3到1904通讯异常。 客户先用新机的蘑菇头进行更换，目前已能正常作业。和PO沟通后补寄一颗蘑菇头进行替换。",
+            "客户反馈通讯线束故障，A3无法识别，经排查线束后，确认为蘑菇头问题。 给以售后换件。",
             "客户新机开箱后发现系统出现通讯线束故障状况，经排查为A3到1904通讯异常，和PO沟通后同意售后换件。"
           ]
         },
@@ -5550,7 +5415,7 @@
             "FJRM2124100026FY"
           ],
           "reasons": [
-            "客户设备为2代中割出现开启大灯会出现短路，导致1904重启。\n经排查后，疑似二代车所使用的滤波电容出现故障导致。和登慧沟通后裔，建议更换为3代车使用的大灯(取消滤波电容模块)。"
+            "客户设备为2代中割出现开启大灯会出现短路，导致1904重启。 经排查后，疑似二代车所使用的滤波电容出现故障导致。和登慧沟通后裔，建议更换为3代车使用的大灯(取消滤波电容模块)。"
           ]
         },
         {
@@ -5572,7 +5437,7 @@
             "FJRM2124100036FY"
           ],
           "reasons": [
-            "1. 客户反馈割台结构断裂和前轮轴承损坏，经PO确认同意寄发售后备件更换。 \n2. 寄发时，麻烦直接4个将紧锁螺母（S020151000002）直接装配在割台上发出。",
+            "1. 客户反馈割台结构断裂和前轮轴承损坏，经PO确认同意寄发售后备件更换。 2. 寄发时，麻烦直接4个将紧锁螺母（S020151000002）直接装配在割台上发出。",
             "客户反馈割台多出出现锈蚀，销售和PO沟通后同意更换三代割台。"
           ]
         },
@@ -5613,7 +5478,7 @@
             "FJRM2124500049FY"
           ],
           "reasons": [
-            "客户反馈车辆只能向右行走，测试释放磁刹也是一样的状况，经登慧判断为右行走电机故障，给予售后换件。\n更改发货地，重新提交。"
+            "客户反馈车辆只能向右行走，测试释放磁刹也是一样的状况，经登慧判断为右行走电机故障，给予售后换件。 更改发货地，重新提交。"
           ]
         },
         {
@@ -5653,7 +5518,7 @@
             "FJRM2124100036FY"
           ],
           "reasons": [
-            "1. 左行走电机异响\n2. 直线轴承锈蚀"
+            "1. 左行走电机异响 2. 直线轴承锈蚀"
           ]
         },
         {
@@ -5776,7 +5641,7 @@
             "FJRM2124500049FY"
           ],
           "reasons": [
-            "7/2 客户反馈\n1. 充电桩充电器出现指示灯频繁闪烁，且发出异响。无法充电。\n2. 刀座限位柱严重磨损。\n经登慧和羽丰确认过需要换件处理。经FAE leader确认后同意售后换件处理。"
+            "7/2 客户反馈 1. 充电桩充电器出现指示灯频繁闪烁，且发出异响。无法充电。 2. 刀座限位柱严重磨损。 经登慧和羽丰确认过需要换件处理。经FAE leader确认后同意售后换件处理。"
           ]
         },
         {
@@ -5796,7 +5661,7 @@
             "FJRM2124C00214FY"
           ],
           "reasons": [
-            "物流暴力运送，导致设备损坏。\n1. Wi-Fi遥控器屏幕破损\n2. 900MHz天线折断\n3. Wi-Fi天线折断\n经沟通给予换件处理。"
+            "物流暴力运送，导致设备损坏。 1. Wi-Fi遥控器屏幕破损 2. 900MHz天线折断 3. Wi-Fi天线折断 经沟通给予换件处理。"
           ]
         },
         {
@@ -5859,7 +5724,7 @@
             "FJRM2124100036FY"
           ],
           "reasons": [
-            "1. 左行走电机异响\n2. 直线轴承锈蚀"
+            "1. 左行走电机异响 2. 直线轴承锈蚀"
           ]
         }
       ]
@@ -5941,7 +5806,7 @@
           ],
           "reasons": [
             "BMS保险烧毁",
-            "客户反馈中割其中一颗电池电量过低，无法充电，也无法升级。\n经研发(志伟)判断是电池电量过低，进入保护模式。无法远程处理。\n为方便客户继续使用，先寄发备件更换。",
+            "客户反馈中割其中一颗电池电量过低，无法充电，也无法升级。 经研发(志伟)判断是电池电量过低，进入保护模式。无法远程处理。 为方便客户继续使用，先寄发备件更换。",
             "客户反馈收到电池后发现边角有因碰撞产生的裂纹，安全起见给客户更换电池。"
           ]
         },
@@ -5965,7 +5830,7 @@
           ],
           "reasons": [
             "遥控器频繁断联",
-            "遥控器频繁断联问题。\n经与研发、PO、FAE leader 沟通后，同意更换售后换件。"
+            "遥控器频繁断联问题。 经与研发、PO、FAE leader 沟通后，同意更换售后换件。"
           ]
         },
         {
@@ -6168,7 +6033,7 @@
             "FJDFRXC0025A0078FY"
           ],
           "reasons": [
-            "1. 小刀片客户反馈会有漏割状况，和Bill.Feng沟通后寄发星型刀片给客户置换。\n2. 充电下刷板有新版本，和Bill.Feng沟通后，寄发新版本给客户更换。",
+            "1. 小刀片客户反馈会有漏割状况，和Bill.Feng沟通后寄发星型刀片给客户置换。 2. 充电下刷板有新版本，和Bill.Feng沟通后，寄发新版本给客户更换。",
             "之前寄发的星型割刀数量不对，补寄两套给客户。"
           ]
         },
@@ -6224,7 +6089,7 @@
             "FJDRLM012570278FY"
           ],
           "reasons": [
-            "1. 客户RLM01水路相关部件(水桶、管路、滤芯、隔膜泵)严重堵塞，无法清洁，其中隔膜泵内部结构发生变形。和项目组沟通后给与换件处理。\n2. 隔膜泵总成+L型螺纹二通+英制快插螺纹弯头这三个物料，请组装好再寄出。"
+            "1. 客户RLM01水路相关部件(水桶、管路、滤芯、隔膜泵)严重堵塞，无法清洁，其中隔膜泵内部结构发生变形。和项目组沟通后给与换件处理。 2. 隔膜泵总成+L型螺纹二通+英制快插螺纹弯头这三个物料，请组装好再寄出。"
           ]
         },
         {
@@ -6277,7 +6142,7 @@
             "FJDZ42P23200090FL"
           ],
           "reasons": [
-            "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+            "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
           ]
         },
         {
@@ -6299,7 +6164,7 @@
             "FJDZ42P23200090FL"
           ],
           "reasons": [
-            "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针",
+            "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针",
             "客户反馈通信线束故障，无法读取到A3版本，经过排查为1904处通信航插口pin针断了一根，为客户售后通信航插口一个，线束一根"
           ]
         },
@@ -6322,8 +6187,8 @@
             "FJLY22923700015FY"
           ],
           "reasons": [
-            "FAE罗雨在客户现场维修多台方向盘大割，定位到PCS,MPPT,分线器，线束故障，为客户售后对应物料\n\nRM250723010先前为客户售后1904，但是由于仓库发错产品，导致无法使用，再次为客户售后一个1904，错发的1904罗雨带回",
-            "初代方向盘MPPT及PCS补发\n因原订单配件缺货，故重新更换料号后下单\n原RMA：RM240528002"
+            "FAE罗雨在客户现场维修多台方向盘大割，定位到PCS,MPPT,分线器，线束故障，为客户售后对应物料 RM250723010先前为客户售后1904，但是由于仓库发错产品，导致无法使用，再次为客户售后一个1904，错发的1904罗雨带回",
+            "初代方向盘MPPT及PCS补发 因原订单配件缺货，故重新更换料号后下单 原RMA：RM240528002"
           ]
         },
         {
@@ -6363,7 +6228,7 @@
             "FJDZ42P23200091FL"
           ],
           "reasons": [
-            "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+            "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
           ]
         },
         {
@@ -6464,7 +6329,7 @@
             "FJDZ42P23200091FL"
           ],
           "reasons": [
-            "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+            "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
           ]
         },
         {
@@ -6484,7 +6349,7 @@
             "FJDZ421023040001FZ"
           ],
           "reasons": [
-            "初代方向盘MPPT及PCS补发\n因原订单配件缺货，故重新更换料号后下单\n原RMA：RM240528002"
+            "初代方向盘MPPT及PCS补发 因原订单配件缺货，故重新更换料号后下单 原RMA：RM240528002"
           ]
         },
         {
@@ -6504,7 +6369,7 @@
             "FJDZ42P23200091FL"
           ],
           "reasons": [
-            "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+            "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
           ]
         }
       ]
@@ -6726,7 +6591,7 @@
             "FJDFV20002510041FY"
           ],
           "reasons": [
-            "951板卡通病，急需更换960板卡\nFJDFV20002510041FY\nFJDFV20002510046FY\nFJDFV20002510072FY\nFJDFV20002510084FY\nFJDFV20002510097FY\nFJDFV20002510088FY\nFJDFV20002510069FY\nFJDFV20002510087FY\nFJDFV20002510098FY\nFJDFV20002510071FY",
+            "951板卡通病，急需更换960板卡 FJDFV20002510041FY FJDFV20002510046FY FJDFV20002510072FY FJDFV20002510084FY FJDFV20002510097FY FJDFV20002510088FY FJDFV20002510069FY FJDFV20002510087FY FJDFV20002510098FY FJDFV20002510071FY",
             "FV2000通病951板卡需要更换成960板卡"
           ]
         },
@@ -7445,9 +7310,9 @@
       "owner": "Jingtian.Chen欧洲",
       "warehouseGroup": "国内仓",
       "projectCode": "R2304",
-      "totalQty": 312.0,
-      "partCount": 85,
-      "rmaCount": 107,
+      "totalQty": 319.0,
+      "partCount": 88,
+      "rmaCount": 111,
       "warehouses": [
         "Fuzhou",
         "Shenzhen"
@@ -7568,18 +7433,21 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2304",
           "partName": "4针圆形航插",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2025-07-30 13:32:58",
+          "qty": 2.0,
+          "rmaCount": 2,
+          "serialCount": 2,
+          "latestDate": "2026-03-31 06:46:36",
           "rmaNames": [
-            "RM250730018"
+            "RM250730018",
+            "RM260331011"
           ],
           "serials": [
+            "FJLQ10322621888ZC",
             "FJRM2124700086FY"
           ],
           "reasons": [
-            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+            "【德国·LS system】大割通讯线束故障，经allen yu和alluke liu确认后，非1904或a3端故障，由于客户万用表测量有限，经讨论补发整条m8-4线束，并补充一根4pin航插头",
+            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
           ]
         },
         {
@@ -7599,7 +7467,7 @@
             "FJRM2124900135FY"
           ],
           "reasons": [
-            "客户反映机器LED灯带只能亮1/4，但是代理反映，客户之所以送来是因为充电器的有关问题，此单由denghui chen确认料号之后，easnow cai同意进行发货\n[YTX-TX-003041A] 4G Antenna L=200mm 1套\n[370000494Y0050B] A3接口板灯带线束 1套\n[QCD-DJ-003009A] 充电机欧版盲充版本 1套\n[210713602Y0100B] 充电桩后罩焊合 1套\n[YTX-TX-003057B] 天线 1套\n[YTX-TX-003061B] 天线 1套"
+            "客户反映机器LED灯带只能亮1/4，但是代理反映，客户之所以送来是因为充电器的有关问题，此单由denghui chen确认料号之后，easnow cai同意进行发货 [YTX-TX-003041A] 4G Antenna L=200mm 1套 [370000494Y0050B] A3接口板灯带线束 1套 [QCD-DJ-003009A] 充电机欧版盲充版本 1套 [210713602Y0100B] 充电桩后罩焊合 1套 [YTX-TX-003057B] 天线 1套 [YTX-TX-003061B] 天线 1套"
           ]
         },
         {
@@ -7719,7 +7587,7 @@
             "FJRM2125100070FY"
           ],
           "reasons": [
-            "客户反映雷达能够识别障碍物，但是声音听起来很奇怪，后台查看显示运行正常，日志查看未能明显发现异样，经Alluka Liu同意之后进行发货，发货料号为\nS010210301601 内六角平圆头螺钉 4颗\nS010210300501 内六角平圆头螺钉 2颗\nS010210401202 内六角平圆头螺钉 4颗\nS010384201601 十字槽盘头自攻螺钉 4颗\n2K0200020Y0030A MID-360激光雷达 1个"
+            "客户反映雷达能够识别障碍物，但是声音听起来很奇怪，后台查看显示运行正常，日志查看未能明显发现异样，经Alluka Liu同意之后进行发货，发货料号为 S010210301601 内六角平圆头螺钉 4颗 S010210300501 内六角平圆头螺钉 2颗 S010210401202 内六角平圆头螺钉 4颗 S010384201601 十字槽盘头自攻螺钉 4颗 2K0200020Y0030A MID-360激光雷达 1个"
           ]
         },
         {
@@ -7744,7 +7612,7 @@
           ],
           "reasons": [
             "【法国amazideas】sn FJLQ17425A00599ZC, 由于出事故进了水，事故原因kyle还在调查，拉通denghui，fengchen等人发现需要更换相关 电控箱封装以及RTK惯导单元，由于事发突然，在欧洲仓库没有相关更换组件，需要走空运",
-            "客户反应RTK无法进固定解，更换新基站之后仍然无法进入，但是关闭融合模式之后进入固定解，一个月之前已经出现过突然行走轨迹歪斜现象，经chenggan进行排查，当时已经沟通过，基站问题修正后，基站已经正常工作。RM21无法进入固定解的原因是副天线持续不可用，导致航向固定在90度。当车辆处于此种状态时，LiDAR+GNSS显然是无法工作的。因此，融合定位要求主副天线【同时】处于固定解状态。因此本件中提到的RM21无法进入固定解的根因，是副天线异常。属于硬件问题。因此排查后经Easnow cai同意进行发货[900208850Q0030A] RTK天线\t\n[280300342Y0100B] 保险杠Ⅲ",
+            "客户反应RTK无法进固定解，更换新基站之后仍然无法进入，但是关闭融合模式之后进入固定解，一个月之前已经出现过突然行走轨迹歪斜现象，经chenggan进行排查，当时已经沟通过，基站问题修正后，基站已经正常工作。RM21无法进入固定解的原因是副天线持续不可用，导致航向固定在90度。当车辆处于此种状态时，LiDAR+GNSS显然是无法工作的。因此，融合定位要求主副天线【同时】处于固定解状态。因此本件中提到的RM21无法进入固定解的根因，是副天线异常。属于硬件问题。因此排查后经Easnow cai同意进行发货[900208850Q0030A] RTK天线 [280300342Y0100B] 保险杠Ⅲ",
             "机器报RTK航行错误，与陈登慧一起视频为客户排查后，判断为RTK天线故障，为用户发新的RTK天线和馈线"
           ]
         },
@@ -7871,7 +7739,7 @@
             "FJRM2124500066FY"
           ],
           "reasons": [
-            "客户2025/8/14日反馈机器充电刷版安装座出现结构性损坏，原因在于该结构存在一小缝隙，缝隙进水后导致里面金属结构发生锈蚀，进而导致机器对桩出现结构性损坏，经与@Jingtian.Chen @Easnow.Cai 沟通后，建议为客户更换一个全新的210747002Y0100E\n充电刷板安装座焊合Ⅱ，此前给客户发过一个蘑菇头（详见RM250806008），由于客户是二代机，蘑菇头为3.0版本，不适配我们最新的3.5蘑菇头，与登慧、刘辉沟通后建议给客户发[270000082Y0100E] 天线支架:数量1\n210702042Y0100  遮线板：数量1\n与福鹏沟通后，表示可以给客户发件"
+            "客户2025/8/14日反馈机器充电刷版安装座出现结构性损坏，原因在于该结构存在一小缝隙，缝隙进水后导致里面金属结构发生锈蚀，进而导致机器对桩出现结构性损坏，经与@Jingtian.Chen @Easnow.Cai 沟通后，建议为客户更换一个全新的210747002Y0100E 充电刷板安装座焊合Ⅱ，此前给客户发过一个蘑菇头（详见RM250806008），由于客户是二代机，蘑菇头为3.0版本，不适配我们最新的3.5蘑菇头，与登慧、刘辉沟通后建议给客户发[270000082Y0100E] 天线支架:数量1 210702042Y0100 遮线板：数量1 与福鹏沟通后，表示可以给客户发件"
           ]
         },
         {
@@ -7931,7 +7799,7 @@
             "奥地利L&L反馈机器FJLQ10324501215ZC / FJRM2124500066FY在应用程序中打不开摄像头，经与研发方工、登慧排查后发现机器A3内部存在过流保护，因此判定机器A3内部存在短路，故申请更换A3一个，此外需要给客户发送一个35A快充，用于测试用途",
             "客户充电器故障，已联系登慧排查，确认需要更换充电器。但目前得到消息AB两款充电器有质量问题，需要返厂。登慧建议先发给客户快充使用。",
             "客户反应入桩出现问题，和EmmonZhuang和JingTian Chen进行排查，建议客户测试充电器能否正常充电，发现原件充电一阵之后停止，换充电器之后一切正常，因此更换充电器及充电桩后罩焊合",
-            "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个\n\n客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
+            "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个 客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
             "羽丰确认需要更换",
             "荷兰robotmaaier客户反馈所在地只能让机器在9-18：00期间割草，其余时间怕扰民。但是机器充电时间太慢，无法在这个时间段内完成任务，所以推荐给他发一个35A的快充，加快一下充电时间以确保在任务时间段内顺利完成作业，此外客户反馈sim卡插入机器不读卡，与登慧排查后，发现1904卡槽的金属触点损坏，无法修复。故为客户补发一个1904，客户反馈机器割草声音太大，Talia反馈给客户发送碎草刀4枚，以减小噪声。"
           ]
@@ -7965,9 +7833,9 @@
             "FJRM2124500048FY"
           ],
           "reasons": [
-            "2025/8/27 客户反馈机器FJLQ17424902127ZC充不上电，交流后AE表示可能是充电器出现问题了，并让客户检查机器充电器是否出现问题。与福鹏沟通后福鹏表示可以给客户补发一个\n[QCD-DJ-003009A] 充电机欧版盲充版本外加充电桩后罩焊合210713602Y0100B。",
+            "2025/8/27 客户反馈机器FJLQ17424902127ZC充不上电，交流后AE表示可能是充电器出现问题了，并让客户检查机器充电器是否出现问题。与福鹏沟通后福鹏表示可以给客户补发一个 [QCD-DJ-003009A] 充电机欧版盲充版本外加充电桩后罩焊合210713602Y0100B。",
             "与灯慧福鹏确认，充电器损坏，更换大电流款",
-            "代理反馈中割报右驱动电机校准编码器故障，并且松开磁刹后能正常工作，客户自行更换了右驱动电机，问题解决，为客户售后右驱动电机，客户暂替保管坏件，之后统一寄回分析故障原因\n经过与福鹏沟通，为客户提供新版35A充电器协助实地测试",
+            "代理反馈中割报右驱动电机校准编码器故障，并且松开磁刹后能正常工作，客户自行更换了右驱动电机，问题解决，为客户售后右驱动电机，客户暂替保管坏件，之后统一寄回分析故障原因 经过与福鹏沟通，为客户提供新版35A充电器协助实地测试",
             "单号RM250806008需要给客户发送一个35A快充，用于测试用途。因35A快充需要搭配[210713602Y0100B] 充电桩后罩焊合使用，单号RM250806008漏加了充电桩后罩。且已审核通过不便撤回重改，故新建RMA单号为客户发送该备件",
             "客户充电器故障，已联系登慧排查，确认需要更换充电器。但目前得到消息AB两款充电器有质量问题，需要返厂。登慧建议先发给客户快充使用。",
             "羽丰确认需要更换",
@@ -7994,7 +7862,7 @@
           ],
           "reasons": [
             "客户刀座螺柱折断，需要换新",
-            "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换\n割刀需要替换刀座"
+            "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换 割刀需要替换刀座"
           ]
         },
         {
@@ -8037,7 +7905,7 @@
             "FJLQ17425700519ZC"
           ],
           "reasons": [
-            "经现场AE确认，客户需要补发一条短连接线束，经Alan miao同意，给客户发送一条[370000034Y0130B] 划线机主线束\n由于仓库发错货，先进行补发手续"
+            "经现场AE确认，客户需要补发一条短连接线束，经Alan miao同意，给客户发送一条[370000034Y0130B] 划线机主线束 由于仓库发错货，先进行补发手续"
           ]
         },
         {
@@ -8125,7 +7993,7 @@
             "FJRM2124700086FY"
           ],
           "reasons": [
-            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
           ]
         },
         {
@@ -8151,7 +8019,7 @@
           "reasons": [
             "10月3日，奥地利L&L客户反馈机器FJLQ10324501215ZC/FJRM2124500066FY频繁报错前保险杠碰撞，AE排查，发现客户前保险杠出现变形，沟通项目组福鹏后同意为客户更换2280300342Y0100B前保险杠一个，此外机器FJLQ17424902100ZC/FJRM2124A00178FY出现割刀电机停转的缘故，更换割刀电机后问题仍旧存在，项目组登慧建议排查割刀电机控制板电容，经排查，割刀电机控制板电容发生损坏。沟通项目组福鹏后同意给客户更换214220000Y0030F割草电机控制器一个，此外，9月9日奥地利L&L客户反馈机器FJRM2124A00176FY / FJLQ17424902111ZC出现割刀电机异响，线上排查未发现问题，10月2号福鹏出差奥地利L&L客户维修该机器时发现割刀电机存在结构损坏，因此给客户发送一个新的[21030014EY0040C] 割草电机",
             "【德国·gps】割刀电机故障，经检查后发现驱动板电容损毁，经denghui确认之后为客户更换新的割刀电机驱动板总成",
-            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
           ]
         },
         {
@@ -8176,7 +8044,7 @@
           "reasons": [
             "客户多款备件出现故障已与robbin确认",
             "客户遥控故障，按钮失效无法控制，替换平板，其余损坏配件客户已更换完毕，补充配件，已与福朋确认更换",
-            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
           ]
         },
         {
@@ -8196,7 +8064,7 @@
             "FJRM2124700086FY"
           ],
           "reasons": [
-            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+            "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
           ]
         },
         {
@@ -8240,9 +8108,9 @@
             "FJRM2124A00179FY"
           ],
           "reasons": [
-            "客户需要一套双胎，5把平刀5把碎草刀，用于测试和宣传目的，经Easnow cai同意，进行发货[280025000Y0100B] 双轮转接套件1套\n[970300022Y0100A] 25寸割刀 5个\n[970300062Y0100B] 25寸碎草刀 5个",
-            "用户用在高尔夫球场，现场有坡的地形较多，经常打滑，导致偏离航线，车机失控，进入禁区等问题。\n中割划线机的易损配件给客户配一套备用，单独从国内寄出运费太高并且时间长",
-            "用户车机使用场景为果园，地面不平，且经常浇水，容易泥泞打滑，目前已导致多次偏离航线，陷在坑里无法前进，所以发双轮套件改善该情况\n代理车为二代车，更换为三代割台，改善旧版割台在割草高度较低时容易产生的问题\n遥控器物理按键失效，发平板替换"
+            "客户需要一套双胎，5把平刀5把碎草刀，用于测试和宣传目的，经Easnow cai同意，进行发货[280025000Y0100B] 双轮转接套件1套 [970300022Y0100A] 25寸割刀 5个 [970300062Y0100B] 25寸碎草刀 5个",
+            "用户用在高尔夫球场，现场有坡的地形较多，经常打滑，导致偏离航线，车机失控，进入禁区等问题。 中割划线机的易损配件给客户配一套备用，单独从国内寄出运费太高并且时间长",
+            "用户车机使用场景为果园，地面不平，且经常浇水，容易泥泞打滑，目前已导致多次偏离航线，陷在坑里无法前进，所以发双轮套件改善该情况 代理车为二代车，更换为三代割台，改善旧版割台在割草高度较低时容易产生的问题 遥控器物理按键失效，发平板替换"
           ]
         },
         {
@@ -8368,7 +8236,7 @@
             "FJLQ10322621926ZC"
           ],
           "reasons": [
-            "陈靖天现场为客户维修机器，天线断裂。陈登慧检查需要更换4G和电台天线。\n用户反馈充电功率低，余家裕安排发充电器。充电器发出前需要改接适配大割"
+            "陈靖天现场为客户维修机器，天线断裂。陈登慧检查需要更换4G和电台天线。 用户反馈充电功率低，余家裕安排发充电器。充电器发出前需要改接适配大割"
           ]
         },
         {
@@ -8408,7 +8276,7 @@
             "FJRM2124A00176FY"
           ],
           "reasons": [
-            "奥地利L&L客户于2026/2/11号反馈中割（FJRM2124A00176FY / FJLQ17424902111ZC）的斜撑螺柱存在生锈腐蚀，拉通项目组羽丰后表示需要替换如下部件：\n1. 270000502Y0100D  天线斜撑焊合\n2. S010460805001  螺栓\n福鹏表示此前版本的斜撑为点焊工艺，存在容易进水腐蚀脱落的问题，后续版本已改进，同意为客户发送上述部件用于替换。\n\n此外，应项目组福鹏要求赠送客户如下物料：\nS010131002003] 六角法兰面螺栓 B级，8个\n[970500015Y0100C] 刀座，2个\n[970100399Y0030D] 英制螺栓，2个\n[S050160001602] 大垫圈 A级，2个\n\n德国仓没有货，申请从国内发货"
+            "奥地利L&L客户于2026/2/11号反馈中割（FJRM2124A00176FY / FJLQ17424902111ZC）的斜撑螺柱存在生锈腐蚀，拉通项目组羽丰后表示需要替换如下部件： 1. 270000502Y0100D 天线斜撑焊合 2. S010460805001 螺栓 福鹏表示此前版本的斜撑为点焊工艺，存在容易进水腐蚀脱落的问题，后续版本已改进，同意为客户发送上述部件用于替换。 此外，应项目组福鹏要求赠送客户如下物料： S010131002003] 六角法兰面螺栓 B级，8个 [970500015Y0100C] 刀座，2个 [970100399Y0030D] 英制螺栓，2个 [S050160001602] 大垫圈 A级，2个 德国仓没有货，申请从国内发货"
           ]
         },
         {
@@ -8459,8 +8327,8 @@
             "FJRM2125100048FY"
           ],
           "reasons": [
-            "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个\n\n客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
-            "客户反馈之前售后的右行走电机（RM250630003）收到后，发现磁刹线束就是断的，为客户重新售后右电机一个，\n客户反馈另一台中割出现原地转向问题，经过与登慧一起排查怀疑是左电机磁刹故障导致，经过与福鹏沟通，为客户售后左电机一个",
+            "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个 客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
+            "客户反馈之前售后的右行走电机（RM250630003）收到后，发现磁刹线束就是断的，为客户重新售后右电机一个， 客户反馈另一台中割出现原地转向问题，经过与登慧一起排查怀疑是左电机磁刹故障导致，经过与福鹏沟通，为客户售后左电机一个",
             "客户多款备件出现故障已与robbin确认",
             "左右电机过流损坏",
             "经过多次重启，以及释放磁刹检查发现存在异响仍无法启动，怀疑变速箱与电机故障，分析日志经硬件组登慧确认，怀疑过流，判断电机故障需更换总成"
@@ -8587,7 +8455,7 @@
             "FJRM2124C00228FY"
           ],
           "reasons": [
-            "经销商反映为终端客户修理机器时已经使用相应备件为客户更换，整理之后要求发货\n[370000544Y0100A] 急停开关 1个\n[QCD-DJ-003009A] 充电机欧版盲充版本 2个\n[210713602Y0100B] 充电桩后罩焊合 2个\n[370000874Y0100C] 割草电机霍尔线束2个 \n因此为客户进行换货"
+            "经销商反映为终端客户修理机器时已经使用相应备件为客户更换，整理之后要求发货 [370000544Y0100A] 急停开关 1个 [QCD-DJ-003009A] 充电机欧版盲充版本 2个 [210713602Y0100B] 充电桩后罩焊合 2个 [370000874Y0100C] 割草电机霍尔线束2个 因此为客户进行换货"
           ]
         },
         {
@@ -8612,7 +8480,7 @@
           "reasons": [
             "客户多款备件出现故障已与robbin确认",
             "客户遥控故障，按钮失效无法控制，替换平板，其余损坏配件客户已更换完毕，补充配件，已与福朋确认更换",
-            "荷兰robomaaier客户反馈机器急停开关损坏，客户欲拆开盖板自行更换，拆开后客户发现盖板部分螺丝打有密封胶，欲更换急停开关只能强行破坏螺丝与盖板，鉴于该密封胶结构已在后续机器版本中优化，AE组靖天建议可以给客户更换新的螺丝与急停开关，经沟通项目组福鹏后，福鹏表示可以给客户发出新的[370000544Y0100A] 急停开关一个与S010210400801  内六角平圆头螺钉20枚，以及280123002Y0100E  1904安装支架焊合Ⅱ 一个"
+            "荷兰robomaaier客户反馈机器急停开关损坏，客户欲拆开盖板自行更换，拆开后客户发现盖板部分螺丝打有密封胶，欲更换急停开关只能强行破坏螺丝与盖板，鉴于该密封胶结构已在后续机器版本中优化，AE组靖天建议可以给客户更换新的螺丝与急停开关，经沟通项目组福鹏后，福鹏表示可以给客户发出新的[370000544Y0100A] 急停开关一个与S010210400801 内六角平圆头螺钉20枚，以及280123002Y0100E 1904安装支架焊合Ⅱ 一个"
           ]
         },
         {
@@ -8644,19 +8512,22 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2304",
           "partName": "控制盒",
-          "qty": 2.0,
-          "rmaCount": 2,
-          "serialCount": 2,
-          "latestDate": "2026-02-09 14:31:49",
+          "qty": 3.0,
+          "rmaCount": 3,
+          "serialCount": 3,
+          "latestDate": "2026-03-23 02:08:21",
           "rmaNames": [
             "RM250806006",
-            "RM260209009"
+            "RM260209009",
+            "RM260323003"
           ],
           "serials": [
             "FJLQ10324701588ZC",
-            "FJLQ17424B02397ZC"
+            "FJLQ17424B02397ZC",
+            "FJRM2124100015FY"
           ],
           "reasons": [
+            "【法国greentech】车机sn FJRM2124100015FY 屏幕不亮拉通fupeng,denghui等人尝试远程支持客户刷机，但是都无法与客户电脑连接，随后与jingtian,zheyuan等人确认可以走售后，由于是初代机，fupeng给予了大割的料号，出库时间已无法查询",
             "机器电量显示异常，zhiwei排查后电池正常无问题。denghui排查发现CAN线阻值异常，判断为1904内部的CAN芯片异常，需要更换1904。",
             "荷兰robotmaaier客户反馈所在地只能让机器在9-18：00期间割草，其余时间怕扰民。但是机器充电时间太慢，无法在这个时间段内完成任务，所以推荐给他发一个35A的快充，加快一下充电时间以确保在任务时间段内顺利完成作业，此外客户反馈sim卡插入机器不读卡，与登慧排查后，发现1904卡槽的金属触点损坏，无法修复。故为客户补发一个1904，客户反馈机器割草声音太大，Talia反馈给客户发送碎草刀4枚，以减小噪声。"
           ]
@@ -8736,7 +8607,7 @@
             "客户充电器故障，已联系登慧排查，确认需要更换充电器",
             "客户反馈无法充电，James.Wang为客户排查后确定为充电器损坏，需要换新。",
             "客户遥控故障，按钮失效无法控制，替换平板，其余损坏配件客户已更换完毕，补充配件，已与福朋确认更换",
-            "问题1：充电充到75%就自动停止充电，手动再次开启继电器，充几秒后再次停止充电，充电机有故障，需要换新的\n问题2： 车机只能识别到一颗电池，另一颗显示未激活。排查线束发现主电源线束连接电池的插头里，6根细pin的第6根pin已经断了，需要更换线束"
+            "问题1：充电充到75%就自动停止充电，手动再次开启继电器，充几秒后再次停止充电，充电机有故障，需要换新的 问题2： 车机只能识别到一颗电池，另一颗显示未激活。排查线束发现主电源线束连接电池的插头里，6根细pin的第6根pin已经断了，需要更换线束"
           ]
         },
         {
@@ -8778,8 +8649,8 @@
             "FJRM2124A00168FY"
           ],
           "reasons": [
-            "2026/3/6奥地利代理L&L反馈新开封的wifi遥控器出现断触误触现象，具体表现为遥控器不受控制地画面乱点，反馈给项目组福鹏后，福鹏表示为开箱不良，需要进行更换，因此给代理发送[900106000Q0050C] 智能遥控器总成-wifi-英文版  一个",
-            "和客户远程排查，发现Type C接口损坏，给予更换。\n由于目前库存仅有美国芝加哥仓和福建仓各一台，所以由国内发出。"
+            "2026/3/6奥地利代理L&L反馈新开封的wifi遥控器出现断触误触现象，具体表现为遥控器不受控制地画面乱点，反馈给项目组福鹏后，福鹏表示为开箱不良，需要进行更换，因此给代理发送[900106000Q0050C] 智能遥控器总成-wifi-英文版 一个",
+            "和客户远程排查，发现Type C接口损坏，给予更换。 由于目前库存仅有美国芝加哥仓和福建仓各一台，所以由国内发出。"
           ]
         },
         {
@@ -8871,6 +8742,26 @@
         {
           "owner": "Jingtian.Chen欧洲",
           "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2304",
+          "partName": "欧版盲充充电机",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-27 23:57:56",
+          "rmaNames": [
+            "RM260328001"
+          ],
+          "serials": [
+            "FJRM2124500062FY"
+          ],
+          "reasons": [
+            "经硬件组陈登慧判断充电器故障，予以更换，另外请仓库出库时将充电器交给陈登慧予以测试再进行发出，确认b版本可用"
+          ]
+        },
+        {
+          "owner": "Jingtian.Chen欧洲",
+          "warehouseGroup": "国内仓",
           "warehouseName": "Fuzhou",
           "projectCode": "R2304",
           "partName": "气管接头喷头",
@@ -8909,7 +8800,7 @@
             "FJRM2124C00223FY"
           ],
           "reasons": [
-            "代Jesse 提交，\n1. 滚刷电机和充电桩充电模块升级.\n2. 前保险杆换新",
+            "代Jesse 提交， 1. 滚刷电机和充电桩充电模块升级. 2. 前保险杆换新",
             "客户反应GC01集操器效果不好，怀疑为老版本通用问题，询问 Terry Wang之后同意进行发货[370002014Y0100A] 滚刷电机1台",
             "经福朋确认，之前的电机拉力不够，无法适配客户的需求，更换1000w电机"
           ]
@@ -8977,7 +8868,7 @@
             "FJRM2124C00225FY"
           ],
           "reasons": [
-            "客户反馈整车无故下电，客户自行排查后发现更换DCDC恢复正常，经过与福鹏沟通，为客户售后DCDC一个\n客户反馈航向固定在90度，经过排查是由于副天线馈线故障导致，为客户售后天线馈线一根"
+            "客户反馈整车无故下电，客户自行排查后发现更换DCDC恢复正常，经过与福鹏沟通，为客户售后DCDC一个 客户反馈航向固定在90度，经过排查是由于副天线馈线故障导致，为客户售后天线馈线一根"
           ]
         },
         {
@@ -9082,7 +8973,7 @@
             "FJRM2124900117FY"
           ],
           "reasons": [
-            "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件：\n1. [900330600Y0100C] 中割蘑菇头总成V2   *1\n2. [900277300Q0030A] 控制盒    *1\n3. 蘑菇头穿管线束 370001224Y0100B   *1\n\n由于法兰克福仓库没有本料号的库存，因此本单从深圳单走线束发货，"
+            "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件： 1. [900330600Y0100C] 中割蘑菇头总成V2 *1 2. [900277300Q0030A] 控制盒 *1 3. 蘑菇头穿管线束 370001224Y0100B *1 由于法兰克福仓库没有本料号的库存，因此本单从深圳单走线束发货，"
           ]
         },
         {
@@ -9144,7 +9035,7 @@
             "FJRM2124500049FY"
           ],
           "reasons": [
-            "前铲支架断裂，需要给客户发结构件来帮助焊接\n客户为21“割刀，因先前销售答应免费升级25”割刀，所以补发25“割刀一个",
+            "前铲支架断裂，需要给客户发结构件来帮助焊接 客户为21“割刀，因先前销售答应免费升级25”割刀，所以补发25“割刀一个",
             "客户车架断裂，已和毛羽丰确认，需发加强筋焊接修复"
           ]
         },
@@ -9186,6 +9077,46 @@
           ],
           "reasons": [
             "客户车架断裂，已和毛羽丰确认，需发加强筋焊接修复"
+          ]
+        },
+        {
+          "owner": "Jingtian.Chen欧洲",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2304",
+          "partName": "转接线",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-31 06:46:36",
+          "rmaNames": [
+            "RM260331011"
+          ],
+          "serials": [
+            "FJLQ10322621888ZC"
+          ],
+          "reasons": [
+            "【德国·LS system】大割通讯线束故障，经allen yu和alluke liu确认后，非1904或a3端故障，由于客户万用表测量有限，经讨论补发整条m8-4线束，并补充一根4pin航插头"
+          ]
+        },
+        {
+          "owner": "Jingtian.Chen欧洲",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2304",
+          "partName": "通讯板",
+          "qty": 3.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-30 09:10:44",
+          "rmaNames": [
+            "RM260330007"
+          ],
+          "serials": [
+            "FJRM2125100008FY"
+          ],
+          "reasons": [
+            "客户反馈近期故障部件汇总，以及故障原因提交工单，经po福鹏同意予以更换"
           ]
         },
         {
@@ -9266,7 +9197,7 @@
             "FJRM2125600211FY"
           ],
           "reasons": [
-            "经经销商反映，多个隔膜泵损坏，需要进行发货，进行数量确认后，客户需要6个隔膜泵和1套电磁阀，但是客户目前只能提供3个隔膜泵和1套电磁阀的照片，经jianlin xie确认同意后，发出[920900017Y0130A] 隔膜泵3个，[921700188Y0130A] 英制快插螺纹弯头3个，[921700028Y0130A] L型螺纹二通\t3个， 需要将2个L型接头安装到泵上面，后再一起发货。[921500027Y0130A] 电磁阀(常闭)1个， [921700028Y0130A] L型螺纹二通2个，同样需要预装好接头发出去，共计[921700028Y0130A] L型螺纹二通5个",
+            "经经销商反映，多个隔膜泵损坏，需要进行发货，进行数量确认后，客户需要6个隔膜泵和1套电磁阀，但是客户目前只能提供3个隔膜泵和1套电磁阀的照片，经jianlin xie确认同意后，发出[920900017Y0130A] 隔膜泵3个，[921700188Y0130A] 英制快插螺纹弯头3个，[921700028Y0130A] L型螺纹二通 3个， 需要将2个L型接头安装到泵上面，后再一起发货。[921500027Y0130A] 电磁阀(常闭)1个， [921700028Y0130A] L型螺纹二通2个，同样需要预装好接头发出去，共计[921700028Y0130A] L型螺纹二通5个",
             "经经销商和现场AE进行反应，客户存在多个泵堵转损坏，经Gavin chen进行排查同意之后，进行发货[920900017Y0130A] 隔膜泵3台，[921700028Y0130A] L型螺纹二通3台，[921700188Y0130A] 英制快插螺纹弯头3台"
           ]
         },
@@ -9333,160 +9264,7 @@
           ],
           "reasons": [
             "因为客户中割难以触发雨滴传感器，所以发一个雨滴传感器底座给客户",
-            "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换\n割刀需要替换刀座"
-          ]
-        }
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2304",
-      "totalQty": 9.0,
-      "partCount": 7,
-      "rmaCount": 6,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "4针圆形航插",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-31 06:46:36",
-          "rmaNames": [
-            "RM260331011"
-          ],
-          "serials": [
-            "FJLQ10322621888ZC"
-          ],
-          "reasons": [
-            "【德国·LS system】大割通讯线束故障，经allen yu和alluke liu确认后，非1904或a3端故障，由于客户万用表测量有限，经讨论补发整条m8-4线束，并补充一根4pin航插头"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "左行走电机组件",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-30 09:51:00",
-          "rmaNames": [
-            "RM260330009"
-          ],
-          "serials": [
-            "FJRM2125100008FY"
-          ],
-          "reasons": [
-            "客户反馈近期故障部件汇总，以及故障原因提交工单，经po福鹏同意予以更换，希望仓库将此单与RM260331001一同发送"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "急停开关",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 08:40:24",
-          "rmaNames": [
-            "RM260326010"
-          ],
-          "serials": [
-            "FJRM2125300090FY"
-          ],
-          "reasons": [
-            "法国HEXAGONE客户开箱时发现急停开关损坏，和出厂质量管控谢达鑫调取出厂照片视频后发现出厂无质量问题，怀疑运输存储时出现损坏，经过jingtian决定，补发一枚"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "控制盒",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-23 02:08:21",
-          "rmaNames": [
-            "RM260323003"
-          ],
-          "serials": [
-            "FJRM2124100015FY"
-          ],
-          "reasons": [
-            "【法国greentech】车机sn FJRM2124100015FY  屏幕不亮拉通fupeng,denghui等人尝试远程支持客户刷机，但是都无法与客户电脑连接，随后与jingtian,zheyuan等人确认可以走售后，由于是初代机，fupeng给予了大割的料号，出库时间已无法查询"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "欧版盲充充电机",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-27 23:57:56",
-          "rmaNames": [
-            "RM260328001"
-          ],
-          "serials": [
-            "FJRM2124500062FY"
-          ],
-          "reasons": [
-            "经硬件组陈登慧判断充电器故障，予以更换，另外请仓库出库时将充电器交给陈登慧予以测试再进行发出，确认b版本可用"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "转接线",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-31 06:46:36",
-          "rmaNames": [
-            "RM260331011"
-          ],
-          "serials": [
-            "FJLQ10322621888ZC"
-          ],
-          "reasons": [
-            "【德国·LS system】大割通讯线束故障，经allen yu和alluke liu确认后，非1904或a3端故障，由于客户万用表测量有限，经讨论补发整条m8-4线束，并补充一根4pin航插头"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2304",
-          "partName": "通讯板",
-          "qty": 3.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-30 09:10:44",
-          "rmaNames": [
-            "RM260330007"
-          ],
-          "serials": [
-            "FJRM2125100008FY"
-          ],
-          "reasons": [
-            "客户反馈近期故障部件汇总，以及故障原因提交工单，经po福鹏同意予以更换"
+            "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换 割刀需要替换刀座"
           ]
         }
       ]
@@ -9495,9 +9273,9 @@
       "owner": "Jingtian.Chen欧洲",
       "warehouseGroup": "海外仓",
       "projectCode": "R2304",
-      "totalQty": 40.0,
+      "totalQty": 42.0,
       "partCount": 21,
-      "rmaCount": 35,
+      "rmaCount": 37,
       "warehouses": [
         "Frankfurt"
       ],
@@ -9562,7 +9340,7 @@
             "FJRM2125400112FY"
           ],
           "reasons": [
-            "客户反映，RTK基站损坏，页面出现coredump Error（程序崩溃转储错误）并且没有恢复，和denghui chen进行确认，之后mike zhao进行同意后，发货[Q0110083] GNSS接收机\t1个"
+            "客户反映，RTK基站损坏，页面出现coredump Error（程序崩溃转储错误）并且没有恢复，和denghui chen进行确认，之后mike zhao进行同意后，发货[Q0110083] GNSS接收机 1个"
           ]
         },
         {
@@ -9710,7 +9488,7 @@
             "FJRM2124C00228FY"
           ],
           "reasons": [
-            "前序单号客户收到货后，询问需要割草点击分接线束，经和Alluka liu确认料号之后为客户进行发货370000854Y0100\tC 一套",
+            "前序单号客户收到货后，询问需要割草点击分接线束，经和Alluka liu确认料号之后为客户进行发货370000854Y0100 C 一套",
             "经硬件组登慧检查判断，客户割草电机线束插头腐蚀，可能导致发热，进行更换"
           ]
         },
@@ -9755,7 +9533,7 @@
             "FJRM2124900146FY"
           ],
           "reasons": [
-            "代理2024年秋天还能正常使用，冬天过后，准备春天开始割草，第一次使用发现右后轮行走出现故障，且1904上有报错（34）\n右电机报编码器故障，排查步骤：\n1.释放磁刹，确认不是因为电机堵转导致的编码器校准失败导致报错；\n2.客户反馈软件升级后出现，将电机版本由1.0.8.11降回1.0.8.8，故障仍在，说明与软件版本无关；\n3.交叉左右两个电机的接线，重新测试，此时报错左电机编码器故障；由于原左驱动器是没有问题的，交叉后出现问题，说明问题出在右电机\n可能是电机里的编码器信号哪里接触不良\n所以申请换件",
+            "代理2024年秋天还能正常使用，冬天过后，准备春天开始割草，第一次使用发现右后轮行走出现故障，且1904上有报错（34） 右电机报编码器故障，排查步骤： 1.释放磁刹，确认不是因为电机堵转导致的编码器校准失败导致报错； 2.客户反馈软件升级后出现，将电机版本由1.0.8.11降回1.0.8.8，故障仍在，说明与软件版本无关； 3.交叉左右两个电机的接线，重新测试，此时报错左电机编码器故障；由于原左驱动器是没有问题的，交叉后出现问题，说明问题出在右电机 可能是电机里的编码器信号哪里接触不良 所以申请换件",
             "客户右电机运行时有明显异响，蔡福鹏查看后安排为用户发新右行走电机"
           ]
         },
@@ -9785,26 +9563,29 @@
           "warehouseName": "Frankfurt",
           "projectCode": "R2304",
           "partName": "左行走电机组件",
-          "qty": 5.0,
-          "rmaCount": 5,
-          "serialCount": 4,
-          "latestDate": "2026-02-25 14:24:44",
+          "qty": 6.0,
+          "rmaCount": 6,
+          "serialCount": 5,
+          "latestDate": "2026-03-30 09:51:00",
           "rmaNames": [
             "RM250805007",
             "RM251105014",
             "RM251105020",
             "RM260123001",
-            "RM260225020"
+            "RM260225020",
+            "RM260330009"
           ],
           "serials": [
             "FJLQ17425400285ZC",
             "FJRM2124900117FY",
             "FJRM2124900127FY",
-            "FJRM2125100001FY"
+            "FJRM2125100001FY",
+            "FJRM2125100008FY"
           ],
           "reasons": [
             "客户反映行走电机编码器校准故障，无法正常输出动力，经过释放磁刹，更换其他机器的线束电机控制板，发现故障跟车，释放磁刹后重启仍然存在问题，推动无异响无阻滞感，对调线束发现从左电机编码失效变为右电机编码失效，经硬件组登慧同意决定发一个新电机",
             "客户反馈中割左右行走电机均报错，出现无法移动的情况，松开磁刹可以正常工作，拉通登辉一起排查后发现可能是由于电机磁刹故障导致，为客户售后左右行走电机各一个",
+            "客户反馈近期故障部件汇总，以及故障原因提交工单，经po福鹏同意予以更换，希望仓库将此单与RM260331001一同发送",
             "客户反馈齿轮故障，经硬件组评估换新",
             "荷兰brinkman代理左行走电机损坏，售后为客户发送一个左行走电机，由于福州仓库贴错标签，导致客户实际收到的是右行走电机，故申请RMA补发，此前发错备件做RMA退货处理，新的备件已经补发，本单用于平账，挂靠已经发出的备件快递费用，不做实际发货。",
             "荷兰brinkman反馈机器FJRM2125100037FY存在左电机异响的问题，想让售后为其发送一个左行走电机，客户不配合排查，换件意愿强烈。沟通项目组福鹏后，福鹏表示可以为客户发送新的行走电机，但是损坏的电机需要反馈波兰仓检查维修"
@@ -9836,20 +9617,23 @@
           "warehouseName": "Frankfurt",
           "projectCode": "R2304",
           "partName": "急停开关",
-          "qty": 2.0,
-          "rmaCount": 2,
-          "serialCount": 1,
-          "latestDate": "2026-02-03 02:44:56",
+          "qty": 3.0,
+          "rmaCount": 3,
+          "serialCount": 2,
+          "latestDate": "2026-03-26 08:40:24",
           "rmaNames": [
             "RM260112002",
-            "RM260203003"
+            "RM260203003",
+            "RM260326010"
           ],
           "serials": [
-            "FJRM2124900111FY"
+            "FJRM2124900111FY",
+            "FJRM2125300090FY"
           ],
           "reasons": [
             "客户是波兰大客户，购买了一百多台机器，经robbin确认，存在以下电机不工作，刹车失效，急停开关跌落，1904无法显示的问题，确认更换配件",
-            "客户是波兰大客户，购买了一百多台机器，通过拆除现有的备件机器，自行维修了损坏的四台机器，汇总了需要更换的配件。由销售申请，经po蔡福朋确认，客户四台机器分别出现刹车故障无法使用，电机无法运转，1904无法显示的问题。"
+            "客户是波兰大客户，购买了一百多台机器，通过拆除现有的备件机器，自行维修了损坏的四台机器，汇总了需要更换的配件。由销售申请，经po蔡福朋确认，客户四台机器分别出现刹车故障无法使用，电机无法运转，1904无法显示的问题。",
+            "法国HEXAGONE客户开箱时发现急停开关损坏，和出厂质量管控谢达鑫调取出厂照片视频后发现出厂无质量问题，怀疑运输存储时出现损坏，经过jingtian决定，补发一枚"
           ]
         },
         {
@@ -9871,7 +9655,7 @@
             "FJLQ17425200183ZC"
           ],
           "reasons": [
-            "经销商反映，其机器弹窗机器倾斜，拉日志之后查看IMU存在大角度倾斜，目前已经排查认为IMU损坏，客户自述数台机器存在同样问题，但是经过日志查看之后在线的机器目前均显示正常。\n因此，经Easnow cai同意后，为其发货[900206004Q0030A] 惯导单元总成 1套",
+            "经销商反映，其机器弹窗机器倾斜，拉日志之后查看IMU存在大角度倾斜，目前已经排查认为IMU损坏，客户自述数台机器存在同样问题，但是经过日志查看之后在线的机器目前均显示正常。 因此，经Easnow cai同意后，为其发货[900206004Q0030A] 惯导单元总成 1套",
             "经项目组po福鹏确认，机器传感器读数故障，无法通过软件解决，给客户更换新的imu"
           ]
         },
@@ -9895,7 +9679,7 @@
           ],
           "reasons": [
             "与蔡福朋等一众研发判断，客户无法进入rtk固定解，原因是1904天线接口损坏，需更换1904车机",
-            "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件：\n1. [900330600Y0100C] 中割蘑菇头总成V2   *1\n2. [900277300Q0030A] 控制盒    *1\n3. 蘑菇头穿管线束 370001224Y0100B   *1\n\n由于法兰克福仓有蘑菇头与控制盒的库存，因此本单从法兰克福走发货，发送蘑菇头与控制盒"
+            "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件： 1. [900330600Y0100C] 中割蘑菇头总成V2 *1 2. [900277300Q0030A] 控制盒 *1 3. 蘑菇头穿管线束 370001224Y0100B *1 由于法兰克福仓有蘑菇头与控制盒的库存，因此本单从法兰克福走发货，发送蘑菇头与控制盒"
           ]
         },
         {
@@ -9990,7 +9774,7 @@
             "FJRLM0125100002FY"
           ],
           "reasons": [
-            "销售elena表示瑞士proxilia客户与25年年初购买了一台专业划线机，由于该专业划线机版本比较早，表示希望AE走售后为客户发送新版本划线机配件，配件如下：\n1. 921700028Y0130A,L型螺纹二通,A.2(Design)\n2. 921700051Y0130A,喷嘴,A.3 (Design)\n3. 921700138Y0130A,预过滤器,A.3 (Design)\n4. 921700188Y0130A,英制快播螺纹弯头,A.2(Design)\n5. 921700200Y0130A,隔膜泵总成,A.3(Design)\n6. 921700268Y0100A,喷头滤网,A.6(Design)\n7. 921700311Y0130A,扁口快拆帽,A.3(Design)\n8. 921700331Y0130A,防滴帽,A.2(Design)\n9. 921700431Y0130A,快拆帽密封垫,A.6(Design)\n10. 921700541Y0130A,防滴隔膜,A.2(Design)\n11. 921700621Y0130A,锥形喷嘴,A.6(Design)\n12. 921700641Y0130A,圆口快拆帽,A.4(Design)\n13. 921700751Y0130A,扇形喷嘴,A.3(Design)\n14. 921700775Y0130A,扇形喷嘴,B.2(Design)\n15. 921750001Y0130A,气管接头喷头,D.2(Design)\n\n沟通项目组陈守辉后同意为客户发送"
+            "销售elena表示瑞士proxilia客户与25年年初购买了一台专业划线机，由于该专业划线机版本比较早，表示希望AE走售后为客户发送新版本划线机配件，配件如下： 1. 921700028Y0130A,L型螺纹二通,A.2(Design) 2. 921700051Y0130A,喷嘴,A.3 (Design) 3. 921700138Y0130A,预过滤器,A.3 (Design) 4. 921700188Y0130A,英制快播螺纹弯头,A.2(Design) 5. 921700200Y0130A,隔膜泵总成,A.3(Design) 6. 921700268Y0100A,喷头滤网,A.6(Design) 7. 921700311Y0130A,扁口快拆帽,A.3(Design) 8. 921700331Y0130A,防滴帽,A.2(Design) 9. 921700431Y0130A,快拆帽密封垫,A.6(Design) 10. 921700541Y0130A,防滴隔膜,A.2(Design) 11. 921700621Y0130A,锥形喷嘴,A.6(Design) 12. 921700641Y0130A,圆口快拆帽,A.4(Design) 13. 921700751Y0130A,扇形喷嘴,A.3(Design) 14. 921700775Y0130A,扇形喷嘴,B.2(Design) 15. 921750001Y0130A,气管接头喷头,D.2(Design) 沟通项目组陈守辉后同意为客户发送"
           ]
         },
         {
@@ -10113,7 +9897,7 @@
             "FLMO124900019FY"
           ],
           "reasons": [
-            "丝杆旋钮组件为旧款，会导致挡板移位，补发改制后的旋钮\n其他物料经项目组评估为易坏件，按要求给客户备件，为了故障时能及时更换"
+            "丝杆旋钮组件为旧款，会导致挡板移位，补发改制后的旋钮 其他物料经项目组评估为易坏件，按要求给客户备件，为了故障时能及时更换"
           ]
         },
         {
@@ -10241,9 +10025,9 @@
       "owner": "Jingtian.Chen欧洲",
       "warehouseGroup": "国内仓",
       "projectCode": "R2502",
-      "totalQty": 17.0,
-      "partCount": 7,
-      "rmaCount": 13,
+      "totalQty": 21.0,
+      "partCount": 8,
+      "rmaCount": 16,
       "warehouses": [
         "Shenzhen"
       ],
@@ -10269,9 +10053,9 @@
             "FJDFRXC002590035FY"
           ],
           "reasons": [
-            "经客户反映，客户的FRX发出异响并持续重启，AE请求客户关闭FRX，然后使用万用表的欧姆档测量每块电路板的正、负电源端子是否短路。经felix chen和AE进行联合排查之后，认为电机轴发生磨损，经jack yao同意，进行发货：[QDJ-DJ-003030B] 割刀电机2套\n[1D0100732Y0170A] 刀盘保护罩右 1套\n[1D0100722Y0170A] 刀盘保护罩左 1套",
-            "荷兰brinkman于10月份购入一台FRX，客户表示机器的割刀裸露在外并不安全，希望给出一些解决方案，沟通项目组姚正后同意为客户发送[1D0100732Y0170A] 刀盘保护罩右\n1D0100722Y0170A刀盘保护罩左\n各一个,将割刀包围起来，满足客户的诉求",
-            "荷兰knoll反馈刀片没有保护结构，沟通项目组姚正后为客户发送[1D0100732Y0170A] 刀盘保护罩右\n与\n1D0100722Y0170A刀盘保护罩左一个"
+            "经客户反映，客户的FRX发出异响并持续重启，AE请求客户关闭FRX，然后使用万用表的欧姆档测量每块电路板的正、负电源端子是否短路。经felix chen和AE进行联合排查之后，认为电机轴发生磨损，经jack yao同意，进行发货：[QDJ-DJ-003030B] 割刀电机2套 [1D0100732Y0170A] 刀盘保护罩右 1套 [1D0100722Y0170A] 刀盘保护罩左 1套",
+            "荷兰brinkman于10月份购入一台FRX，客户表示机器的割刀裸露在外并不安全，希望给出一些解决方案，沟通项目组姚正后同意为客户发送[1D0100732Y0170A] 刀盘保护罩右 1D0100722Y0170A刀盘保护罩左 各一个,将割刀包围起来，满足客户的诉求",
+            "荷兰knoll反馈刀片没有保护结构，沟通项目组姚正后为客户发送[1D0100732Y0170A] 刀盘保护罩右 与 1D0100722Y0170A刀盘保护罩左一个"
           ]
         },
         {
@@ -10280,21 +10064,24 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2502",
           "partName": "划线机一度电电池转接线线束",
-          "qty": 2.0,
-          "rmaCount": 2,
-          "serialCount": 2,
-          "latestDate": "2025-11-30 01:59:17",
+          "qty": 4.0,
+          "rmaCount": 3,
+          "serialCount": 3,
+          "latestDate": "2026-03-26 21:37:59",
           "rmaNames": [
             "RM251117018",
-            "RM251130002"
+            "RM251130002",
+            "RM260327001"
           ],
           "serials": [
             "FJDFRX0002570005FY",
-            "FJDFRX0002570009FY"
+            "FJDFRX0002570009FY",
+            "FJDFRX0002570010FY"
           ],
           "reasons": [
             "奥地利Gerald客户购买了一台FRX，遇到电池线不够长的问题，无法正常将一度电池安装，沟通项目组jack.yao后统一为客户发送370000534Y0130a 一度电电池转换线线束一枚",
-            "客户的FRX没有一度电电池转接线线束，为客户补发"
+            "客户的FRX没有一度电电池转接线线束，为客户补发",
+            "项目组给客户赠送FRX电池延长线h和护手板"
           ]
         },
         {
@@ -10314,7 +10101,7 @@
             "FJDFRXC002590035FY"
           ],
           "reasons": [
-            "荷兰knoll客户反馈FRX塑料刀盘损坏，割草刀片飞出，与项目组jack.yao沟通后同意为客户发送新的1D0100061Y0050G  FRX 塑料割盘与1D0088000Y0050，星型刀片配件一套"
+            "荷兰knoll客户反馈FRX塑料刀盘损坏，割草刀片飞出，与项目组jack.yao沟通后同意为客户发送新的1D0100061Y0050G FRX 塑料割盘与1D0088000Y0050，星型刀片配件一套"
           ]
         },
         {
@@ -10369,18 +10156,39 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2502",
           "partName": "智能计算装置",
-          "qty": 1.0,
-          "rmaCount": 1,
+          "qty": 2.0,
+          "rmaCount": 2,
           "serialCount": 1,
-          "latestDate": "2026-03-16 09:40:03",
+          "latestDate": "2026-03-24 05:58:36",
           "rmaNames": [
-            "RM260316007"
+            "RM260316007",
+            "RM260324004"
           ],
           "serials": [
             "FJDFRXC0025A0062FY"
           ],
           "reasons": [
             "【法国amazideas】同场景下，相同地点，由同一n10提供ntrip，FRX搜星数显著小于v4e，现场kyle拉通robbin luo，bill feng 和jack yao, liangwu guo 讨论确认由天线硬件引起，确认更换蘑菇头，需要烧录FRX固件，需要记录SN"
+          ]
+        },
+        {
+          "owner": "Jingtian.Chen欧洲",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2502",
+          "partName": "步进电机",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-28 22:51:45",
+          "rmaNames": [
+            "RM260329001"
+          ],
+          "serials": [
+            "FJDFRXC002590035FY"
+          ],
+          "reasons": [
+            "荷兰knoll代理反馈FRX（FJDFRXC002590035FY）刀盘升降电机不工作，具体表现为割刀可以旋转，但是电机升降，电机不工作，且没有声音，拉通项目组姚正、高雷排查后发现驱动器正常，结论为升降电机损坏，项目组高雷与姚正表示可以为客户更换g / Spare parts / motor [QDJ-DJ-003038A] 步进电机一个"
           ]
         },
         {
@@ -10403,80 +10211,7 @@
           ],
           "reasons": [
             "荷兰knoll的FRX（序列号）出现固件更新失败的缘故，拉通项目组腾杰、高雷、郭武良等人排查，发现电机通信不上，进一步排查，发现电机驱动板烧毁。项目组姚正表示为客户补发BZB-QD-003142JD] 驱动板两套,法兰克福仓没有货，申请国内发货",
-            "陈靖天现场为客户维修机器，客户FRX试用样机控制板损坏，需要换新\n\n控制板需要刷程序"
-          ]
-        }
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2502",
-      "totalQty": 4.0,
-      "partCount": 3,
-      "rmaCount": 3,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2502",
-          "partName": "划线机一度电电池转接线线束",
-          "qty": 2.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-26 21:37:59",
-          "rmaNames": [
-            "RM260327001"
-          ],
-          "serials": [
-            "FJDFRX0002570010FY"
-          ],
-          "reasons": [
-            "项目组给客户赠送FRX电池延长线h和护手板"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2502",
-          "partName": "智能计算装置",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-24 05:58:36",
-          "rmaNames": [
-            "RM260324004"
-          ],
-          "serials": [
-            "FJDFRXC0025A0062FY"
-          ],
-          "reasons": [
-            "【法国amazideas】同场景下，相同地点，由同一n10提供ntrip，FRX搜星数显著小于v4e，现场kyle拉通robbin luo，bill feng 和jack yao, liangwu guo 讨论确认由天线硬件引起，确认更换蘑菇头，需要烧录FRX固件，需要记录SN"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2502",
-          "partName": "步进电机",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-28 22:51:45",
-          "rmaNames": [
-            "RM260329001"
-          ],
-          "serials": [
-            "FJDFRXC002590035FY"
-          ],
-          "reasons": [
-            "荷兰knoll代理反馈FRX（FJDFRXC002590035FY）刀盘升降电机不工作，具体表现为割刀可以旋转，但是电机升降，电机不工作，且没有声音，拉通项目组姚正、高雷排查后发现驱动器正常，结论为升降电机损坏，项目组高雷与姚正表示可以为客户更换g / Spare parts / motor\t[QDJ-DJ-003038A] 步进电机一个"
+            "陈靖天现场为客户维修机器，客户FRX试用样机控制板损坏，需要换新 控制板需要刷程序"
           ]
         }
       ]
@@ -10509,7 +10244,7 @@
             "FJDFRX0002550004FY"
           ],
           "reasons": [
-            "陈靖天现场为客户维修机器，客户FRX试用样机割刀电机损坏，需要换新\n\n电机为Svea的共用料，出库需检查版本，以及清除Svea相关logo贴纸"
+            "陈靖天现场为客户维修机器，客户FRX试用样机割刀电机损坏，需要换新 电机为Svea的共用料，出库需检查版本，以及清除Svea相关logo贴纸"
           ]
         },
         {
@@ -10538,9 +10273,9 @@
       "owner": "Jingtian.Chen欧洲",
       "warehouseGroup": "国内仓",
       "projectCode": "R2503",
-      "totalQty": 212.0,
-      "partCount": 35,
-      "rmaCount": 48,
+      "totalQty": 218.0,
+      "partCount": 37,
+      "rmaCount": 53,
       "warehouses": [
         "Fuzhou",
         "Shenzhen"
@@ -10566,7 +10301,7 @@
           ],
           "reasons": [
             "客户反应平板没有进行线刷，开机进入农机界面，经销售Luc和Gavin chen进行确认后，按PI订单走一个平板的售后单",
-            "客户反馈rlm01的平板坏了。由于客户之前的rlm01平板是7寸，项目组说过可以给换成10寸的，现在想走售后给客户发一个rlm01的十寸三防平板。经沟通，@Forever.Cao 建议给客户更换一个900297330Q0030A\n10寸三防平板。"
+            "客户反馈rlm01的平板坏了。由于客户之前的rlm01平板是7寸，项目组说过可以给换成10寸的，现在想走售后给客户发一个rlm01的十寸三防平板。经沟通，@Forever.Cao 建议给客户更换一个900297330Q0030A 10寸三防平板。"
           ]
         },
         {
@@ -10575,18 +10310,21 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2503",
           "partName": "3040长轴电机驱动总成",
-          "qty": 2.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-14 12:16:40",
+          "qty": 3.0,
+          "rmaCount": 2,
+          "serialCount": 2,
+          "latestDate": "2026-03-22 16:57:23",
           "rmaNames": [
-            "RM260314001"
+            "RM260314001",
+            "RM260323002"
           ],
           "serials": [
-            "FJDRLM0225A0189FY"
+            "FJDRLM0225A0189FY",
+            "FJDRLM0225B0247FY"
           ],
           "reasons": [
-            "瑞士rudazmini划线机1.5与2km速度下划线不直，存在一定程度的偏移，拉通项目组冯晨、曹俭、均瑞等排查后，建议为客户发送如下备件，以便AE去到现场进行更换。\n1. [[BZB-QD-003155JB] 驱动板。 *1\n2. [172830000Y0130A] 3040长轴电机驱动总成。 *2\n3. pare parts / Harnesses\t[QXL-XS-003607A] VCU液压集成线束    *1"
+            "【奥地利 mowy RLM02】sn FJDRLM0225B0247FY 客户反应开机之后遥控发现电机报错，温度检测模块出了问题，电机检测到过热保护，实际上没有问题，fengchen暂时屏蔽了车机数据，并和Jefferson确认物料号，之后要换电机总成",
+            "瑞士rudazmini划线机1.5与2km速度下划线不直，存在一定程度的偏移，拉通项目组冯晨、曹俭、均瑞等排查后，建议为客户发送如下备件，以便AE去到现场进行更换。 1. [[BZB-QD-003155JB] 驱动板。 *1 2. [172830000Y0130A] 3040长轴电机驱动总成。 *2 3. pare parts / Harnesses [QXL-XS-003607A] VCU液压集成线束 *1"
           ]
         },
         {
@@ -10691,7 +10429,7 @@
             "FJDRLM012530090FY"
           ],
           "reasons": [
-            "按照客户要求，和jingtian chen，Emmon Zhuang协商后同意进行发货。\n2个T型硅胶塞+1个软胶塞为一套，共计五套"
+            "按照客户要求，和jingtian chen，Emmon Zhuang协商后同意进行发货。 2个T型硅胶塞+1个软胶塞为一套，共计五套"
           ]
         },
         {
@@ -10741,17 +10479,23 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2503",
           "partName": "三档旋钮开关",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2025-12-08 12:14:09",
+          "qty": 3.0,
+          "rmaCount": 3,
+          "serialCount": 3,
+          "latestDate": "2026-03-25 14:13:22",
           "rmaNames": [
-            "RM251208022"
+            "RM251208022",
+            "RM260324005",
+            "RM260325015"
           ],
           "serials": [
-            "FJDRLM012540158FY"
+            "FJDRLM012530051FY",
+            "FJDRLM012540158FY",
+            "FJDRLM012550186FY"
           ],
           "reasons": [
+            "【法国 linemark】客户反应三档旋钮无法旋钮喷漆，按钮接触不良 和急停开关上盖脱落，沟通烦培, 剑林等人确认是部件缺陷之后可以更换，急停开关370000544Y0100A 在法兰克福有货 和三档旋钮370000054Y0130B 其中三档旋钮在法兰克福无货，为节省运费一起从深圳发送",
+            "【法国·coseec】RLM01的三档旋钮开关正常转向spray喷漆时无响应，需要精密的轻微旋转至特定的非正常角度才能触发，经判断，原三档旋钮开关故障，予以更换",
             "客户反馈专业划线机FJDRLM012540158FY喷漆旋钮开关损坏，沟通项目组守辉，同意为代理发送[370000054Y0130B] 三档旋钮开关一个做售后用途。"
           ]
         },
@@ -10917,7 +10661,7 @@
             "FJDRLM0225A0115FY"
           ],
           "reasons": [
-            "瑞士UFA客户于2025年12/17日反馈mini划线机耗漆太多，跟项目组曹俭与冯晨沟通后，表示可以为客户发送[921700775Y0130A] 扇形喷嘴与[921700268Y0100A] 喷头滤网 2个，此外项目组曹俭表示由于客户下单了20太迷你划线机，可以为客户发送\n[1U0000082Y0130C] 喷嘴移动导轨20个。海外仓没有货，申请从国内发"
+            "瑞士UFA客户于2025年12/17日反馈mini划线机耗漆太多，跟项目组曹俭与冯晨沟通后，表示可以为客户发送[921700775Y0130A] 扇形喷嘴与[921700268Y0100A] 喷头滤网 2个，此外项目组曹俭表示由于客户下单了20太迷你划线机，可以为客户发送 [1U0000082Y0130C] 喷嘴移动导轨20个。海外仓没有货，申请从国内发"
           ]
         },
         {
@@ -11012,7 +10756,27 @@
             "FJDRLM012530084FY"
           ],
           "reasons": [
-            "客户这台车反应上盖松动问题，发送上盖相关配件之后发现不能随着开关按钮及时控制机器的开关，疑似为上盖连接线束及开关出现问题，经Terry wang进行排查和Gavin chen进行同意之后进行发货\n[370000584Y0100A] 启动按钮开关 数量1\n[370000544Y0100A] 急停开关 数量1\n[370000194Y0130B] 便携式划线机主线束 数量1\n[370000214Y0130C] 上盖信号转接线束 数量1\n[370000184Y0130D] 便携式划线机动力线束 数量1"
+            "客户这台车反应上盖松动问题，发送上盖相关配件之后发现不能随着开关按钮及时控制机器的开关，疑似为上盖连接线束及开关出现问题，经Terry wang进行排查和Gavin chen进行同意之后进行发货 [370000584Y0100A] 启动按钮开关 数量1 [370000544Y0100A] 急停开关 数量1 [370000194Y0130B] 便携式划线机主线束 数量1 [370000214Y0130C] 上盖信号转接线束 数量1 [370000184Y0130D] 便携式划线机动力线束 数量1"
+          ]
+        },
+        {
+          "owner": "Jingtian.Chen欧洲",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
+          "projectCode": "R2503",
+          "partName": "急停开关",
+          "qty": 1.0,
+          "rmaCount": 1,
+          "serialCount": 1,
+          "latestDate": "2026-03-25 14:13:22",
+          "rmaNames": [
+            "RM260325015"
+          ],
+          "serials": [
+            "FJDRLM012530051FY"
+          ],
+          "reasons": [
+            "【法国 linemark】客户反应三档旋钮无法旋钮喷漆，按钮接触不良 和急停开关上盖脱落，沟通烦培, 剑林等人确认是部件缺陷之后可以更换，急停开关370000544Y0100A 在法兰克福有货 和三档旋钮370000054Y0130B 其中三档旋钮在法兰克福无货，为节省运费一起从深圳发送"
           ]
         },
         {
@@ -11084,18 +10848,21 @@
           "warehouseName": "Shenzhen",
           "projectCode": "R2503",
           "partName": "推杆电机压接线束",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2025-09-22 12:35:48",
+          "qty": 2.0,
+          "rmaCount": 2,
+          "serialCount": 2,
+          "latestDate": "2026-03-20 21:57:53",
           "rmaNames": [
-            "RM250922014"
+            "RM250922014",
+            "RM260321001"
           ],
           "serials": [
-            "FJDRLM022580081FY"
+            "FJDRLM022580081FY",
+            "FJDRLM0225A0147FY"
           ],
           "reasons": [
-            "客户一开箱机器就反馈推杆无法正常抬升，并且可以手动拉伸推杆，经过电气组高雷确认，为推杆电机故障，为客户售后推杆一个 QXL-XS-003542B"
+            "客户一开箱机器就反馈推杆无法正常抬升，并且可以手动拉伸推杆，经过电气组高雷确认，为推杆电机故障，为客户售后推杆一个 QXL-XS-003542B",
+            "荷兰knoll代理表示mini划线机的推杆电机线束被喷头结构夹坏，推杆电机线束已无法正常使用，因机器仍在保修期内，因此申请FJD为其发送QXL-XS-003542B推杆电机压接线束一个，沟通项目组冯晨表示可以为客户更换一个。"
           ]
         },
         {
@@ -11243,7 +11010,7 @@
             "FJDRLM012550196FY"
           ],
           "reasons": [
-            "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送\n921700570Y0130A        F型可旋三通接头  1        \n921500030Y0130B        电磁阀(常开)         1        \n921700028Y0130A        L型螺纹二通          1       \n各一个。",
+            "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送 921700570Y0130A F型可旋三通接头 1 921500030Y0130B 电磁阀(常开) 1 921700028Y0130A L型螺纹二通 1 各一个。",
             "客户划线机开箱出现电磁阀内部锈蚀，客户2025总共下单了20台划线机，Gavin安排为客户发5个新电磁阀以及接头。",
             "客户排气电磁阀的阀芯生锈，导致卡阀，喷涂系统无法正常喷涂，经jianlin xie，jingtian chen进行排查后，同意发货"
           ]
@@ -11299,147 +11066,11 @@
             "荷兰knoll客户专业划线机划线不直，为客户诊断后，推荐客户可以使用钉胎看一下效果，沟通项目组守辉后同意为客户发送[950200021Y0130A] 钉胎一副，共两个",
             "销售kea.guo告知项目组gavin.chen瑞士sensonnens客户需要两套钉胎，gavin.chen告知AE组Salung.liang后，特此给客户发两套[950200021Y0130A] 钉胎，共4个"
           ]
-        }
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "projectCode": "R2503",
-      "totalQty": 8.0,
-      "partCount": 7,
-      "rmaCount": 7,
-      "warehouses": [
-        "未匹配"
-      ],
-      "items": [
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "3040长轴电机驱动总成",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-22 16:57:23",
-          "rmaNames": [
-            "RM260323002"
-          ],
-          "serials": [
-            "FJDRLM0225B0247FY"
-          ],
-          "reasons": [
-            "【奥地利 mowy RLM02】sn FJDRLM0225B0247FY 客户反应开机之后遥控发现电机报错，温度检测模块出了问题，电机检测到过热保护，实际上没有问题，fengchen暂时屏蔽了车机数据，并和Jefferson确认物料号，之后要换电机总成"
-          ]
         },
         {
           "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "三档旋钮开关",
-          "qty": 2.0,
-          "rmaCount": 2,
-          "serialCount": 2,
-          "latestDate": "2026-03-25 14:13:22",
-          "rmaNames": [
-            "RM260324005",
-            "RM260325015"
-          ],
-          "serials": [
-            "FJDRLM012530051FY",
-            "FJDRLM012550186FY"
-          ],
-          "reasons": [
-            "【法国 linemark】客户反应三档旋钮无法旋钮喷漆，按钮接触不良 和急停开关上盖脱落，沟通烦培, 剑林等人确认是部件缺陷之后可以更换，急停开关370000544Y0100A 在法兰克福有货 和三档旋钮370000054Y0130B 其中三档旋钮在法兰克福无货，为节省运费一起从深圳发送",
-            "【法国·coseec】RLM01的三档旋钮开关正常转向spray喷漆时无响应，需要精密的轻微旋转至特定的非正常角度才能触发，经判断，原三档旋钮开关故障，予以更换"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "可充电锂离子电池",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-20 22:48:22",
-          "rmaNames": [
-            "RM260321002"
-          ],
-          "serials": [
-            "FJDRLM012540158FY"
-          ],
-          "reasons": [
-            "荷兰knoll代理表示专业划线机（FJDRLM012540158FY）的电池充不进电，拉通研发志伟排查后发现电池损坏，沟通项目组守辉后同意为客户更换[O0040005] 可充电锂离子电池一个，德国仓有货，申请德国仓发货"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "急停开关",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-25 14:13:22",
-          "rmaNames": [
-            "RM260325015"
-          ],
-          "serials": [
-            "FJDRLM012530051FY"
-          ],
-          "reasons": [
-            "【法国 linemark】客户反应三档旋钮无法旋钮喷漆，按钮接触不良 和急停开关上盖脱落，沟通烦培, 剑林等人确认是部件缺陷之后可以更换，急停开关370000544Y0100A 在法兰克福有货 和三档旋钮370000054Y0130B 其中三档旋钮在法兰克福无货，为节省运费一起从深圳发送"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "推杆电机压接线束",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-20 21:57:53",
-          "rmaNames": [
-            "RM260321001"
-          ],
-          "serials": [
-            "FJDRLM0225A0147FY"
-          ],
-          "reasons": [
-            "荷兰knoll代理表示mini划线机的推杆电机线束被喷头结构夹坏，推杆电机线束已无法正常使用，因机器仍在保修期内，因此申请FJD为其发送QXL-XS-003542B推杆电机压接线束一个，沟通项目组冯晨表示可以为客户更换一个。"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
-          "projectCode": "R2503",
-          "partName": "硬平膜压力变送器",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-25 13:56:00",
-          "rmaNames": [
-            "RM260325013"
-          ],
-          "serials": [
-            "FJDRLM012540122FY"
-          ],
-          "reasons": [
-            "奥地利L&L的专业划线机（FJDRLM012540122FY）出现不报缺漆的异常，拉通项目组守辉、帅铭排查后发现压力传感器发生损坏，守辉表示可以为客户发送[921700178Y0130A] 硬平膜压力变送器一个，申请德国仓发货"
-          ]
-        },
-        {
-          "owner": "Jingtian.Chen欧洲",
-          "warehouseGroup": "未匹配仓库",
-          "warehouseName": "未匹配",
+          "warehouseGroup": "国内仓",
+          "warehouseName": "Shenzhen",
           "projectCode": "R2503",
           "partName": "驱动板",
           "qty": 1.0,
@@ -11462,9 +11093,9 @@
       "owner": "Jingtian.Chen欧洲",
       "warehouseGroup": "海外仓",
       "projectCode": "R2503",
-      "totalQty": 32.0,
+      "totalQty": 34.0,
       "partCount": 11,
-      "rmaCount": 16,
+      "rmaCount": 18,
       "warehouses": [
         "Frankfurt"
       ],
@@ -11533,7 +11164,7 @@
           "reasons": [
             "代理从客户那里收到视频。视频中显示蘑菇头松动；怀疑盖子有裂缝。经Gavin chen同意之后进行发货[990000171Y0130A] EVA垫1个，[270001362Y0130A] 电控钣金1个，[270001352Y0130A] 支撑钣金1个，[991400021Y0130A] 蘑菇头防护衬垫1个，[S010460602501] 带弹平垫六角螺栓2个，[S010460601200] 带弹平垫六角螺栓2个，[210100311O0040A] 环氧板1个，[501000011Y0130D] 上盖1个，[270000812Y0130B] 电池罩1个，[NS0100192Y0130A] T型套筒1个",
             "客户反映上盖损坏，经过Gavin chen同意之后进行发货",
-            "客户反映上盖松动，之前德国客户有同样问题，经Gavin chen确认同意，进行发货[990000171Y0130A] EVA垫 1个\n[270001362Y0130A] 电控钣金 1个\n[270001352Y0130A] 支撑钣金 1个\n[991400021Y0130A] 蘑菇头防护衬垫 1个\n[S010460602501] 带弹平垫六角螺栓 2个\n[S010460601200] 带弹平垫六角螺栓 2个\n[210100311O0040A] 环氧板 1个\n[501000011Y0130D] 上盖 1个\n[270000812Y0130B] 电池罩 1个\n[NS0100192Y0130A] T型套筒 1个",
+            "客户反映上盖松动，之前德国客户有同样问题，经Gavin chen确认同意，进行发货[990000171Y0130A] EVA垫 1个 [270001362Y0130A] 电控钣金 1个 [270001352Y0130A] 支撑钣金 1个 [991400021Y0130A] 蘑菇头防护衬垫 1个 [S010460602501] 带弹平垫六角螺栓 2个 [S010460601200] 带弹平垫六角螺栓 2个 [210100311O0040A] 环氧板 1个 [501000011Y0130D] 上盖 1个 [270000812Y0130B] 电池罩 1个 [NS0100192Y0130A] T型套筒 1个",
             "客户这台车反应上盖松动问题，收到之后反馈上盖电池仓下沿断裂，由于上盖备件在德国法兰克福仓有货，按照优先从德国仓发货原则，Gavin chen进行同意进行"
           ]
         },
@@ -11543,18 +11174,21 @@
           "warehouseName": "Frankfurt",
           "projectCode": "R2503",
           "partName": "可充电锂离子电池",
-          "qty": 10.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2025-05-08 11:59:26",
+          "qty": 11.0,
+          "rmaCount": 2,
+          "serialCount": 2,
+          "latestDate": "2026-03-20 22:48:22",
           "rmaNames": [
-            "RM250508038"
+            "RM250508038",
+            "RM260321002"
           ],
           "serials": [
-            "FJDRLM012530054FY"
+            "FJDRLM012530054FY",
+            "FJDRLM012540158FY"
           ],
           "reasons": [
-            "早期发出的电池无通讯，需要全部更换为通讯电池，代理处共有10台机器"
+            "早期发出的电池无通讯，需要全部更换为通讯电池，代理处共有10台机器",
+            "荷兰knoll代理表示专业划线机（FJDRLM012540158FY）的电池充不进电，拉通研发志伟排查后发现电池损坏，沟通项目组守辉后同意为客户更换[O0040005] 可充电锂离子电池一个，德国仓有货，申请德国仓发货"
           ]
         },
         {
@@ -11597,7 +11231,7 @@
             "FJDRLM012550215FY"
           ],
           "reasons": [
-            "荷兰smartgarden代理专业划线机急停开关损坏，沟通项目组守辉，同意为客户更换\n[370000544Y0100A] 急停开关一个，德国仓有货，申请德国仓发货"
+            "荷兰smartgarden代理专业划线机急停开关损坏，沟通项目组守辉，同意为客户更换 [370000544Y0100A] 急停开关一个，德国仓有货，申请德国仓发货"
           ]
         },
         {
@@ -11657,7 +11291,7 @@
             "FJDRLM012550160FY"
           ],
           "reasons": [
-            "奥地利L&L专业划线机出现故障，具体表现为切换排气跟喷涂档位，喷嘴都有水雾喷出，拉通项目组谢剑林排查后，发现常闭电磁阀出现损坏，客户更换后，问题稍微缓解，但未彻底解决，让客户继续更换常开电磁阀，问题车机解决。与项目组守辉沟通后表示同意为客户更换如下备件各一个用作售后用途。\n1. 921500030Y0130B    电磁阀(常开)\n2. [921000010Y0130A] 电磁阀\n德国仓有货，申请从德国仓发送"
+            "奥地利L&L专业划线机出现故障，具体表现为切换排气跟喷涂档位，喷嘴都有水雾喷出，拉通项目组谢剑林排查后，发现常闭电磁阀出现损坏，客户更换后，问题稍微缓解，但未彻底解决，让客户继续更换常开电磁阀，问题车机解决。与项目组守辉沟通后表示同意为客户更换如下备件各一个用作售后用途。 1. 921500030Y0130B 电磁阀(常开) 2. [921000010Y0130A] 电磁阀 德国仓有货，申请从德国仓发送"
           ]
         },
         {
@@ -11679,7 +11313,7 @@
             "FJDRLM012550189FY"
           ],
           "reasons": [
-            "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送\n921700570Y0130A        F型可旋三通接头        1        PHW10-03\n921500030Y0130B        电磁阀(常开)        1        2KWA05010F\n921700028Y0130A        L型螺纹二通        1        PL10-03\n各一个。申请从德国仓发货",
+            "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送 921700570Y0130A F型可旋三通接头 1 PHW10-03 921500030Y0130B 电磁阀(常开) 1 2KWA05010F 921700028Y0130A L型螺纹二通 1 PL10-03 各一个。申请从德国仓发货",
             "ae现场部署发现电磁阀锈蚀，经过po gavin确认，更换常开电磁阀"
           ]
         },
@@ -11689,17 +11323,20 @@
           "warehouseName": "Frankfurt",
           "projectCode": "R2503",
           "partName": "硬平膜压力变送器",
-          "qty": 1.0,
-          "rmaCount": 1,
-          "serialCount": 1,
-          "latestDate": "2026-03-17 15:32:25",
+          "qty": 2.0,
+          "rmaCount": 2,
+          "serialCount": 2,
+          "latestDate": "2026-03-25 13:56:00",
           "rmaNames": [
-            "RM260317014"
+            "RM260317014",
+            "RM260325013"
           ],
           "serials": [
+            "FJDRLM012540122FY",
             "FJDRLM0125C0236FY"
           ],
           "reasons": [
+            "奥地利L&L的专业划线机（FJDRLM012540122FY）出现不报缺漆的异常，拉通项目组守辉、帅铭排查后发现压力传感器发生损坏，守辉表示可以为客户发送[921700178Y0130A] 硬平膜压力变送器一个，申请德国仓发货",
             "经谢建林与rlm01po gavin确认，压力传感器故障，予以换件"
           ]
         }
@@ -11835,8 +11472,8 @@
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2119",
       "partName": "充电桩头",
       "qty": 1.0,
@@ -12041,33 +11678,35 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2119",
       "partName": "割草机90MM左前轮组件",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2025-11-10 03:02:51",
+      "qty": 2.0,
+      "rmaCount": 2,
+      "serialCount": 2,
+      "latestDate": "2026-03-24 00:00:54",
       "rmaNames": [
-        "RM251110002"
+        "RM251110002",
+        "RM260324002"
       ],
       "serials": [
-        "FJDFR40002470185FY"
+        "FJDFR40002470185FY",
+        "FJDFR40002520026FY"
       ],
       "reasons": [
+        "客户FR4000前轮出现松动，轴承与底壳之间左右晃动，并有很大间隙。前轮位置距离充电桩电机低约5毫米，导致充电针无法插入。必须手动将其推入才能充电。现为客户发送最新前轮",
         "客户反馈运输时充电桩顶棚受损，且前轮脱落。现为客户更换前轮及充电桩顶棚。"
       ]
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "海外仓",
+      "warehouseName": "Sydney Warehouse",
       "projectCode": "R2119",
       "partName": "割草机90MM左前轮组件",
-      "qty": 2.0,
-      "rmaCount": 2,
+      "qty": 1.0,
+      "rmaCount": 1,
       "serialCount": 1,
-      "latestDate": "2026-03-24 00:00:54",
+      "latestDate": "2026-03-23 23:41:43",
       "rmaNames": [
-        "RM260324001",
-        "RM260324002"
+        "RM260324001"
       ],
       "serials": [
         "FJDFR40002520026FY"
@@ -12166,7 +11805,7 @@
         "FJDFV200024B0030FY"
       ],
       "reasons": [
-        "发给顾客的小割螺丝长短不一样，\n顾客在安装长螺栓时刀片对比其他短螺栓的安装不牢固 所以选择拧紧，导致滑丝。",
+        "发给顾客的小割螺丝长短不一样， 顾客在安装长螺栓时刀片对比其他短螺栓的安装不牢固 所以选择拧紧，导致滑丝。",
         "因客户产品机型过旧。现给客户更换最新的金属法兰 刀盘以及耐久刀片",
         "客户割刀刀盘出现裂痕，轮胎同时也出现裂痕。为客户更换刀盘以及轮胎。",
         "客户蘑菇头无法使用且刀盘损坏。为客户更换蘑菇头以及刀盘",
@@ -12228,8 +11867,8 @@
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2119",
       "partName": "小割维护底盘总成",
       "qty": 30.0,
@@ -12247,9 +11886,9 @@
         "FJDFR400025B0707FY"
       ],
       "reasons": [
-        "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接口\n部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆维\n修",
-        "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接向\n部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维\n修",
-        "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘知\n部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维\n修"
+        "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接口 部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆维 修",
+        "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘接向 部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维 修",
+        "FR4000底盘转向轮轴承直径比底盘预留孔洞大安装后底盘知 部位发生开裂,特此为顾客发送30台底盘后续由AE上门拆卸维 修"
       ]
     },
     {
@@ -12278,41 +11917,24 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2119",
       "partName": "控制板",
-      "qty": 2.0,
-      "rmaCount": 2,
-      "serialCount": 2,
-      "latestDate": "2025-11-13 03:58:53",
-      "rmaNames": [
-        "RM251029001",
-        "RM251113003"
-      ],
-      "serials": [
-        "FJDFR40002470158FY",
-        "FJDFR400024C0326FY"
-      ],
-      "reasons": [
-        "客户数控板常亮，但是蘑菇头灯不亮。经与研发排查，需要为客户更换VCU板卡。",
-        "客户车机为24年老版本车机，VCU驱动板和功率板出现问题，导致客户行走电机，割刀电机，电池故障均出现报错。现为客户更换VCU驱动板和功率板。"
-      ]
-    },
-    {
-      "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2119",
-      "partName": "控制板",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
+      "qty": 3.0,
+      "rmaCount": 3,
+      "serialCount": 3,
       "latestDate": "2026-03-22 16:07:43",
       "rmaNames": [
+        "RM251029001",
+        "RM251113003",
         "RM260323001"
       ],
       "serials": [
+        "FJDFR40002470158FY",
+        "FJDFR400024C0326FY",
         "FJDFR40002540178FY"
       ],
       "reasons": [
-        "客户FJDFR40002540178FY，VCU板子坏了通信不良。前FAE Carter并未及时为客户发送备件，特此为客户发送VCU板卡进行更换。"
+        "客户FJDFR40002540178FY，VCU板子坏了通信不良。前FAE Carter并未及时为客户发送备件，特此为客户发送VCU板卡进行更换。",
+        "客户数控板常亮，但是蘑菇头灯不亮。经与研发排查，需要为客户更换VCU板卡。",
+        "客户车机为24年老版本车机，VCU驱动板和功率板出现问题，导致客户行走电机，割刀电机，电池故障均出现报错。现为客户更换VCU驱动板和功率板。"
       ]
     },
     {
@@ -12404,6 +12026,26 @@
     {
       "owner": "Haochen.Peng亚太",
       "warehouseGroup": "海外仓",
+      "warehouseName": "Frankfurt",
+      "projectCode": "R2119",
+      "partName": "智能割草机器人",
+      "qty": 1.0,
+      "rmaCount": 1,
+      "serialCount": 1,
+      "latestDate": "2026-03-27 12:17:05",
+      "rmaNames": [
+        "RM260327021"
+      ],
+      "serials": [
+        "FJDFR40002470175FY"
+      ],
+      "reasons": [
+        "客户FR4000摄像头模组出现问题，避障失败，其次版本为老结构，硬件出现故障。特此为客户发送一台最新版FR4000"
+      ]
+    },
+    {
+      "owner": "Haochen.Peng亚太",
+      "warehouseGroup": "海外仓",
       "warehouseName": "Japan",
       "projectCode": "R2119",
       "partName": "智能割草机器人",
@@ -12467,31 +12109,11 @@
         "FR4000生产日期为24年6月顾客开箱使用后VCU板异常，整车电机报错，相同生产批次两台退回重发。本次是由丰疆国际的订单退货由FE走退换新机流程。",
         "刀盘转接件塑料热熔化，割刀电机无法使用",
         "无法正常充电，",
-        "日本SEKIDO小割FR4000三台小割硬件均出现问题。同产品组与销售沟通，为客户走整机换件申请。\n3/17  FJDFR400024C0283FY 板子故障(无法解除Stop状态)\n5/8  FJDFR400024C0276FY 充电异常\n6/2  FJDFR40002470191FY 行走电机异常(轮轴磨损严重，电机保护塑料盖板有融化痕迹)",
+        "日本SEKIDO小割FR4000三台小割硬件均出现问题。同产品组与销售沟通，为客户走整机换件申请。 3/17 FJDFR400024C0283FY 板子故障(无法解除Stop状态) 5/8 FJDFR400024C0276FY 充电异常 6/2 FJDFR40002470191FY 行走电机异常(轮轴磨损严重，电机保护塑料盖板有融化痕迹)",
         "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机",
         "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。",
-        "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。\n坏件处置建议",
-        "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。\n坏件处置建议\n发回日本仓，九月由FAE前去维修。\n坏件现状\n无法使用结构问题。"
-      ]
-    },
-    {
-      "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2119",
-      "partName": "智能割草机器人",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-27 12:17:05",
-      "rmaNames": [
-        "RM260327021"
-      ],
-      "serials": [
-        "FJDFR40002470175FY"
-      ],
-      "reasons": [
-        "客户FR4000摄像头模组出现问题，避障失败，其次版本为老结构，硬件出现故障。特此为客户发送一台最新版FR4000"
+        "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。 坏件处置建议",
+        "本次因财务审批原因，由FAE通过RMA流程为顾客更换FR4000整机。 坏件处置建议 发回日本仓，九月由FAE前去维修。 坏件现状 无法使用结构问题。"
       ]
     },
     {
@@ -12807,7 +12429,7 @@
         "FJLQ10322621946ZC"
       ],
       "reasons": [
-        "客户4台大割+捡球机的前轮爆胎及捡球机前轮破损,需要更换。由于螺母没有上架料\n号,因此需要工厂一同寄送料号为S020161200004的6个螺母,和料号为\n280132562Y0030A的12块垫片",
+        "客户4台大割+捡球机的前轮爆胎及捡球机前轮破损,需要更换。由于螺母没有上架料 号,因此需要工厂一同寄送料号为S020161200004的6个螺母,和料号为 280132562Y0030A的12块垫片",
         "客户两个前轮存在不同程度的漏气，需要更换2个前轮"
       ]
     },
@@ -12850,7 +12472,7 @@
       ],
       "reasons": [
         "客户八月份到货大割，充电器发生异常，无法正常重点并冒烟，有难闻气味。经FAE远程排查，为客户走换件流程，后续旧设备由杨阳出差时从客户处带回分析。",
-        "远程排查视频：https://fjdynamics.feishu.cn/minutes/obcnrzi1nolv44i2uax4w729?from=from_copylink\n充电器使用一个多月发生异常，无法正常供电。\n与陈登慧、魏志伟共同确认车机本体电池无异常(代理用自己的充电器可以正常供电)。\n由于终端客户现场没有万用表，充电器具体异常原因需代理带回公司后进一步拆机分析或寄回我司与生产厂家共同分析。\n已验证确认异常充电器的现象：\n1.没有输出电流\n2.充电器与电池协议能正常握手\n3.充电器接入时，电池指示灯能正常显示充电状态代表协议握手成功\n4.充电器在充电时风扇不转，CAN线等线束均已经检查没有松动"
+        "远程排查视频：https://fjdynamics.feishu.cn/minutes/obcnrzi1nolv44i2uax4w729?from=from_copylink 充电器使用一个多月发生异常，无法正常供电。 与陈登慧、魏志伟共同确认车机本体电池无异常(代理用自己的充电器可以正常供电)。 由于终端客户现场没有万用表，充电器具体异常原因需代理带回公司后进一步拆机分析或寄回我司与生产厂家共同分析。 已验证确认异常充电器的现象： 1.没有输出电流 2.充电器与电池协议能正常握手 3.充电器接入时，电池指示灯能正常显示充电状态代表协议握手成功 4.充电器在充电时风扇不转，CAN线等线束均已经检查没有松动"
       ]
     },
     {
@@ -13000,7 +12622,7 @@
         "FJLQ10322621946ZC"
       ],
       "reasons": [
-        "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。\n球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
+        "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。 球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
       ]
     },
     {
@@ -13107,7 +12729,7 @@
         "FJLQ10322621944ZC"
       ],
       "reasons": [
-        "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。\n球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
+        "FJLQ10322621944ZC 控制盒立柱焊合断裂，结构硬件问题，需售后更换，为避免客户购买得其他3台车也出现该问题，申请4个立柱焊合，全部一次更换。 球篮质量差，没用几天就变形，断裂，新的加强结构还未做好，暂时先申请2套8个球篮给客户更换。"
       ]
     },
     {
@@ -13299,8 +12921,8 @@
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2502",
       "partName": "割刀电机",
       "qty": 2.0,
@@ -13345,8 +12967,8 @@
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2502",
       "partName": "星形刀片",
       "qty": 4.0,
@@ -13440,7 +13062,7 @@
         "FJDRLM012510004FY"
       ],
       "reasons": [
-        "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下\n地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT\n香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室\n收件人：Wendy\n电话：+852 9814 0563"
+        "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下 地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT 香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室 收件人：Wendy 电话：+852 9814 0563"
       ]
     },
     {
@@ -13523,7 +13145,7 @@
         "FJDRLM012510004FY"
       ],
       "reasons": [
-        "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下\n地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT\n香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室\n收件人：Wendy\n电话：+852 9814 0563"
+        "香港办公室的RLM01需要更换整个喷涂系统，因此申领该批物料，由于没有demo机的订单号，只能随便填一个错误的地址和联系人，正确信息收货人信息如下 地址:Unit520-522, 5/F, CORE BUILDING 1, PH1, 1 SCIENCE PARK EAST AVE, HK SCIENCE PARK, SHA TIN, NT 香港新界沙田香港科學園科技大道東1號核心大樓1E，5樓，520-522室 收件人：Wendy 电话：+852 9814 0563"
       ]
     },
     {
@@ -13633,8 +13255,8 @@
     },
     {
       "owner": "Haochen.Peng亚太",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "海外仓",
+      "warehouseName": "Sydney Warehouse",
       "projectCode": "R2503",
       "partName": "硬平膜压力变送器",
       "qty": 1.0,
@@ -13841,7 +13463,7 @@
         "FJDFR40002580584FY"
       ],
       "reasons": [
-        "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮，            和高工一起排查之后发现是充电桩里的板子损坏。"
+        "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮， 和高工一起排查之后发现是充电桩里的板子损坏。"
       ]
     },
     {
@@ -13994,7 +13616,7 @@
         "FJDFR40002580584FY"
       ],
       "reasons": [
-        "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮，            和高工一起排查之后发现是充电桩里的板子损坏。"
+        "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮， 和高工一起排查之后发现是充电桩里的板子损坏。"
       ]
     },
     {
@@ -14037,7 +13659,7 @@
       ],
       "reasons": [
         "客户的充电桩适配器损坏",
-        "法国客户的充电桩适配器 和  AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
+        "法国客户的充电桩适配器 和 AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
       ]
     },
     {
@@ -14075,7 +13697,7 @@
         "给客户配备金属法兰",
         "给新西兰客户寄的一些刀盘和刀片",
         "销售通知想让客户割盘更加贴近地面，需要寄送一个刀盘转接件以及内六角圆柱头螺钉，由于法兰克福仓库没有库存，只能从国内发货。",
-        "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+        "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
       ]
     },
     {
@@ -14095,7 +13717,7 @@
         "FJDFR400024C0324FY"
       ],
       "reasons": [
-        "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+        "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
       ]
     },
     {
@@ -14162,7 +13784,7 @@
         "FJDFR40002560474FY"
       ],
       "reasons": [
-        "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘，  刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
+        "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘， 刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
         "客户的刀片损坏，需要寄送新型的加厚刀片，法兰克福仓没有货，只能从国内发"
       ]
     },
@@ -14197,48 +13819,31 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2119",
       "partName": "割台t升降丝母组件总成",
-      "qty": 52.0,
-      "rmaCount": 4,
-      "serialCount": 5,
-      "latestDate": "2025-10-09 03:13:15",
+      "qty": 54.0,
+      "rmaCount": 5,
+      "serialCount": 6,
+      "latestDate": "2026-03-26 14:38:21",
       "rmaNames": [
         "RM250711010",
         "RM250909004",
         "RM250911014",
-        "RM251009008"
+        "RM251009008",
+        "RM260326017"
       ],
       "serials": [
         "FJDFR40002450051FY",
         "FJDFR40002460130FY",
+        "FJDFR40002470254FY",
         "FJDFR40002550308FY",
         "FJDFV20002510004FY",
         "FJDFV20002510007FY"
       ],
       "reasons": [
         "客户备件损坏",
+        "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。",
         "小割刀盘升降有噪音，硬件已更新，给客户发送新硬件解决噪音问题。",
         "给客户配备金属法兰",
         "销售联系需要给客户发货"
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2119",
-      "partName": "割台t升降丝母组件总成",
-      "qty": 2.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-26 14:38:21",
-      "rmaNames": [
-        "RM260326017"
-      ],
-      "serials": [
-        "FJDFR40002470254FY"
-      ],
-      "reasons": [
-        "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。"
       ]
     },
     {
@@ -14269,6 +13874,26 @@
     },
     {
       "owner": "Jackson.Lv澳新",
+      "warehouseGroup": "海外仓",
+      "warehouseName": "Frankfurt",
+      "projectCode": "R2119",
+      "partName": "割草机90MM右前轮组件",
+      "qty": 1.0,
+      "rmaCount": 1,
+      "serialCount": 1,
+      "latestDate": "2026-03-26 09:01:05",
+      "rmaNames": [
+        "RM260326014"
+      ],
+      "serials": [
+        "FJDFR40002450089FY"
+      ],
+      "reasons": [
+        "客户的两个FR4000前轮损坏，需要寄送新的。"
+      ]
+    },
+    {
+      "owner": "Jackson.Lv澳新",
       "warehouseGroup": "国内仓",
       "warehouseName": "Shenzhen",
       "projectCode": "R2119",
@@ -14292,10 +13917,10 @@
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "海外仓",
+      "warehouseName": "Frankfurt",
       "projectCode": "R2119",
-      "partName": "割草机90MM右前轮组件",
+      "partName": "割草机90MM左前轮组件",
       "qty": 1.0,
       "rmaCount": 1,
       "serialCount": 1,
@@ -14331,26 +13956,6 @@
       "reasons": [
         "客户的两个前轮损坏，需要寄新的，法兰克福仓库暂时没有货，只能从国内发，已经登记海外配件需求表上了。",
         "给奥地利客户发两个前轮，之前的轴承损坏了"
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2119",
-      "partName": "割草机90MM左前轮组件",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-26 09:01:05",
-      "rmaNames": [
-        "RM260326014"
-      ],
-      "serials": [
-        "FJDFR40002450089FY"
-      ],
-      "reasons": [
-        "客户的两个FR4000前轮损坏，需要寄送新的。"
       ]
     },
     {
@@ -14379,41 +13984,24 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2119",
       "partName": "割草电机仓防尘罩",
-      "qty": 2.0,
-      "rmaCount": 2,
-      "serialCount": 2,
-      "latestDate": "2025-11-05 06:50:01",
+      "qty": 3.0,
+      "rmaCount": 3,
+      "serialCount": 3,
+      "latestDate": "2026-03-26 14:38:21",
       "rmaNames": [
         "RM251020008",
-        "RM251105007"
+        "RM251105007",
+        "RM260326017"
       ],
       "serials": [
+        "FJDFR40002470254FY",
         "FJDFR400024C0324FY",
         "FJDFR40002510011FY"
       ],
       "reasons": [
         "客户的防尘罩在清洗过程中发现破损",
-        "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2119",
-      "partName": "割草电机仓防尘罩",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-26 14:38:21",
-      "rmaNames": [
-        "RM260326017"
-      ],
-      "serials": [
-        "FJDFR40002470254FY"
-      ],
-      "reasons": [
-        "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。"
+        "客户的防尘罩损坏，导致机器内部进入灰尘，致使T8丝母座与连杆卡滞。",
+        "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
       ]
     },
     {
@@ -14433,7 +14021,7 @@
         "FJDFR400024C0324FY"
       ],
       "reasons": [
-        "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+        "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
       ]
     },
     {
@@ -14456,7 +14044,7 @@
       ],
       "reasons": [
         "给客户配备金属法兰",
-        "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+        "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
       ]
     },
     {
@@ -14567,12 +14155,12 @@
         "FJDFR40002560474FY"
       ],
       "reasons": [
-        "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘，  刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
+        "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘， 刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
         "客户的刀盘和刀片坏了，外加一个星型刀片给客户测试",
         "客户的刀盘掉落，需要发金属法兰，外加小割刀盘和 刀片以及配套的螺丝",
         "法国客户的刀片和蘑菇头损坏，",
         "给新西兰客户寄的一些刀盘和刀片",
-        "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+        "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
       ]
     },
     {
@@ -14592,7 +14180,7 @@
         "FJDFR400024C0324FY"
       ],
       "reasons": [
-        "需要给德国客户寄一个橡胶保护套，   挡板，  升降电机仓，还有电机仓板金件，          塑料割盘"
+        "需要给德国客户寄一个橡胶保护套， 挡板， 升降电机仓，还有电机仓板金件， 塑料割盘"
       ]
     },
     {
@@ -14614,7 +14202,7 @@
         "FJDFR40002560474FY"
       ],
       "reasons": [
-        "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘，  刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
+        "客户的刀片损坏，需要发新的加厚刀片以及对应的新型号螺丝，另外一个刀盘中螺丝断裂，需要新寄一个刀盘， 刀盘，刀盘和螺丝法兰克福仓库都没有，需要从国内发货。",
         "客户的刀片损坏，需要寄送新型的加厚刀片，法兰克福仓没有货，只能从国内发"
       ]
     },
@@ -14807,7 +14395,7 @@
         "FJDFR40002450089FY"
       ],
       "reasons": [
-        "法国客户的充电桩适配器 和  AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
+        "法国客户的充电桩适配器 和 AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。"
       ]
     },
     {
@@ -14875,7 +14463,7 @@
       ],
       "reasons": [
         "客户的FR4000后轮和行走电机损坏",
-        "法国客户的充电桩适配器 和  AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。",
+        "法国客户的充电桩适配器 和 AC电源线损坏， 需要分别寄送一个新的 ，另外外加一个行走电机无法转动，由于 欧规AC电源线 （原装） 法兰克福仓库没有，所以只能从国内法。",
         "西班牙客户机器滑鞘了，需要寄送一个后轮，一个电机，两个 隔套"
       ]
     },
@@ -15017,7 +14605,7 @@
         "FJDFR40002580584FY"
       ],
       "reasons": [
-        "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮，            和高工一起排查之后发现是充电桩里的板子损坏。"
+        "销售通知客户想要防水的充电桩航插线和适配器，需要给客户寄送一个，另外客户开箱之后发现充电桩电源灯不亮， 和高工一起排查之后发现是充电桩里的板子损坏。"
       ]
     },
     {
@@ -15188,6 +14776,26 @@
     },
     {
       "owner": "Jackson.Lv澳新",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
+      "projectCode": "R2304",
+      "partName": "割草电机",
+      "qty": 1.0,
+      "rmaCount": 1,
+      "serialCount": 1,
+      "latestDate": "2026-03-23 06:41:58",
+      "rmaNames": [
+        "RM260323008"
+      ],
+      "serials": [
+        "FJLQ10322621921ZC"
+      ],
+      "reasons": [
+        "澳洲客户Brandon Vickers的Z42P大割割草电机出现堵塞错误，拉通@Alluka.Liu @Allen.Yu确认，客户割草电机故障，为其补发一个割草电机"
+      ]
+    },
+    {
+      "owner": "Jackson.Lv澳新",
       "warehouseGroup": "海外仓",
       "warehouseName": "Sydney",
       "projectCode": "R2304",
@@ -15204,26 +14812,6 @@
       ],
       "reasons": [
         "客户Tobias使用RM21过程中遇到割刀电机工作异常，拉通denghui.chen，Shifeng.huang与客户确认后为割刀电机控制版损坏，割刀电机出现异响 。决定更换。Braden发货给Tobias，补发给Braden。"
-      ]
-    },
-    {
-      "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2304",
-      "partName": "割草电机",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-23 06:41:58",
-      "rmaNames": [
-        "RM260323008"
-      ],
-      "serials": [
-        "FJLQ10322621921ZC"
-      ],
-      "reasons": [
-        "澳洲客户Brandon Vickers的Z42P大割割草电机出现堵塞错误，拉通@Alluka.Liu @Allen.Yu确认，客户割草电机故障，为其补发一个割草电机"
       ]
     },
     {
@@ -15762,8 +15350,8 @@
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "海外仓",
+      "warehouseName": "Sydney Warehouse",
       "projectCode": "R2304",
       "partName": "隔膜泵",
       "qty": 1.0,
@@ -15879,7 +15467,7 @@
         "FJDFRX0002550004FY"
       ],
       "reasons": [
-        "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄   充电桩， 充电桩电源线  ，适配器， 充电桩海外没有库存，所以从国内发"
+        "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄 充电桩， 充电桩电源线 ，适配器， 充电桩海外没有库存，所以从国内发"
       ]
     },
     {
@@ -15899,7 +15487,7 @@
         "FJDFRX0002550004FY"
       ],
       "reasons": [
-        "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄   充电桩， 充电桩电源线  ，适配器， 充电桩海外没有库存，所以从国内发"
+        "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄 充电桩， 充电桩电源线 ，适配器， 充电桩海外没有库存，所以从国内发"
       ]
     },
     {
@@ -15961,7 +15549,7 @@
         "FJDFRX0002550004FY"
       ],
       "reasons": [
-        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
+        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
       ]
     },
     {
@@ -15986,8 +15574,8 @@
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2502",
       "partName": "步进电机",
       "qty": 1.0,
@@ -16021,13 +15609,13 @@
         "FJDFRX0002550004FY"
       ],
       "reasons": [
-        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
+        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
       ]
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2502",
       "partName": "电机驱动器",
       "qty": 1.0,
@@ -16061,7 +15649,7 @@
         "FJDFRX0002550004FY"
       ],
       "reasons": [
-        "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄   充电桩， 充电桩电源线  ，适配器， 充电桩海外没有库存，所以从国内发"
+        "客户的充电桩绿灯快闪，后闪红灯，和姚工商量决定给客户寄 充电桩， 充电桩电源线 ，适配器， 充电桩海外没有库存，所以从国内发"
       ]
     },
     {
@@ -16103,7 +15691,7 @@
         "FJDFRX0002570023FY"
       ],
       "reasons": [
-        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。",
+        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。",
         "韩国客户反馈FRX原本电量70% 充电一晚上结果变0%，在姚工的建议下给客户发送一个ATN的充电适配器"
       ]
     },
@@ -16124,13 +15712,13 @@
         "FJDFRX0002550004FY"
       ],
       "reasons": [
-        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序  需要重新寄送。     因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
+        "之前给客户发货的FRX机器的 1.行走电机驱动板;2. 行走电机控制板;3.FRX 左割刀电机驱动板无电流环3.FRX VCU控制盒总成 没有烧录程序 需要重新寄送。 因为1. FRX行走电机控制板；2.FRX 左割刀电机驱动板无电流环 法兰克福没有库存，所以只能从国内发。"
       ]
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "海外仓",
+      "warehouseName": "Sydney Warehouse",
       "projectCode": "R2503",
       "partName": "10寸平板",
       "qty": 1.0,
@@ -16144,7 +15732,7 @@
         "FJDRLM012580345FY"
       ],
       "reasons": [
-        "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个\n\n澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
+        "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个 澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
       ]
     },
     {
@@ -16169,8 +15757,8 @@
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "海外仓",
+      "warehouseName": "Sydney Warehouse",
       "projectCode": "R2503",
       "partName": "RTK基站",
       "qty": 1.0,
@@ -16184,7 +15772,7 @@
         "FJDRLM012580345FY"
       ],
       "reasons": [
-        "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个\n\n澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
+        "澳大利亚客户Robotech Enterprises的RLM01的配套平板电脑，充电状态下屏幕卡在FJD logo静态画面，无法正常开机进入系统，经@Jackson.Lv和@Gavin.Chen确认,为客户补发一个 澳大利亚客户Robotech Enterprises的基站天线断开，经@Jackson.Lv和@Gavin.Chen确认，为客户补发一个"
       ]
     },
     {
@@ -16329,8 +15917,8 @@
     },
     {
       "owner": "Jackson.Lv澳新",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2503",
       "partName": "隔膜泵总成",
       "qty": 1.0,
@@ -16467,7 +16055,7 @@
         "FJDZ42P23200079FL"
       ],
       "reasons": [
-        "客户反馈大割(Z42P)的1904 SIM卡插入后，无法侦测。尝试加厚SIM厚度，依然无法读到SIM卡。和项管沟通后，给更换1904。\n发货前，请确认1904系统刷到大割最新版本。"
+        "客户反馈大割(Z42P)的1904 SIM卡插入后，无法侦测。尝试加厚SIM厚度，依然无法读到SIM卡。和项管沟通后，给更换1904。 发货前，请确认1904系统刷到大割最新版本。"
       ]
     },
     {
@@ -16647,7 +16235,7 @@
         "FJDFR40002470247FY"
       ],
       "reasons": [
-        "客户反馈割台底部有零件松脱，且出现噪音。经结构工程师判断应该是割草电机螺丝，因割草电机发热，孔烫坏了。\n根据结构工程师提供的维修物料，安排物料寄发更换。"
+        "客户反馈割台底部有零件松脱，且出现噪音。经结构工程师判断应该是割草电机螺丝，因割草电机发热，孔烫坏了。 根据结构工程师提供的维修物料，安排物料寄发更换。"
       ]
     },
     {
@@ -16707,7 +16295,7 @@
         "FJRM2124900105FY"
       ],
       "reasons": [
-        "客户反馈设备开启融合模式后，RTK会无法进入固定解。\n经排查为疑似副天线故障，导致航向数据异常，设导致设备无法进入固定解。寄发售后备件进行更换。"
+        "客户反馈设备开启融合模式后，RTK会无法进入固定解。 经排查为疑似副天线故障，导致航向数据异常，设导致设备无法进入固定解。寄发售后备件进行更换。"
       ]
     },
     {
@@ -16762,12 +16350,12 @@
         "FJRM2124B00207FY"
       ],
       "reasons": [
-        "原单据 RM250701004， 因DHL发错件，经销管确认，重新提单。\n原单据备注：“客户反馈蘑菇头和天线的线束断裂，经罗雨确认后，给与售后换件。”",
-        "客户反馈LiDAR建图异常和摄像头没有影像，以及遥控器频繁断联问题。\n经与研发、PO、FAE leader 沟通后，同意更换售后换件。",
+        "原单据 RM250701004， 因DHL发错件，经销管确认，重新提单。 原单据备注：“客户反馈蘑菇头和天线的线束断裂，经罗雨确认后，给与售后换件。”",
+        "客户反馈LiDAR建图异常和摄像头没有影像，以及遥控器频繁断联问题。 经与研发、PO、FAE leader 沟通后，同意更换售后换件。",
         "客户反馈蘑菇头和天线的线束断裂，经罗雨确认后，给与售后换件。",
         "客户反馈设备使用时频繁出现通讯线束故障、传感器异常和遥控器断联问题。经研发排查后判断为蘑菇头内USB以太网模块故障导致，寄发蘑菇头模块进行更换维修。",
-        "客户反馈通讯线束异常。经排查确认为A3到1904通讯异常。\n客户先用新机的蘑菇头进行更换，目前已能正常作业。和PO沟通后补寄一颗蘑菇头进行替换。",
-        "客户反馈通讯线束故障，A3无法识别，经排查线束后，确认为蘑菇头问题。\n给以售后换件。",
+        "客户反馈通讯线束异常。经排查确认为A3到1904通讯异常。 客户先用新机的蘑菇头进行更换，目前已能正常作业。和PO沟通后补寄一颗蘑菇头进行替换。",
+        "客户反馈通讯线束故障，A3无法识别，经排查线束后，确认为蘑菇头问题。 给以售后换件。",
         "客户新机开箱后发现系统出现通讯线束故障状况，经排查为A3到1904通讯异常，和PO沟通后同意售后换件。"
       ]
     },
@@ -16850,7 +16438,7 @@
         "FJRM2124100026FY"
       ],
       "reasons": [
-        "客户设备为2代中割出现开启大灯会出现短路，导致1904重启。\n经排查后，疑似二代车所使用的滤波电容出现故障导致。和登慧沟通后裔，建议更换为3代车使用的大灯(取消滤波电容模块)。"
+        "客户设备为2代中割出现开启大灯会出现短路，导致1904重启。 经排查后，疑似二代车所使用的滤波电容出现故障导致。和登慧沟通后裔，建议更换为3代车使用的大灯(取消滤波电容模块)。"
       ]
     },
     {
@@ -16872,7 +16460,7 @@
         "FJRM2124100036FY"
       ],
       "reasons": [
-        "1. 客户反馈割台结构断裂和前轮轴承损坏，经PO确认同意寄发售后备件更换。 \n2. 寄发时，麻烦直接4个将紧锁螺母（S020151000002）直接装配在割台上发出。",
+        "1. 客户反馈割台结构断裂和前轮轴承损坏，经PO确认同意寄发售后备件更换。 2. 寄发时，麻烦直接4个将紧锁螺母（S020151000002）直接装配在割台上发出。",
         "客户反馈割台多出出现锈蚀，销售和PO沟通后同意更换三代割台。"
       ]
     },
@@ -16918,7 +16506,7 @@
       ],
       "reasons": [
         "BMS保险烧毁",
-        "客户反馈中割其中一颗电池电量过低，无法充电，也无法升级。\n经研发(志伟)判断是电池电量过低，进入保护模式。无法远程处理。\n为方便客户继续使用，先寄发备件更换。",
+        "客户反馈中割其中一颗电池电量过低，无法充电，也无法升级。 经研发(志伟)判断是电池电量过低，进入保护模式。无法远程处理。 为方便客户继续使用，先寄发备件更换。",
         "客户反馈收到电池后发现边角有因碰撞产生的裂纹，安全起见给客户更换电池。"
       ]
     },
@@ -16939,7 +16527,7 @@
         "FJRM2124500049FY"
       ],
       "reasons": [
-        "客户反馈车辆只能向右行走，测试释放磁刹也是一样的状况，经登慧判断为右行走电机故障，给予售后换件。\n更改发货地，重新提交。"
+        "客户反馈车辆只能向右行走，测试释放磁刹也是一样的状况，经登慧判断为右行走电机故障，给予售后换件。 更改发货地，重新提交。"
       ]
     },
     {
@@ -16979,7 +16567,7 @@
         "FJRM2124100036FY"
       ],
       "reasons": [
-        "1. 左行走电机异响\n2. 直线轴承锈蚀"
+        "1. 左行走电机异响 2. 直线轴承锈蚀"
       ]
     },
     {
@@ -17022,7 +16610,7 @@
       ],
       "reasons": [
         "遥控器频繁断联",
-        "遥控器频繁断联问题。\n经与研发、PO、FAE leader 沟通后，同意更换售后换件。"
+        "遥控器频繁断联问题。 经与研发、PO、FAE leader 沟通后，同意更换售后换件。"
       ]
     },
     {
@@ -17145,7 +16733,7 @@
         "FJRM2124500049FY"
       ],
       "reasons": [
-        "7/2 客户反馈\n1. 充电桩充电器出现指示灯频繁闪烁，且发出异响。无法充电。\n2. 刀座限位柱严重磨损。\n经登慧和羽丰确认过需要换件处理。经FAE leader确认后同意售后换件处理。"
+        "7/2 客户反馈 1. 充电桩充电器出现指示灯频繁闪烁，且发出异响。无法充电。 2. 刀座限位柱严重磨损。 经登慧和羽丰确认过需要换件处理。经FAE leader确认后同意售后换件处理。"
       ]
     },
     {
@@ -17188,7 +16776,7 @@
         "FJRM2124C00214FY"
       ],
       "reasons": [
-        "物流暴力运送，导致设备损坏。\n1. Wi-Fi遥控器屏幕破损\n2. 900MHz天线折断\n3. Wi-Fi天线折断\n经沟通给予换件处理。"
+        "物流暴力运送，导致设备损坏。 1. Wi-Fi遥控器屏幕破损 2. 900MHz天线折断 3. Wi-Fi天线折断 经沟通给予换件处理。"
       ]
     },
     {
@@ -17251,7 +16839,7 @@
         "FJRM2124100036FY"
       ],
       "reasons": [
-        "1. 左行走电机异响\n2. 直线轴承锈蚀"
+        "1. 左行走电机异响 2. 直线轴承锈蚀"
       ]
     },
     {
@@ -17372,7 +16960,7 @@
         "FJDFRXC0025A0078FY"
       ],
       "reasons": [
-        "1. 小刀片客户反馈会有漏割状况，和Bill.Feng沟通后寄发星型刀片给客户置换。\n2. 充电下刷板有新版本，和Bill.Feng沟通后，寄发新版本给客户更换。",
+        "1. 小刀片客户反馈会有漏割状况，和Bill.Feng沟通后寄发星型刀片给客户置换。 2. 充电下刷板有新版本，和Bill.Feng沟通后，寄发新版本给客户更换。",
         "之前寄发的星型割刀数量不对，补寄两套给客户。"
       ]
     },
@@ -17415,7 +17003,7 @@
         "FJDRLM012570278FY"
       ],
       "reasons": [
-        "1. 客户RLM01水路相关部件(水桶、管路、滤芯、隔膜泵)严重堵塞，无法清洁，其中隔膜泵内部结构发生变形。和项目组沟通后给与换件处理。\n2. 隔膜泵总成+L型螺纹二通+英制快插螺纹弯头这三个物料，请组装好再寄出。"
+        "1. 客户RLM01水路相关部件(水桶、管路、滤芯、隔膜泵)严重堵塞，无法清洁，其中隔膜泵内部结构发生变形。和项目组沟通后给与换件处理。 2. 隔膜泵总成+L型螺纹二通+英制快插螺纹弯头这三个物料，请组装好再寄出。"
       ]
     },
     {
@@ -17455,7 +17043,7 @@
         "FJDZ42P23200090FL"
       ],
       "reasons": [
-        "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+        "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
       ]
     },
     {
@@ -17477,7 +17065,7 @@
         "FJDZ42P23200090FL"
       ],
       "reasons": [
-        "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针",
+        "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针",
         "客户反馈通信线束故障，无法读取到A3版本，经过排查为1904处通信航插口pin针断了一根，为客户售后通信航插口一个，线束一根"
       ]
     },
@@ -17500,8 +17088,8 @@
         "FJLY22923700015FY"
       ],
       "reasons": [
-        "FAE罗雨在客户现场维修多台方向盘大割，定位到PCS,MPPT,分线器，线束故障，为客户售后对应物料\n\nRM250723010先前为客户售后1904，但是由于仓库发错产品，导致无法使用，再次为客户售后一个1904，错发的1904罗雨带回",
-        "初代方向盘MPPT及PCS补发\n因原订单配件缺货，故重新更换料号后下单\n原RMA：RM240528002"
+        "FAE罗雨在客户现场维修多台方向盘大割，定位到PCS,MPPT,分线器，线束故障，为客户售后对应物料 RM250723010先前为客户售后1904，但是由于仓库发错产品，导致无法使用，再次为客户售后一个1904，错发的1904罗雨带回",
+        "初代方向盘MPPT及PCS补发 因原订单配件缺货，故重新更换料号后下单 原RMA：RM240528002"
       ]
     },
     {
@@ -17561,7 +17149,7 @@
         "FJDZ42P23200091FL"
       ],
       "reasons": [
-        "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+        "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
       ]
     },
     {
@@ -17682,7 +17270,7 @@
         "FJDZ42P23200091FL"
       ],
       "reasons": [
-        "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+        "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
       ]
     },
     {
@@ -17702,7 +17290,7 @@
         "FJDZ421023040001FZ"
       ],
       "reasons": [
-        "初代方向盘MPPT及PCS补发\n因原订单配件缺货，故重新更换料号后下单\n原RMA：RM240528002"
+        "初代方向盘MPPT及PCS补发 因原订单配件缺货，故重新更换料号后下单 原RMA：RM240528002"
       ]
     },
     {
@@ -17722,7 +17310,7 @@
         "FJDZ42P23200091FL"
       ],
       "reasons": [
-        "客户两台大割\n第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障\n第二台大割出现A3故障，排查后发现N1904通信线束断针"
+        "客户两台大割 第一台大割出现割刀转速异常，排查后发现是割刀继电器和线束故障 第二台大割出现A3故障，排查后发现N1904通信线束断针"
       ]
     },
     {
@@ -17864,7 +17452,7 @@
         "FJDFV20002510041FY"
       ],
       "reasons": [
-        "951板卡通病，急需更换960板卡\nFJDFV20002510041FY\nFJDFV20002510046FY\nFJDFV20002510072FY\nFJDFV20002510084FY\nFJDFV20002510097FY\nFJDFV20002510088FY\nFJDFV20002510069FY\nFJDFV20002510087FY\nFJDFV20002510098FY\nFJDFV20002510071FY",
+        "951板卡通病，急需更换960板卡 FJDFV20002510041FY FJDFV20002510046FY FJDFV20002510072FY FJDFV20002510084FY FJDFV20002510097FY FJDFV20002510088FY FJDFV20002510069FY FJDFV20002510087FY FJDFV20002510098FY FJDFV20002510071FY",
         "FV2000通病951板卡需要更换成960板卡"
       ]
     },
@@ -18722,38 +18310,21 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2304",
       "partName": "4针圆形航插",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2025-07-30 13:32:58",
-      "rmaNames": [
-        "RM250730018"
-      ],
-      "serials": [
-        "FJRM2124700086FY"
-      ],
-      "reasons": [
-        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2304",
-      "partName": "4针圆形航插",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
+      "qty": 2.0,
+      "rmaCount": 2,
+      "serialCount": 2,
       "latestDate": "2026-03-31 06:46:36",
       "rmaNames": [
+        "RM250730018",
         "RM260331011"
       ],
       "serials": [
-        "FJLQ10322621888ZC"
+        "FJLQ10322621888ZC",
+        "FJRM2124700086FY"
       ],
       "reasons": [
-        "【德国·LS system】大割通讯线束故障，经allen yu和alluke liu确认后，非1904或a3端故障，由于客户万用表测量有限，经讨论补发整条m8-4线束，并补充一根4pin航插头"
+        "【德国·LS system】大割通讯线束故障，经allen yu和alluke liu确认后，非1904或a3端故障，由于客户万用表测量有限，经讨论补发整条m8-4线束，并补充一根4pin航插头",
+        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
       ]
     },
     {
@@ -18773,7 +18344,7 @@
         "FJRM2124900135FY"
       ],
       "reasons": [
-        "客户反映机器LED灯带只能亮1/4，但是代理反映，客户之所以送来是因为充电器的有关问题，此单由denghui chen确认料号之后，easnow cai同意进行发货\n[YTX-TX-003041A] 4G Antenna L=200mm 1套\n[370000494Y0050B] A3接口板灯带线束 1套\n[QCD-DJ-003009A] 充电机欧版盲充版本 1套\n[210713602Y0100B] 充电桩后罩焊合 1套\n[YTX-TX-003057B] 天线 1套\n[YTX-TX-003061B] 天线 1套"
+        "客户反映机器LED灯带只能亮1/4，但是代理反映，客户之所以送来是因为充电器的有关问题，此单由denghui chen确认料号之后，easnow cai同意进行发货 [YTX-TX-003041A] 4G Antenna L=200mm 1套 [370000494Y0050B] A3接口板灯带线束 1套 [QCD-DJ-003009A] 充电机欧版盲充版本 1套 [210713602Y0100B] 充电桩后罩焊合 1套 [YTX-TX-003057B] 天线 1套 [YTX-TX-003061B] 天线 1套"
       ]
     },
     {
@@ -18853,7 +18424,7 @@
         "FJRM2125400112FY"
       ],
       "reasons": [
-        "客户反映，RTK基站损坏，页面出现coredump Error（程序崩溃转储错误）并且没有恢复，和denghui chen进行确认，之后mike zhao进行同意后，发货[Q0110083] GNSS接收机\t1个"
+        "客户反映，RTK基站损坏，页面出现coredump Error（程序崩溃转储错误）并且没有恢复，和denghui chen进行确认，之后mike zhao进行同意后，发货[Q0110083] GNSS接收机 1个"
       ]
     },
     {
@@ -18933,7 +18504,7 @@
         "FJRM2125100070FY"
       ],
       "reasons": [
-        "客户反映雷达能够识别障碍物，但是声音听起来很奇怪，后台查看显示运行正常，日志查看未能明显发现异样，经Alluka Liu同意之后进行发货，发货料号为\nS010210301601 内六角平圆头螺钉 4颗\nS010210300501 内六角平圆头螺钉 2颗\nS010210401202 内六角平圆头螺钉 4颗\nS010384201601 十字槽盘头自攻螺钉 4颗\n2K0200020Y0030A MID-360激光雷达 1个"
+        "客户反映雷达能够识别障碍物，但是声音听起来很奇怪，后台查看显示运行正常，日志查看未能明显发现异样，经Alluka Liu同意之后进行发货，发货料号为 S010210301601 内六角平圆头螺钉 4颗 S010210300501 内六角平圆头螺钉 2颗 S010210401202 内六角平圆头螺钉 4颗 S010384201601 十字槽盘头自攻螺钉 4颗 2K0200020Y0030A MID-360激光雷达 1个"
       ]
     },
     {
@@ -18978,7 +18549,7 @@
       ],
       "reasons": [
         "【法国amazideas】sn FJLQ17425A00599ZC, 由于出事故进了水，事故原因kyle还在调查，拉通denghui，fengchen等人发现需要更换相关 电控箱封装以及RTK惯导单元，由于事发突然，在欧洲仓库没有相关更换组件，需要走空运",
-        "客户反应RTK无法进固定解，更换新基站之后仍然无法进入，但是关闭融合模式之后进入固定解，一个月之前已经出现过突然行走轨迹歪斜现象，经chenggan进行排查，当时已经沟通过，基站问题修正后，基站已经正常工作。RM21无法进入固定解的原因是副天线持续不可用，导致航向固定在90度。当车辆处于此种状态时，LiDAR+GNSS显然是无法工作的。因此，融合定位要求主副天线【同时】处于固定解状态。因此本件中提到的RM21无法进入固定解的根因，是副天线异常。属于硬件问题。因此排查后经Easnow cai同意进行发货[900208850Q0030A] RTK天线\t\n[280300342Y0100B] 保险杠Ⅲ",
+        "客户反应RTK无法进固定解，更换新基站之后仍然无法进入，但是关闭融合模式之后进入固定解，一个月之前已经出现过突然行走轨迹歪斜现象，经chenggan进行排查，当时已经沟通过，基站问题修正后，基站已经正常工作。RM21无法进入固定解的原因是副天线持续不可用，导致航向固定在90度。当车辆处于此种状态时，LiDAR+GNSS显然是无法工作的。因此，融合定位要求主副天线【同时】处于固定解状态。因此本件中提到的RM21无法进入固定解的根因，是副天线异常。属于硬件问题。因此排查后经Easnow cai同意进行发货[900208850Q0030A] RTK天线 [280300342Y0100B] 保险杠Ⅲ",
         "机器报RTK航行错误，与陈登慧一起视频为客户排查后，判断为RTK天线故障，为用户发新的RTK天线和馈线"
       ]
     },
@@ -19128,7 +18699,7 @@
         "FJRM2124500066FY"
       ],
       "reasons": [
-        "客户2025/8/14日反馈机器充电刷版安装座出现结构性损坏，原因在于该结构存在一小缝隙，缝隙进水后导致里面金属结构发生锈蚀，进而导致机器对桩出现结构性损坏，经与@Jingtian.Chen @Easnow.Cai 沟通后，建议为客户更换一个全新的210747002Y0100E\n充电刷板安装座焊合Ⅱ，此前给客户发过一个蘑菇头（详见RM250806008），由于客户是二代机，蘑菇头为3.0版本，不适配我们最新的3.5蘑菇头，与登慧、刘辉沟通后建议给客户发[270000082Y0100E] 天线支架:数量1\n210702042Y0100  遮线板：数量1\n与福鹏沟通后，表示可以给客户发件"
+        "客户2025/8/14日反馈机器充电刷版安装座出现结构性损坏，原因在于该结构存在一小缝隙，缝隙进水后导致里面金属结构发生锈蚀，进而导致机器对桩出现结构性损坏，经与@Jingtian.Chen @Easnow.Cai 沟通后，建议为客户更换一个全新的210747002Y0100E 充电刷板安装座焊合Ⅱ，此前给客户发过一个蘑菇头（详见RM250806008），由于客户是二代机，蘑菇头为3.0版本，不适配我们最新的3.5蘑菇头，与登慧、刘辉沟通后建议给客户发[270000082Y0100E] 天线支架:数量1 210702042Y0100 遮线板：数量1 与福鹏沟通后，表示可以给客户发件"
       ]
     },
     {
@@ -19208,7 +18779,7 @@
         "奥地利L&L反馈机器FJLQ10324501215ZC / FJRM2124500066FY在应用程序中打不开摄像头，经与研发方工、登慧排查后发现机器A3内部存在过流保护，因此判定机器A3内部存在短路，故申请更换A3一个，此外需要给客户发送一个35A快充，用于测试用途",
         "客户充电器故障，已联系登慧排查，确认需要更换充电器。但目前得到消息AB两款充电器有质量问题，需要返厂。登慧建议先发给客户快充使用。",
         "客户反应入桩出现问题，和EmmonZhuang和JingTian Chen进行排查，建议客户测试充电器能否正常充电，发现原件充电一阵之后停止，换充电器之后一切正常，因此更换充电器及充电桩后罩焊合",
-        "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个\n\n客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
+        "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个 客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
         "羽丰确认需要更换",
         "荷兰robotmaaier客户反馈所在地只能让机器在9-18：00期间割草，其余时间怕扰民。但是机器充电时间太慢，无法在这个时间段内完成任务，所以推荐给他发一个35A的快充，加快一下充电时间以确保在任务时间段内顺利完成作业，此外客户反馈sim卡插入机器不读卡，与登慧排查后，发现1904卡槽的金属触点损坏，无法修复。故为客户补发一个1904，客户反馈机器割草声音太大，Talia反馈给客户发送碎草刀4枚，以减小噪声。"
       ]
@@ -19242,9 +18813,9 @@
         "FJRM2124500048FY"
       ],
       "reasons": [
-        "2025/8/27 客户反馈机器FJLQ17424902127ZC充不上电，交流后AE表示可能是充电器出现问题了，并让客户检查机器充电器是否出现问题。与福鹏沟通后福鹏表示可以给客户补发一个\n[QCD-DJ-003009A] 充电机欧版盲充版本外加充电桩后罩焊合210713602Y0100B。",
+        "2025/8/27 客户反馈机器FJLQ17424902127ZC充不上电，交流后AE表示可能是充电器出现问题了，并让客户检查机器充电器是否出现问题。与福鹏沟通后福鹏表示可以给客户补发一个 [QCD-DJ-003009A] 充电机欧版盲充版本外加充电桩后罩焊合210713602Y0100B。",
         "与灯慧福鹏确认，充电器损坏，更换大电流款",
-        "代理反馈中割报右驱动电机校准编码器故障，并且松开磁刹后能正常工作，客户自行更换了右驱动电机，问题解决，为客户售后右驱动电机，客户暂替保管坏件，之后统一寄回分析故障原因\n经过与福鹏沟通，为客户提供新版35A充电器协助实地测试",
+        "代理反馈中割报右驱动电机校准编码器故障，并且松开磁刹后能正常工作，客户自行更换了右驱动电机，问题解决，为客户售后右驱动电机，客户暂替保管坏件，之后统一寄回分析故障原因 经过与福鹏沟通，为客户提供新版35A充电器协助实地测试",
         "单号RM250806008需要给客户发送一个35A快充，用于测试用途。因35A快充需要搭配[210713602Y0100B] 充电桩后罩焊合使用，单号RM250806008漏加了充电桩后罩。且已审核通过不便撤回重改，故新建RMA单号为客户发送该备件",
         "客户充电器故障，已联系登慧排查，确认需要更换充电器。但目前得到消息AB两款充电器有质量问题，需要返厂。登慧建议先发给客户快充使用。",
         "羽丰确认需要更换",
@@ -19271,7 +18842,7 @@
       ],
       "reasons": [
         "客户刀座螺柱折断，需要换新",
-        "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换\n割刀需要替换刀座"
+        "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换 割刀需要替换刀座"
       ]
     },
     {
@@ -19314,7 +18885,7 @@
         "FJLQ17425700519ZC"
       ],
       "reasons": [
-        "经现场AE确认，客户需要补发一条短连接线束，经Alan miao同意，给客户发送一条[370000034Y0130B] 划线机主线束\n由于仓库发错货，先进行补发手续"
+        "经现场AE确认，客户需要补发一条短连接线束，经Alan miao同意，给客户发送一条[370000034Y0130B] 划线机主线束 由于仓库发错货，先进行补发手续"
       ]
     },
     {
@@ -19445,7 +19016,7 @@
         "FJRM2124700086FY"
       ],
       "reasons": [
-        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
       ]
     },
     {
@@ -19471,7 +19042,7 @@
       "reasons": [
         "10月3日，奥地利L&L客户反馈机器FJLQ10324501215ZC/FJRM2124500066FY频繁报错前保险杠碰撞，AE排查，发现客户前保险杠出现变形，沟通项目组福鹏后同意为客户更换2280300342Y0100B前保险杠一个，此外机器FJLQ17424902100ZC/FJRM2124A00178FY出现割刀电机停转的缘故，更换割刀电机后问题仍旧存在，项目组登慧建议排查割刀电机控制板电容，经排查，割刀电机控制板电容发生损坏。沟通项目组福鹏后同意给客户更换214220000Y0030F割草电机控制器一个，此外，9月9日奥地利L&L客户反馈机器FJRM2124A00176FY / FJLQ17424902111ZC出现割刀电机异响，线上排查未发现问题，10月2号福鹏出差奥地利L&L客户维修该机器时发现割刀电机存在结构损坏，因此给客户发送一个新的[21030014EY0040C] 割草电机",
         "【德国·gps】割刀电机故障，经检查后发现驱动板电容损毁，经denghui确认之后为客户更换新的割刀电机驱动板总成",
-        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
       ]
     },
     {
@@ -19493,7 +19064,7 @@
         "FJRM2124C00228FY"
       ],
       "reasons": [
-        "前序单号客户收到货后，询问需要割草点击分接线束，经和Alluka liu确认料号之后为客户进行发货370000854Y0100\tC 一套",
+        "前序单号客户收到货后，询问需要割草点击分接线束，经和Alluka liu确认料号之后为客户进行发货370000854Y0100 C 一套",
         "经硬件组登慧检查判断，客户割草电机线束插头腐蚀，可能导致发热，进行更换"
       ]
     },
@@ -19519,7 +19090,7 @@
       "reasons": [
         "客户多款备件出现故障已与robbin确认",
         "客户遥控故障，按钮失效无法控制，替换平板，其余损坏配件客户已更换完毕，补充配件，已与福朋确认更换",
-        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
       ]
     },
     {
@@ -19539,7 +19110,7 @@
         "FJRM2124700086FY"
       ],
       "reasons": [
-        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左）\n[370000854Y0100C] 割草电机线束分装\n[370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
+        "荷兰van客户割刀电机过载电流保护，与登慧排查，发现割刀电机损坏。因其过载过程瞬时电流较大，控制器元器件大概率被瞬时电流击穿，故申请更换[370000224Y0030B] 割草电机控制器（左） [370000854Y0100C] 割草电机线束分装 [370000864Y0100C] 割草电机三相线束[370000874Y0100C]割草电机霍尔转接线束。排查过程发现通信线束故障，检查后发现线束存在隐形故障（时好时坏），故申请更换[900250344Q0030E] 4针圆形航插。"
       ]
     },
     {
@@ -19583,9 +19154,9 @@
         "FJRM2124A00179FY"
       ],
       "reasons": [
-        "客户需要一套双胎，5把平刀5把碎草刀，用于测试和宣传目的，经Easnow cai同意，进行发货[280025000Y0100B] 双轮转接套件1套\n[970300022Y0100A] 25寸割刀 5个\n[970300062Y0100B] 25寸碎草刀 5个",
-        "用户用在高尔夫球场，现场有坡的地形较多，经常打滑，导致偏离航线，车机失控，进入禁区等问题。\n中割划线机的易损配件给客户配一套备用，单独从国内寄出运费太高并且时间长",
-        "用户车机使用场景为果园，地面不平，且经常浇水，容易泥泞打滑，目前已导致多次偏离航线，陷在坑里无法前进，所以发双轮套件改善该情况\n代理车为二代车，更换为三代割台，改善旧版割台在割草高度较低时容易产生的问题\n遥控器物理按键失效，发平板替换"
+        "客户需要一套双胎，5把平刀5把碎草刀，用于测试和宣传目的，经Easnow cai同意，进行发货[280025000Y0100B] 双轮转接套件1套 [970300022Y0100A] 25寸割刀 5个 [970300062Y0100B] 25寸碎草刀 5个",
+        "用户用在高尔夫球场，现场有坡的地形较多，经常打滑，导致偏离航线，车机失控，进入禁区等问题。 中割划线机的易损配件给客户配一套备用，单独从国内寄出运费太高并且时间长",
+        "用户车机使用场景为果园，地面不平，且经常浇水，容易泥泞打滑，目前已导致多次偏离航线，陷在坑里无法前进，所以发双轮套件改善该情况 代理车为二代车，更换为三代割台，改善旧版割台在割草高度较低时容易产生的问题 遥控器物理按键失效，发平板替换"
       ]
     },
     {
@@ -19629,7 +19200,7 @@
         "FJRM2124900146FY"
       ],
       "reasons": [
-        "代理2024年秋天还能正常使用，冬天过后，准备春天开始割草，第一次使用发现右后轮行走出现故障，且1904上有报错（34）\n右电机报编码器故障，排查步骤：\n1.释放磁刹，确认不是因为电机堵转导致的编码器校准失败导致报错；\n2.客户反馈软件升级后出现，将电机版本由1.0.8.11降回1.0.8.8，故障仍在，说明与软件版本无关；\n3.交叉左右两个电机的接线，重新测试，此时报错左电机编码器故障；由于原左驱动器是没有问题的，交叉后出现问题，说明问题出在右电机\n可能是电机里的编码器信号哪里接触不良\n所以申请换件",
+        "代理2024年秋天还能正常使用，冬天过后，准备春天开始割草，第一次使用发现右后轮行走出现故障，且1904上有报错（34） 右电机报编码器故障，排查步骤： 1.释放磁刹，确认不是因为电机堵转导致的编码器校准失败导致报错； 2.客户反馈软件升级后出现，将电机版本由1.0.8.11降回1.0.8.8，故障仍在，说明与软件版本无关； 3.交叉左右两个电机的接线，重新测试，此时报错左电机编码器故障；由于原左驱动器是没有问题的，交叉后出现问题，说明问题出在右电机 可能是电机里的编码器信号哪里接触不良 所以申请换件",
         "客户右电机运行时有明显异响，蔡福鹏查看后安排为用户发新右行走电机"
       ]
     },
@@ -19776,7 +19347,7 @@
         "FJLQ10322621926ZC"
       ],
       "reasons": [
-        "陈靖天现场为客户维修机器，天线断裂。陈登慧检查需要更换4G和电台天线。\n用户反馈充电功率低，余家裕安排发充电器。充电器发出前需要改接适配大割"
+        "陈靖天现场为客户维修机器，天线断裂。陈登慧检查需要更换4G和电台天线。 用户反馈充电功率低，余家裕安排发充电器。充电器发出前需要改接适配大割"
       ]
     },
     {
@@ -19816,7 +19387,7 @@
         "FJRM2124A00176FY"
       ],
       "reasons": [
-        "奥地利L&L客户于2026/2/11号反馈中割（FJRM2124A00176FY / FJLQ17424902111ZC）的斜撑螺柱存在生锈腐蚀，拉通项目组羽丰后表示需要替换如下部件：\n1. 270000502Y0100D  天线斜撑焊合\n2. S010460805001  螺栓\n福鹏表示此前版本的斜撑为点焊工艺，存在容易进水腐蚀脱落的问题，后续版本已改进，同意为客户发送上述部件用于替换。\n\n此外，应项目组福鹏要求赠送客户如下物料：\nS010131002003] 六角法兰面螺栓 B级，8个\n[970500015Y0100C] 刀座，2个\n[970100399Y0030D] 英制螺栓，2个\n[S050160001602] 大垫圈 A级，2个\n\n德国仓没有货，申请从国内发货"
+        "奥地利L&L客户于2026/2/11号反馈中割（FJRM2124A00176FY / FJLQ17424902111ZC）的斜撑螺柱存在生锈腐蚀，拉通项目组羽丰后表示需要替换如下部件： 1. 270000502Y0100D 天线斜撑焊合 2. S010460805001 螺栓 福鹏表示此前版本的斜撑为点焊工艺，存在容易进水腐蚀脱落的问题，后续版本已改进，同意为客户发送上述部件用于替换。 此外，应项目组福鹏要求赠送客户如下物料： S010131002003] 六角法兰面螺栓 B级，8个 [970500015Y0100C] 刀座，2个 [970100399Y0030D] 英制螺栓，2个 [S050160001602] 大垫圈 A级，2个 德国仓没有货，申请从国内发货"
       ]
     },
     {
@@ -19825,26 +19396,29 @@
       "warehouseName": "Frankfurt",
       "projectCode": "R2304",
       "partName": "左行走电机组件",
-      "qty": 5.0,
-      "rmaCount": 5,
-      "serialCount": 4,
-      "latestDate": "2026-02-25 14:24:44",
+      "qty": 6.0,
+      "rmaCount": 6,
+      "serialCount": 5,
+      "latestDate": "2026-03-30 09:51:00",
       "rmaNames": [
         "RM250805007",
         "RM251105014",
         "RM251105020",
         "RM260123001",
-        "RM260225020"
+        "RM260225020",
+        "RM260330009"
       ],
       "serials": [
         "FJLQ17425400285ZC",
         "FJRM2124900117FY",
         "FJRM2124900127FY",
-        "FJRM2125100001FY"
+        "FJRM2125100001FY",
+        "FJRM2125100008FY"
       ],
       "reasons": [
         "客户反映行走电机编码器校准故障，无法正常输出动力，经过释放磁刹，更换其他机器的线束电机控制板，发现故障跟车，释放磁刹后重启仍然存在问题，推动无异响无阻滞感，对调线束发现从左电机编码失效变为右电机编码失效，经硬件组登慧同意决定发一个新电机",
         "客户反馈中割左右行走电机均报错，出现无法移动的情况，松开磁刹可以正常工作，拉通登辉一起排查后发现可能是由于电机磁刹故障导致，为客户售后左右行走电机各一个",
+        "客户反馈近期故障部件汇总，以及故障原因提交工单，经po福鹏同意予以更换，希望仓库将此单与RM260331001一同发送",
         "客户反馈齿轮故障，经硬件组评估换新",
         "荷兰brinkman代理左行走电机损坏，售后为客户发送一个左行走电机，由于福州仓库贴错标签，导致客户实际收到的是右行走电机，故申请RMA补发，此前发错备件做RMA退货处理，新的备件已经补发，本单用于平账，挂靠已经发出的备件快递费用，不做实际发货。",
         "荷兰brinkman反馈机器FJRM2125100037FY存在左电机异响的问题，想让售后为其发送一个左行走电机，客户不配合排查，换件意愿强烈。沟通项目组福鹏后，福鹏表示可以为客户发送新的行走电机，但是损坏的电机需要反馈波兰仓检查维修"
@@ -19898,31 +19472,11 @@
         "FJRM2125100048FY"
       ],
       "reasons": [
-        "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个\n\n客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
-        "客户反馈之前售后的右行走电机（RM250630003）收到后，发现磁刹线束就是断的，为客户重新售后右电机一个，\n客户反馈另一台中割出现原地转向问题，经过与登慧一起排查怀疑是左电机磁刹故障导致，经过与福鹏沟通，为客户售后左电机一个",
+        "客户反馈中割原地旋转，客户自己更换了左电机后，故障消除，石峰也看了日志，推测磁刹未正常释放，为客户售后左电机一个 客户反馈中割充电器无法正常工作，排查后发现充电器状态灯异常，和登慧确认后，怀疑充电器内部故障，为客户售后充电器一个",
+        "客户反馈之前售后的右行走电机（RM250630003）收到后，发现磁刹线束就是断的，为客户重新售后右电机一个， 客户反馈另一台中割出现原地转向问题，经过与登慧一起排查怀疑是左电机磁刹故障导致，经过与福鹏沟通，为客户售后左电机一个",
         "客户多款备件出现故障已与robbin确认",
         "左右电机过流损坏",
         "经过多次重启，以及释放磁刹检查发现存在异响仍无法启动，怀疑变速箱与电机故障，分析日志经硬件组登慧确认，怀疑过流，判断电机故障需更换总成"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2304",
-      "partName": "左行走电机组件",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-30 09:51:00",
-      "rmaNames": [
-        "RM260330009"
-      ],
-      "serials": [
-        "FJRM2125100008FY"
-      ],
-      "reasons": [
-        "客户反馈近期故障部件汇总，以及故障原因提交工单，经po福鹏同意予以更换，希望仓库将此单与RM260331001一同发送"
       ]
     },
     {
@@ -20055,20 +19609,23 @@
       "warehouseName": "Frankfurt",
       "projectCode": "R2304",
       "partName": "急停开关",
-      "qty": 2.0,
-      "rmaCount": 2,
-      "serialCount": 1,
-      "latestDate": "2026-02-03 02:44:56",
+      "qty": 3.0,
+      "rmaCount": 3,
+      "serialCount": 2,
+      "latestDate": "2026-03-26 08:40:24",
       "rmaNames": [
         "RM260112002",
-        "RM260203003"
+        "RM260203003",
+        "RM260326010"
       ],
       "serials": [
-        "FJRM2124900111FY"
+        "FJRM2124900111FY",
+        "FJRM2125300090FY"
       ],
       "reasons": [
         "客户是波兰大客户，购买了一百多台机器，经robbin确认，存在以下电机不工作，刹车失效，急停开关跌落，1904无法显示的问题，确认更换配件",
-        "客户是波兰大客户，购买了一百多台机器，通过拆除现有的备件机器，自行维修了损坏的四台机器，汇总了需要更换的配件。由销售申请，经po蔡福朋确认，客户四台机器分别出现刹车故障无法使用，电机无法运转，1904无法显示的问题。"
+        "客户是波兰大客户，购买了一百多台机器，通过拆除现有的备件机器，自行维修了损坏的四台机器，汇总了需要更换的配件。由销售申请，经po蔡福朋确认，客户四台机器分别出现刹车故障无法使用，电机无法运转，1904无法显示的问题。",
+        "法国HEXAGONE客户开箱时发现急停开关损坏，和出厂质量管控谢达鑫调取出厂照片视频后发现出厂无质量问题，怀疑运输存储时出现损坏，经过jingtian决定，补发一枚"
       ]
     },
     {
@@ -20088,7 +19645,7 @@
         "FJRM2124C00228FY"
       ],
       "reasons": [
-        "经销商反映为终端客户修理机器时已经使用相应备件为客户更换，整理之后要求发货\n[370000544Y0100A] 急停开关 1个\n[QCD-DJ-003009A] 充电机欧版盲充版本 2个\n[210713602Y0100B] 充电桩后罩焊合 2个\n[370000874Y0100C] 割草电机霍尔线束2个 \n因此为客户进行换货"
+        "经销商反映为终端客户修理机器时已经使用相应备件为客户更换，整理之后要求发货 [370000544Y0100A] 急停开关 1个 [QCD-DJ-003009A] 充电机欧版盲充版本 2个 [210713602Y0100B] 充电桩后罩焊合 2个 [370000874Y0100C] 割草电机霍尔线束2个 因此为客户进行换货"
       ]
     },
     {
@@ -20113,27 +19670,7 @@
       "reasons": [
         "客户多款备件出现故障已与robbin确认",
         "客户遥控故障，按钮失效无法控制，替换平板，其余损坏配件客户已更换完毕，补充配件，已与福朋确认更换",
-        "荷兰robomaaier客户反馈机器急停开关损坏，客户欲拆开盖板自行更换，拆开后客户发现盖板部分螺丝打有密封胶，欲更换急停开关只能强行破坏螺丝与盖板，鉴于该密封胶结构已在后续机器版本中优化，AE组靖天建议可以给客户更换新的螺丝与急停开关，经沟通项目组福鹏后，福鹏表示可以给客户发出新的[370000544Y0100A] 急停开关一个与S010210400801  内六角平圆头螺钉20枚，以及280123002Y0100E  1904安装支架焊合Ⅱ 一个"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2304",
-      "partName": "急停开关",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-26 08:40:24",
-      "rmaNames": [
-        "RM260326010"
-      ],
-      "serials": [
-        "FJRM2125300090FY"
-      ],
-      "reasons": [
-        "法国HEXAGONE客户开箱时发现急停开关损坏，和出厂质量管控谢达鑫调取出厂照片视频后发现出厂无质量问题，怀疑运输存储时出现损坏，经过jingtian决定，补发一枚"
+        "荷兰robomaaier客户反馈机器急停开关损坏，客户欲拆开盖板自行更换，拆开后客户发现盖板部分螺丝打有密封胶，欲更换急停开关只能强行破坏螺丝与盖板，鉴于该密封胶结构已在后续机器版本中优化，AE组靖天建议可以给客户更换新的螺丝与急停开关，经沟通项目组福鹏后，福鹏表示可以给客户发出新的[370000544Y0100A] 急停开关一个与S010210400801 内六角平圆头螺钉20枚，以及280123002Y0100E 1904安装支架焊合Ⅱ 一个"
       ]
     },
     {
@@ -20155,7 +19692,7 @@
         "FJLQ17425200183ZC"
       ],
       "reasons": [
-        "经销商反映，其机器弹窗机器倾斜，拉日志之后查看IMU存在大角度倾斜，目前已经排查认为IMU损坏，客户自述数台机器存在同样问题，但是经过日志查看之后在线的机器目前均显示正常。\n因此，经Easnow cai同意后，为其发货[900206004Q0030A] 惯导单元总成 1套",
+        "经销商反映，其机器弹窗机器倾斜，拉日志之后查看IMU存在大角度倾斜，目前已经排查认为IMU损坏，客户自述数台机器存在同样问题，但是经过日志查看之后在线的机器目前均显示正常。 因此，经Easnow cai同意后，为其发货[900206004Q0030A] 惯导单元总成 1套",
         "经项目组po福鹏确认，机器传感器读数故障，无法通过软件解决，给客户更换新的imu"
       ]
     },
@@ -20202,7 +19739,7 @@
       ],
       "reasons": [
         "与蔡福朋等一众研发判断，客户无法进入rtk固定解，原因是1904天线接口损坏，需更换1904车机",
-        "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件：\n1. [900330600Y0100C] 中割蘑菇头总成V2   *1\n2. [900277300Q0030A] 控制盒    *1\n3. 蘑菇头穿管线束 370001224Y0100B   *1\n\n由于法兰克福仓有蘑菇头与控制盒的库存，因此本单从法兰克福走发货，发送蘑菇头与控制盒"
+        "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件： 1. [900330600Y0100C] 中割蘑菇头总成V2 *1 2. [900277300Q0030A] 控制盒 *1 3. 蘑菇头穿管线束 370001224Y0100B *1 由于法兰克福仓有蘑菇头与控制盒的库存，因此本单从法兰克福走发货，发送蘑菇头与控制盒"
       ]
     },
     {
@@ -20211,41 +19748,24 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2304",
       "partName": "控制盒",
-      "qty": 2.0,
-      "rmaCount": 2,
-      "serialCount": 2,
-      "latestDate": "2026-02-09 14:31:49",
-      "rmaNames": [
-        "RM250806006",
-        "RM260209009"
-      ],
-      "serials": [
-        "FJLQ10324701588ZC",
-        "FJLQ17424B02397ZC"
-      ],
-      "reasons": [
-        "机器电量显示异常，zhiwei排查后电池正常无问题。denghui排查发现CAN线阻值异常，判断为1904内部的CAN芯片异常，需要更换1904。",
-        "荷兰robotmaaier客户反馈所在地只能让机器在9-18：00期间割草，其余时间怕扰民。但是机器充电时间太慢，无法在这个时间段内完成任务，所以推荐给他发一个35A的快充，加快一下充电时间以确保在任务时间段内顺利完成作业，此外客户反馈sim卡插入机器不读卡，与登慧排查后，发现1904卡槽的金属触点损坏，无法修复。故为客户补发一个1904，客户反馈机器割草声音太大，Talia反馈给客户发送碎草刀4枚，以减小噪声。"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2304",
-      "partName": "控制盒",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
+      "qty": 3.0,
+      "rmaCount": 3,
+      "serialCount": 3,
       "latestDate": "2026-03-23 02:08:21",
       "rmaNames": [
+        "RM250806006",
+        "RM260209009",
         "RM260323003"
       ],
       "serials": [
+        "FJLQ10324701588ZC",
+        "FJLQ17424B02397ZC",
         "FJRM2124100015FY"
       ],
       "reasons": [
-        "【法国greentech】车机sn FJRM2124100015FY  屏幕不亮拉通fupeng,denghui等人尝试远程支持客户刷机，但是都无法与客户电脑连接，随后与jingtian,zheyuan等人确认可以走售后，由于是初代机，fupeng给予了大割的料号，出库时间已无法查询"
+        "【法国greentech】车机sn FJRM2124100015FY 屏幕不亮拉通fupeng,denghui等人尝试远程支持客户刷机，但是都无法与客户电脑连接，随后与jingtian,zheyuan等人确认可以走售后，由于是初代机，fupeng给予了大割的料号，出库时间已无法查询",
+        "机器电量显示异常，zhiwei排查后电池正常无问题。denghui排查发现CAN线阻值异常，判断为1904内部的CAN芯片异常，需要更换1904。",
+        "荷兰robotmaaier客户反馈所在地只能让机器在9-18：00期间割草，其余时间怕扰民。但是机器充电时间太慢，无法在这个时间段内完成任务，所以推荐给他发一个35A的快充，加快一下充电时间以确保在任务时间段内顺利完成作业，此外客户反馈sim卡插入机器不读卡，与登慧排查后，发现1904卡槽的金属触点损坏，无法修复。故为客户补发一个1904，客户反馈机器割草声音太大，Talia反馈给客户发送碎草刀4枚，以减小噪声。"
       ]
     },
     {
@@ -20343,7 +19863,7 @@
         "客户充电器故障，已联系登慧排查，确认需要更换充电器",
         "客户反馈无法充电，James.Wang为客户排查后确定为充电器损坏，需要换新。",
         "客户遥控故障，按钮失效无法控制，替换平板，其余损坏配件客户已更换完毕，补充配件，已与福朋确认更换",
-        "问题1：充电充到75%就自动停止充电，手动再次开启继电器，充几秒后再次停止充电，充电机有故障，需要换新的\n问题2： 车机只能识别到一颗电池，另一颗显示未激活。排查线束发现主电源线束连接电池的插头里，6根细pin的第6根pin已经断了，需要更换线束"
+        "问题1：充电充到75%就自动停止充电，手动再次开启继电器，充几秒后再次停止充电，充电机有故障，需要换新的 问题2： 车机只能识别到一颗电池，另一颗显示未激活。排查线束发现主电源线束连接电池的插头里，6根细pin的第6根pin已经断了，需要更换线束"
       ]
     },
     {
@@ -20385,8 +19905,8 @@
         "FJRM2124A00168FY"
       ],
       "reasons": [
-        "2026/3/6奥地利代理L&L反馈新开封的wifi遥控器出现断触误触现象，具体表现为遥控器不受控制地画面乱点，反馈给项目组福鹏后，福鹏表示为开箱不良，需要进行更换，因此给代理发送[900106000Q0050C] 智能遥控器总成-wifi-英文版  一个",
-        "和客户远程排查，发现Type C接口损坏，给予更换。\n由于目前库存仅有美国芝加哥仓和福建仓各一台，所以由国内发出。"
+        "2026/3/6奥地利代理L&L反馈新开封的wifi遥控器出现断触误触现象，具体表现为遥控器不受控制地画面乱点，反馈给项目组福鹏后，福鹏表示为开箱不良，需要进行更换，因此给代理发送[900106000Q0050C] 智能遥控器总成-wifi-英文版 一个",
+        "和客户远程排查，发现Type C接口损坏，给予更换。 由于目前库存仅有美国芝加哥仓和福建仓各一台，所以由国内发出。"
       ]
     },
     {
@@ -20477,8 +19997,8 @@
     },
     {
       "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2304",
       "partName": "欧版盲充充电机",
       "qty": 1.0,
@@ -20536,7 +20056,7 @@
         "FJRM2124C00223FY"
       ],
       "reasons": [
-        "代Jesse 提交，\n1. 滚刷电机和充电桩充电模块升级.\n2. 前保险杆换新",
+        "代Jesse 提交， 1. 滚刷电机和充电桩充电模块升级. 2. 前保险杆换新",
         "客户反应GC01集操器效果不好，怀疑为老版本通用问题，询问 Terry Wang之后同意进行发货[370002014Y0100A] 滚刷电机1台",
         "经福朋确认，之前的电机拉力不够，无法适配客户的需求，更换1000w电机"
       ]
@@ -20604,7 +20124,7 @@
         "FJRM2124C00225FY"
       ],
       "reasons": [
-        "客户反馈整车无故下电，客户自行排查后发现更换DCDC恢复正常，经过与福鹏沟通，为客户售后DCDC一个\n客户反馈航向固定在90度，经过排查是由于副天线馈线故障导致，为客户售后天线馈线一根"
+        "客户反馈整车无故下电，客户自行排查后发现更换DCDC恢复正常，经过与福鹏沟通，为客户售后DCDC一个 客户反馈航向固定在90度，经过排查是由于副天线馈线故障导致，为客户售后天线馈线一根"
       ]
     },
     {
@@ -20751,7 +20271,7 @@
         "FJRM2124900117FY"
       ],
       "reasons": [
-        "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件：\n1. [900330600Y0100C] 中割蘑菇头总成V2   *1\n2. [900277300Q0030A] 控制盒    *1\n3. 蘑菇头穿管线束 370001224Y0100B   *1\n\n由于法兰克福仓库没有本料号的库存，因此本单从深圳单走线束发货，"
+        "荷兰brinkman 中割出现等待数据传感器稳定，以及通信线束故障等问题，11/12日拉通登慧，福鹏，橙苷，庄工、方工等人排查硬件未发现明显故障，橙苷与方工排查蘑菇头与雷达后发现也没有问题，怀疑问题可能出现在1904上，沟通项目组福鹏与登慧后表示同意为客户发送如下配件： 1. [900330600Y0100C] 中割蘑菇头总成V2 *1 2. [900277300Q0030A] 控制盒 *1 3. 蘑菇头穿管线束 370001224Y0100B *1 由于法兰克福仓库没有本料号的库存，因此本单从深圳单走线束发货，"
       ]
     },
     {
@@ -20813,7 +20333,7 @@
         "FJRM2124500049FY"
       ],
       "reasons": [
-        "前铲支架断裂，需要给客户发结构件来帮助焊接\n客户为21“割刀，因先前销售答应免费升级25”割刀，所以补发25“割刀一个",
+        "前铲支架断裂，需要给客户发结构件来帮助焊接 客户为21“割刀，因先前销售答应免费升级25”割刀，所以补发25“割刀一个",
         "客户车架断裂，已和毛羽丰确认，需发加强筋焊接修复"
       ]
     },
@@ -20859,8 +20379,8 @@
     },
     {
       "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2304",
       "partName": "转接线",
       "qty": 1.0,
@@ -20879,8 +20399,8 @@
     },
     {
       "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2304",
       "partName": "通讯板",
       "qty": 3.0,
@@ -20975,7 +20495,7 @@
         "FJRM2125600211FY"
       ],
       "reasons": [
-        "经经销商反映，多个隔膜泵损坏，需要进行发货，进行数量确认后，客户需要6个隔膜泵和1套电磁阀，但是客户目前只能提供3个隔膜泵和1套电磁阀的照片，经jianlin xie确认同意后，发出[920900017Y0130A] 隔膜泵3个，[921700188Y0130A] 英制快插螺纹弯头3个，[921700028Y0130A] L型螺纹二通\t3个， 需要将2个L型接头安装到泵上面，后再一起发货。[921500027Y0130A] 电磁阀(常闭)1个， [921700028Y0130A] L型螺纹二通2个，同样需要预装好接头发出去，共计[921700028Y0130A] L型螺纹二通5个",
+        "经经销商反映，多个隔膜泵损坏，需要进行发货，进行数量确认后，客户需要6个隔膜泵和1套电磁阀，但是客户目前只能提供3个隔膜泵和1套电磁阀的照片，经jianlin xie确认同意后，发出[920900017Y0130A] 隔膜泵3个，[921700188Y0130A] 英制快插螺纹弯头3个，[921700028Y0130A] L型螺纹二通 3个， 需要将2个L型接头安装到泵上面，后再一起发货。[921500027Y0130A] 电磁阀(常闭)1个， [921700028Y0130A] L型螺纹二通2个，同样需要预装好接头发出去，共计[921700028Y0130A] L型螺纹二通5个",
         "经经销商和现场AE进行反应，客户存在多个泵堵转损坏，经Gavin chen进行排查同意之后，进行发货[920900017Y0130A] 隔膜泵3台，[921700028Y0130A] L型螺纹二通3台，[921700188Y0130A] 英制快插螺纹弯头3台"
       ]
     },
@@ -21042,7 +20562,7 @@
       ],
       "reasons": [
         "因为客户中割难以触发雨滴传感器，所以发一个雨滴传感器底座给客户",
-        "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换\n割刀需要替换刀座"
+        "雨滴传感器难以触发，需寄雨滴传感器底座给客户替换 割刀需要替换刀座"
       ]
     },
     {
@@ -21062,7 +20582,7 @@
         "FJRLM0125100002FY"
       ],
       "reasons": [
-        "销售elena表示瑞士proxilia客户与25年年初购买了一台专业划线机，由于该专业划线机版本比较早，表示希望AE走售后为客户发送新版本划线机配件，配件如下：\n1. 921700028Y0130A,L型螺纹二通,A.2(Design)\n2. 921700051Y0130A,喷嘴,A.3 (Design)\n3. 921700138Y0130A,预过滤器,A.3 (Design)\n4. 921700188Y0130A,英制快播螺纹弯头,A.2(Design)\n5. 921700200Y0130A,隔膜泵总成,A.3(Design)\n6. 921700268Y0100A,喷头滤网,A.6(Design)\n7. 921700311Y0130A,扁口快拆帽,A.3(Design)\n8. 921700331Y0130A,防滴帽,A.2(Design)\n9. 921700431Y0130A,快拆帽密封垫,A.6(Design)\n10. 921700541Y0130A,防滴隔膜,A.2(Design)\n11. 921700621Y0130A,锥形喷嘴,A.6(Design)\n12. 921700641Y0130A,圆口快拆帽,A.4(Design)\n13. 921700751Y0130A,扇形喷嘴,A.3(Design)\n14. 921700775Y0130A,扇形喷嘴,B.2(Design)\n15. 921750001Y0130A,气管接头喷头,D.2(Design)\n\n沟通项目组陈守辉后同意为客户发送"
+        "销售elena表示瑞士proxilia客户与25年年初购买了一台专业划线机，由于该专业划线机版本比较早，表示希望AE走售后为客户发送新版本划线机配件，配件如下： 1. 921700028Y0130A,L型螺纹二通,A.2(Design) 2. 921700051Y0130A,喷嘴,A.3 (Design) 3. 921700138Y0130A,预过滤器,A.3 (Design) 4. 921700188Y0130A,英制快播螺纹弯头,A.2(Design) 5. 921700200Y0130A,隔膜泵总成,A.3(Design) 6. 921700268Y0100A,喷头滤网,A.6(Design) 7. 921700311Y0130A,扁口快拆帽,A.3(Design) 8. 921700331Y0130A,防滴帽,A.2(Design) 9. 921700431Y0130A,快拆帽密封垫,A.6(Design) 10. 921700541Y0130A,防滴隔膜,A.2(Design) 11. 921700621Y0130A,锥形喷嘴,A.6(Design) 12. 921700641Y0130A,圆口快拆帽,A.4(Design) 13. 921700751Y0130A,扇形喷嘴,A.3(Design) 14. 921700775Y0130A,扇形喷嘴,B.2(Design) 15. 921750001Y0130A,气管接头喷头,D.2(Design) 沟通项目组陈守辉后同意为客户发送"
       ]
     },
     {
@@ -21228,7 +20748,7 @@
         "FLMO124900019FY"
       ],
       "reasons": [
-        "丝杆旋钮组件为旧款，会导致挡板移位，补发改制后的旋钮\n其他物料经项目组评估为易坏件，按要求给客户备件，为了故障时能及时更换"
+        "丝杆旋钮组件为旧款，会导致挡板移位，补发改制后的旋钮 其他物料经项目组评估为易坏件，按要求给客户备件，为了故障时能及时更换"
       ]
     },
     {
@@ -21315,9 +20835,9 @@
         "FJDFRXC002590035FY"
       ],
       "reasons": [
-        "经客户反映，客户的FRX发出异响并持续重启，AE请求客户关闭FRX，然后使用万用表的欧姆档测量每块电路板的正、负电源端子是否短路。经felix chen和AE进行联合排查之后，认为电机轴发生磨损，经jack yao同意，进行发货：[QDJ-DJ-003030B] 割刀电机2套\n[1D0100732Y0170A] 刀盘保护罩右 1套\n[1D0100722Y0170A] 刀盘保护罩左 1套",
-        "荷兰brinkman于10月份购入一台FRX，客户表示机器的割刀裸露在外并不安全，希望给出一些解决方案，沟通项目组姚正后同意为客户发送[1D0100732Y0170A] 刀盘保护罩右\n1D0100722Y0170A刀盘保护罩左\n各一个,将割刀包围起来，满足客户的诉求",
-        "荷兰knoll反馈刀片没有保护结构，沟通项目组姚正后为客户发送[1D0100732Y0170A] 刀盘保护罩右\n与\n1D0100722Y0170A刀盘保护罩左一个"
+        "经客户反映，客户的FRX发出异响并持续重启，AE请求客户关闭FRX，然后使用万用表的欧姆档测量每块电路板的正、负电源端子是否短路。经felix chen和AE进行联合排查之后，认为电机轴发生磨损，经jack yao同意，进行发货：[QDJ-DJ-003030B] 割刀电机2套 [1D0100732Y0170A] 刀盘保护罩右 1套 [1D0100722Y0170A] 刀盘保护罩左 1套",
+        "荷兰brinkman于10月份购入一台FRX，客户表示机器的割刀裸露在外并不安全，希望给出一些解决方案，沟通项目组姚正后同意为客户发送[1D0100732Y0170A] 刀盘保护罩右 1D0100722Y0170A刀盘保护罩左 各一个,将割刀包围起来，满足客户的诉求",
+        "荷兰knoll反馈刀片没有保护结构，沟通项目组姚正后为客户发送[1D0100732Y0170A] 刀盘保护罩右 与 1D0100722Y0170A刀盘保护罩左一个"
       ]
     },
     {
@@ -21326,40 +20846,23 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2502",
       "partName": "划线机一度电电池转接线线束",
-      "qty": 2.0,
-      "rmaCount": 2,
-      "serialCount": 2,
-      "latestDate": "2025-11-30 01:59:17",
-      "rmaNames": [
-        "RM251117018",
-        "RM251130002"
-      ],
-      "serials": [
-        "FJDFRX0002570005FY",
-        "FJDFRX0002570009FY"
-      ],
-      "reasons": [
-        "奥地利Gerald客户购买了一台FRX，遇到电池线不够长的问题，无法正常将一度电池安装，沟通项目组jack.yao后统一为客户发送370000534Y0130a 一度电电池转换线线束一枚",
-        "客户的FRX没有一度电电池转接线线束，为客户补发"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2502",
-      "partName": "划线机一度电电池转接线线束",
-      "qty": 2.0,
-      "rmaCount": 1,
-      "serialCount": 1,
+      "qty": 4.0,
+      "rmaCount": 3,
+      "serialCount": 3,
       "latestDate": "2026-03-26 21:37:59",
       "rmaNames": [
+        "RM251117018",
+        "RM251130002",
         "RM260327001"
       ],
       "serials": [
+        "FJDFRX0002570005FY",
+        "FJDFRX0002570009FY",
         "FJDFRX0002570010FY"
       ],
       "reasons": [
+        "奥地利Gerald客户购买了一台FRX，遇到电池线不够长的问题，无法正常将一度电池安装，沟通项目组jack.yao后统一为客户发送370000534Y0130a 一度电电池转换线线束一枚",
+        "客户的FRX没有一度电电池转接线线束，为客户补发",
         "项目组给客户赠送FRX电池延长线h和护手板"
       ]
     },
@@ -21380,7 +20883,7 @@
         "FJDFRX0002550004FY"
       ],
       "reasons": [
-        "陈靖天现场为客户维修机器，客户FRX试用样机割刀电机损坏，需要换新\n\n电机为Svea的共用料，出库需检查版本，以及清除Svea相关logo贴纸"
+        "陈靖天现场为客户维修机器，客户FRX试用样机割刀电机损坏，需要换新 电机为Svea的共用料，出库需检查版本，以及清除Svea相关logo贴纸"
       ]
     },
     {
@@ -21400,7 +20903,7 @@
         "FJDFRXC002590035FY"
       ],
       "reasons": [
-        "荷兰knoll客户反馈FRX塑料刀盘损坏，割草刀片飞出，与项目组jack.yao沟通后同意为客户发送新的1D0100061Y0050G  FRX 塑料割盘与1D0088000Y0050，星型刀片配件一套"
+        "荷兰knoll客户反馈FRX塑料刀盘损坏，割草刀片飞出，与项目组jack.yao沟通后同意为客户发送新的1D0100061Y0050G FRX 塑料割盘与1D0088000Y0050，星型刀片配件一套"
       ]
     },
     {
@@ -21475,31 +20978,12 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2502",
       "partName": "智能计算装置",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-16 09:40:03",
-      "rmaNames": [
-        "RM260316007"
-      ],
-      "serials": [
-        "FJDFRXC0025A0062FY"
-      ],
-      "reasons": [
-        "【法国amazideas】同场景下，相同地点，由同一n10提供ntrip，FRX搜星数显著小于v4e，现场kyle拉通robbin luo，bill feng 和jack yao, liangwu guo 讨论确认由天线硬件引起，确认更换蘑菇头，需要烧录FRX固件，需要记录SN"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2502",
-      "partName": "智能计算装置",
-      "qty": 1.0,
-      "rmaCount": 1,
+      "qty": 2.0,
+      "rmaCount": 2,
       "serialCount": 1,
       "latestDate": "2026-03-24 05:58:36",
       "rmaNames": [
+        "RM260316007",
         "RM260324004"
       ],
       "serials": [
@@ -21511,8 +20995,8 @@
     },
     {
       "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2502",
       "partName": "步进电机",
       "qty": 1.0,
@@ -21526,7 +21010,7 @@
         "FJDFRXC002590035FY"
       ],
       "reasons": [
-        "荷兰knoll代理反馈FRX（FJDFRXC002590035FY）刀盘升降电机不工作，具体表现为割刀可以旋转，但是电机升降，电机不工作，且没有声音，拉通项目组姚正、高雷排查后发现驱动器正常，结论为升降电机损坏，项目组高雷与姚正表示可以为客户更换g / Spare parts / motor\t[QDJ-DJ-003038A] 步进电机一个"
+        "荷兰knoll代理反馈FRX（FJDFRXC002590035FY）刀盘升降电机不工作，具体表现为割刀可以旋转，但是电机升降，电机不工作，且没有声音，拉通项目组姚正、高雷排查后发现驱动器正常，结论为升降电机损坏，项目组高雷与姚正表示可以为客户更换g / Spare parts / motor [QDJ-DJ-003038A] 步进电机一个"
       ]
     },
     {
@@ -21549,7 +21033,7 @@
       ],
       "reasons": [
         "荷兰knoll的FRX（序列号）出现固件更新失败的缘故，拉通项目组腾杰、高雷、郭武良等人排查，发现电机通信不上，进一步排查，发现电机驱动板烧毁。项目组姚正表示为客户补发BZB-QD-003142JD] 驱动板两套,法兰克福仓没有货，申请国内发货",
-        "陈靖天现场为客户维修机器，客户FRX试用样机控制板损坏，需要换新\n\n控制板需要刷程序"
+        "陈靖天现场为客户维修机器，客户FRX试用样机控制板损坏，需要换新 控制板需要刷程序"
       ]
     },
     {
@@ -21592,7 +21076,7 @@
       ],
       "reasons": [
         "客户反应平板没有进行线刷，开机进入农机界面，经销售Luc和Gavin chen进行确认后，按PI订单走一个平板的售后单",
-        "客户反馈rlm01的平板坏了。由于客户之前的rlm01平板是7寸，项目组说过可以给换成10寸的，现在想走售后给客户发一个rlm01的十寸三防平板。经沟通，@Forever.Cao 建议给客户更换一个900297330Q0030A\n10寸三防平板。"
+        "客户反馈rlm01的平板坏了。由于客户之前的rlm01平板是7寸，项目组说过可以给换成10寸的，现在想走售后给客户发一个rlm01的十寸三防平板。经沟通，@Forever.Cao 建议给客户更换一个900297330Q0030A 10寸三防平板。"
       ]
     },
     {
@@ -21601,38 +21085,21 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2503",
       "partName": "3040长轴电机驱动总成",
-      "qty": 2.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-14 12:16:40",
-      "rmaNames": [
-        "RM260314001"
-      ],
-      "serials": [
-        "FJDRLM0225A0189FY"
-      ],
-      "reasons": [
-        "瑞士rudazmini划线机1.5与2km速度下划线不直，存在一定程度的偏移，拉通项目组冯晨、曹俭、均瑞等排查后，建议为客户发送如下备件，以便AE去到现场进行更换。\n1. [[BZB-QD-003155JB] 驱动板。 *1\n2. [172830000Y0130A] 3040长轴电机驱动总成。 *2\n3. pare parts / Harnesses\t[QXL-XS-003607A] VCU液压集成线束    *1"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2503",
-      "partName": "3040长轴电机驱动总成",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
+      "qty": 3.0,
+      "rmaCount": 2,
+      "serialCount": 2,
       "latestDate": "2026-03-22 16:57:23",
       "rmaNames": [
+        "RM260314001",
         "RM260323002"
       ],
       "serials": [
+        "FJDRLM0225A0189FY",
         "FJDRLM0225B0247FY"
       ],
       "reasons": [
-        "【奥地利 mowy RLM02】sn FJDRLM0225B0247FY 客户反应开机之后遥控发现电机报错，温度检测模块出了问题，电机检测到过热保护，实际上没有问题，fengchen暂时屏蔽了车机数据，并和Jefferson确认物料号，之后要换电机总成"
+        "【奥地利 mowy RLM02】sn FJDRLM0225B0247FY 客户反应开机之后遥控发现电机报错，温度检测模块出了问题，电机检测到过热保护，实际上没有问题，fengchen暂时屏蔽了车机数据，并和Jefferson确认物料号，之后要换电机总成",
+        "瑞士rudazmini划线机1.5与2km速度下划线不直，存在一定程度的偏移，拉通项目组冯晨、曹俭、均瑞等排查后，建议为客户发送如下备件，以便AE去到现场进行更换。 1. [[BZB-QD-003155JB] 驱动板。 *1 2. [172830000Y0130A] 3040长轴电机驱动总成。 *2 3. pare parts / Harnesses [QXL-XS-003607A] VCU液压集成线束 *1"
       ]
     },
     {
@@ -21737,7 +21204,7 @@
         "FJDRLM012530090FY"
       ],
       "reasons": [
-        "按照客户要求，和jingtian chen，Emmon Zhuang协商后同意进行发货。\n2个T型硅胶塞+1个软胶塞为一套，共计五套"
+        "按照客户要求，和jingtian chen，Emmon Zhuang协商后同意进行发货。 2个T型硅胶塞+1个软胶塞为一套，共计五套"
       ]
     },
     {
@@ -21807,41 +21274,24 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2503",
       "partName": "三档旋钮开关",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2025-12-08 12:14:09",
-      "rmaNames": [
-        "RM251208022"
-      ],
-      "serials": [
-        "FJDRLM012540158FY"
-      ],
-      "reasons": [
-        "客户反馈专业划线机FJDRLM012540158FY喷漆旋钮开关损坏，沟通项目组守辉，同意为代理发送[370000054Y0130B] 三档旋钮开关一个做售后用途。"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2503",
-      "partName": "三档旋钮开关",
-      "qty": 2.0,
-      "rmaCount": 2,
-      "serialCount": 2,
+      "qty": 3.0,
+      "rmaCount": 3,
+      "serialCount": 3,
       "latestDate": "2026-03-25 14:13:22",
       "rmaNames": [
+        "RM251208022",
         "RM260324005",
         "RM260325015"
       ],
       "serials": [
         "FJDRLM012530051FY",
+        "FJDRLM012540158FY",
         "FJDRLM012550186FY"
       ],
       "reasons": [
         "【法国 linemark】客户反应三档旋钮无法旋钮喷漆，按钮接触不良 和急停开关上盖脱落，沟通烦培, 剑林等人确认是部件缺陷之后可以更换，急停开关370000544Y0100A 在法兰克福有货 和三档旋钮370000054Y0130B 其中三档旋钮在法兰克福无货，为节省运费一起从深圳发送",
-        "【法国·coseec】RLM01的三档旋钮开关正常转向spray喷漆时无响应，需要精密的轻微旋转至特定的非正常角度才能触发，经判断，原三档旋钮开关故障，予以更换"
+        "【法国·coseec】RLM01的三档旋钮开关正常转向spray喷漆时无响应，需要精密的轻微旋转至特定的非正常角度才能触发，经判断，原三档旋钮开关故障，予以更换",
+        "客户反馈专业划线机FJDRLM012540158FY喷漆旋钮开关损坏，沟通项目组守辉，同意为代理发送[370000054Y0130B] 三档旋钮开关一个做售后用途。"
       ]
     },
     {
@@ -21868,7 +21318,7 @@
       "reasons": [
         "代理从客户那里收到视频。视频中显示蘑菇头松动；怀疑盖子有裂缝。经Gavin chen同意之后进行发货[990000171Y0130A] EVA垫1个，[270001362Y0130A] 电控钣金1个，[270001352Y0130A] 支撑钣金1个，[991400021Y0130A] 蘑菇头防护衬垫1个，[S010460602501] 带弹平垫六角螺栓2个，[S010460601200] 带弹平垫六角螺栓2个，[210100311O0040A] 环氧板1个，[501000011Y0130D] 上盖1个，[270000812Y0130B] 电池罩1个，[NS0100192Y0130A] T型套筒1个",
         "客户反映上盖损坏，经过Gavin chen同意之后进行发货",
-        "客户反映上盖松动，之前德国客户有同样问题，经Gavin chen确认同意，进行发货[990000171Y0130A] EVA垫 1个\n[270001362Y0130A] 电控钣金 1个\n[270001352Y0130A] 支撑钣金 1个\n[991400021Y0130A] 蘑菇头防护衬垫 1个\n[S010460602501] 带弹平垫六角螺栓 2个\n[S010460601200] 带弹平垫六角螺栓 2个\n[210100311O0040A] 环氧板 1个\n[501000011Y0130D] 上盖 1个\n[270000812Y0130B] 电池罩 1个\n[NS0100192Y0130A] T型套筒 1个",
+        "客户反映上盖松动，之前德国客户有同样问题，经Gavin chen确认同意，进行发货[990000171Y0130A] EVA垫 1个 [270001362Y0130A] 电控钣金 1个 [270001352Y0130A] 支撑钣金 1个 [991400021Y0130A] 蘑菇头防护衬垫 1个 [S010460602501] 带弹平垫六角螺栓 2个 [S010460601200] 带弹平垫六角螺栓 2个 [210100311O0040A] 环氧板 1个 [501000011Y0130D] 上盖 1个 [270000812Y0130B] 电池罩 1个 [NS0100192Y0130A] T型套筒 1个",
         "客户这台车反应上盖松动问题，收到之后反馈上盖电池仓下沿断裂，由于上盖备件在德国法兰克福仓有货，按照优先从德国仓发货原则，Gavin chen进行同意进行"
       ]
     },
@@ -21980,18 +21430,21 @@
       "warehouseName": "Frankfurt",
       "projectCode": "R2503",
       "partName": "可充电锂离子电池",
-      "qty": 10.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2025-05-08 11:59:26",
+      "qty": 11.0,
+      "rmaCount": 2,
+      "serialCount": 2,
+      "latestDate": "2026-03-20 22:48:22",
       "rmaNames": [
-        "RM250508038"
+        "RM250508038",
+        "RM260321002"
       ],
       "serials": [
-        "FJDRLM012530054FY"
+        "FJDRLM012530054FY",
+        "FJDRLM012540158FY"
       ],
       "reasons": [
-        "早期发出的电池无通讯，需要全部更换为通讯电池，代理处共有10台机器"
+        "早期发出的电池无通讯，需要全部更换为通讯电池，代理处共有10台机器",
+        "荷兰knoll代理表示专业划线机（FJDRLM012540158FY）的电池充不进电，拉通研发志伟排查后发现电池损坏，沟通项目组守辉后同意为客户更换[O0040005] 可充电锂离子电池一个，德国仓有货，申请德国仓发货"
       ]
     },
     {
@@ -22015,26 +21468,6 @@
       "reasons": [
         "客户设备RLM01 T型锁销损坏，经PO确认。同意发备件更换。",
         "阿联酋babiker代理反馈mini划线机（FJDRLM0225B0355FY）收到货时，电池没有螺丝没有安装好，导致塑料外壳与电芯本体没有正确密封，沟通项目组冯晨后表示该电池安全性无法确定，可以为客户更换O0040065 可充电锂离子电池一枚，阿联酋隶属中东地区，申请国内发货"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2503",
-      "partName": "可充电锂离子电池",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-20 22:48:22",
-      "rmaNames": [
-        "RM260321002"
-      ],
-      "serials": [
-        "FJDRLM012540158FY"
-      ],
-      "reasons": [
-        "荷兰knoll代理表示专业划线机（FJDRLM012540158FY）的电池充不进电，拉通研发志伟排查后发现电池损坏，沟通项目组守辉后同意为客户更换[O0040005] 可充电锂离子电池一个，德国仓有货，申请德国仓发货"
       ]
     },
     {
@@ -22074,7 +21507,7 @@
         "FJDRLM0225A0115FY"
       ],
       "reasons": [
-        "瑞士UFA客户于2025年12/17日反馈mini划线机耗漆太多，跟项目组曹俭与冯晨沟通后，表示可以为客户发送[921700775Y0130A] 扇形喷嘴与[921700268Y0100A] 喷头滤网 2个，此外项目组曹俭表示由于客户下单了20太迷你划线机，可以为客户发送\n[1U0000082Y0130C] 喷嘴移动导轨20个。海外仓没有货，申请从国内发"
+        "瑞士UFA客户于2025年12/17日反馈mini划线机耗漆太多，跟项目组曹俭与冯晨沟通后，表示可以为客户发送[921700775Y0130A] 扇形喷嘴与[921700268Y0100A] 喷头滤网 2个，此外项目组曹俭表示由于客户下单了20太迷你划线机，可以为客户发送 [1U0000082Y0130C] 喷嘴移动导轨20个。海外仓没有货，申请从国内发"
       ]
     },
     {
@@ -22192,7 +21625,7 @@
         "FJDRLM012550215FY"
       ],
       "reasons": [
-        "荷兰smartgarden代理专业划线机急停开关损坏，沟通项目组守辉，同意为客户更换\n[370000544Y0100A] 急停开关一个，德国仓有货，申请德国仓发货"
+        "荷兰smartgarden代理专业划线机急停开关损坏，沟通项目组守辉，同意为客户更换 [370000544Y0100A] 急停开关一个，德国仓有货，申请德国仓发货"
       ]
     },
     {
@@ -22212,13 +21645,13 @@
         "FJDRLM012530084FY"
       ],
       "reasons": [
-        "客户这台车反应上盖松动问题，发送上盖相关配件之后发现不能随着开关按钮及时控制机器的开关，疑似为上盖连接线束及开关出现问题，经Terry wang进行排查和Gavin chen进行同意之后进行发货\n[370000584Y0100A] 启动按钮开关 数量1\n[370000544Y0100A] 急停开关 数量1\n[370000194Y0130B] 便携式划线机主线束 数量1\n[370000214Y0130C] 上盖信号转接线束 数量1\n[370000184Y0130D] 便携式划线机动力线束 数量1"
+        "客户这台车反应上盖松动问题，发送上盖相关配件之后发现不能随着开关按钮及时控制机器的开关，疑似为上盖连接线束及开关出现问题，经Terry wang进行排查和Gavin chen进行同意之后进行发货 [370000584Y0100A] 启动按钮开关 数量1 [370000544Y0100A] 急停开关 数量1 [370000194Y0130B] 便携式划线机主线束 数量1 [370000214Y0130C] 上盖信号转接线束 数量1 [370000184Y0130D] 便携式划线机动力线束 数量1"
       ]
     },
     {
       "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2503",
       "partName": "急停开关",
       "qty": 1.0,
@@ -22304,37 +21737,20 @@
       "warehouseName": "Shenzhen",
       "projectCode": "R2503",
       "partName": "推杆电机压接线束",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2025-09-22 12:35:48",
-      "rmaNames": [
-        "RM250922014"
-      ],
-      "serials": [
-        "FJDRLM022580081FY"
-      ],
-      "reasons": [
-        "客户一开箱机器就反馈推杆无法正常抬升，并且可以手动拉伸推杆，经过电气组高雷确认，为推杆电机故障，为客户售后推杆一个 QXL-XS-003542B"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2503",
-      "partName": "推杆电机压接线束",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
+      "qty": 2.0,
+      "rmaCount": 2,
+      "serialCount": 2,
       "latestDate": "2026-03-20 21:57:53",
       "rmaNames": [
+        "RM250922014",
         "RM260321001"
       ],
       "serials": [
+        "FJDRLM022580081FY",
         "FJDRLM0225A0147FY"
       ],
       "reasons": [
+        "客户一开箱机器就反馈推杆无法正常抬升，并且可以手动拉伸推杆，经过电气组高雷确认，为推杆电机故障，为客户售后推杆一个 QXL-XS-003542B",
         "荷兰knoll代理表示mini划线机的推杆电机线束被喷头结构夹坏，推杆电机线束已无法正常使用，因机器仍在保修期内，因此申请FJD为其发送QXL-XS-003542B推杆电机压接线束一个，沟通项目组冯晨表示可以为客户更换一个。"
       ]
     },
@@ -22499,7 +21915,7 @@
         "FJDRLM012550160FY"
       ],
       "reasons": [
-        "奥地利L&L专业划线机出现故障，具体表现为切换排气跟喷涂档位，喷嘴都有水雾喷出，拉通项目组谢剑林排查后，发现常闭电磁阀出现损坏，客户更换后，问题稍微缓解，但未彻底解决，让客户继续更换常开电磁阀，问题车机解决。与项目组守辉沟通后表示同意为客户更换如下备件各一个用作售后用途。\n1. 921500030Y0130B    电磁阀(常开)\n2. [921000010Y0130A] 电磁阀\n德国仓有货，申请从德国仓发送"
+        "奥地利L&L专业划线机出现故障，具体表现为切换排气跟喷涂档位，喷嘴都有水雾喷出，拉通项目组谢剑林排查后，发现常闭电磁阀出现损坏，客户更换后，问题稍微缓解，但未彻底解决，让客户继续更换常开电磁阀，问题车机解决。与项目组守辉沟通后表示同意为客户更换如下备件各一个用作售后用途。 1. 921500030Y0130B 电磁阀(常开) 2. [921000010Y0130A] 电磁阀 德国仓有货，申请从德国仓发送"
       ]
     },
     {
@@ -22541,7 +21957,7 @@
         "FJDRLM012550189FY"
       ],
       "reasons": [
-        "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送\n921700570Y0130A        F型可旋三通接头        1        PHW10-03\n921500030Y0130B        电磁阀(常开)        1        2KWA05010F\n921700028Y0130A        L型螺纹二通        1        PL10-03\n各一个。申请从德国仓发货",
+        "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送 921700570Y0130A F型可旋三通接头 1 PHW10-03 921500030Y0130B 电磁阀(常开) 1 2KWA05010F 921700028Y0130A L型螺纹二通 1 PL10-03 各一个。申请从德国仓发货",
         "ae现场部署发现电磁阀锈蚀，经过po gavin确认，更换常开电磁阀"
       ]
     },
@@ -22566,7 +21982,7 @@
         "FJDRLM012550196FY"
       ],
       "reasons": [
-        "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送\n921700570Y0130A        F型可旋三通接头  1        \n921500030Y0130B        电磁阀(常开)         1        \n921700028Y0130A        L型螺纹二通          1       \n各一个。",
+        "2025/12/10 荷兰代理Expoline客户反馈购入的专业划线机出现泵压力不够的情况，具体表现为打开喷洒按钮后喷嘴水雾压力不足，但是机器却能正常回流，拉通项目组谢建林排查后确定是客户机器常开电磁阀发生损坏，沟通项目组守辉同意为客户发送 921700570Y0130A F型可旋三通接头 1 921500030Y0130B 电磁阀(常开) 1 921700028Y0130A L型螺纹二通 1 各一个。",
         "客户划线机开箱出现电磁阀内部锈蚀，客户2025总共下单了20台划线机，Gavin安排为客户发5个新电磁阀以及接头。",
         "客户排气电磁阀的阀芯生锈，导致卡阀，喷涂系统无法正常喷涂，经jianlin xie，jingtian chen进行排查后，同意发货"
       ]
@@ -22577,38 +21993,21 @@
       "warehouseName": "Frankfurt",
       "projectCode": "R2503",
       "partName": "硬平膜压力变送器",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
-      "latestDate": "2026-03-17 15:32:25",
-      "rmaNames": [
-        "RM260317014"
-      ],
-      "serials": [
-        "FJDRLM0125C0236FY"
-      ],
-      "reasons": [
-        "经谢建林与rlm01po gavin确认，压力传感器故障，予以换件"
-      ]
-    },
-    {
-      "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
-      "projectCode": "R2503",
-      "partName": "硬平膜压力变送器",
-      "qty": 1.0,
-      "rmaCount": 1,
-      "serialCount": 1,
+      "qty": 2.0,
+      "rmaCount": 2,
+      "serialCount": 2,
       "latestDate": "2026-03-25 13:56:00",
       "rmaNames": [
+        "RM260317014",
         "RM260325013"
       ],
       "serials": [
-        "FJDRLM012540122FY"
+        "FJDRLM012540122FY",
+        "FJDRLM0125C0236FY"
       ],
       "reasons": [
-        "奥地利L&L的专业划线机（FJDRLM012540122FY）出现不报缺漆的异常，拉通项目组守辉、帅铭排查后发现压力传感器发生损坏，守辉表示可以为客户发送[921700178Y0130A] 硬平膜压力变送器一个，申请德国仓发货"
+        "奥地利L&L的专业划线机（FJDRLM012540122FY）出现不报缺漆的异常，拉通项目组守辉、帅铭排查后发现压力传感器发生损坏，守辉表示可以为客户发送[921700178Y0130A] 硬平膜压力变送器一个，申请德国仓发货",
+        "经谢建林与rlm01po gavin确认，压力传感器故障，予以换件"
       ]
     },
     {
@@ -22665,8 +22064,8 @@
     },
     {
       "owner": "Jingtian.Chen欧洲",
-      "warehouseGroup": "未匹配仓库",
-      "warehouseName": "未匹配",
+      "warehouseGroup": "国内仓",
+      "warehouseName": "Shenzhen",
       "projectCode": "R2503",
       "partName": "驱动板",
       "qty": 1.0,
