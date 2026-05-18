@@ -6,12 +6,17 @@
   --muted: #66756d;
   --line: rgba(50, 72, 60, 0.12);
   --brand: #1e6b52;
+  --brand-soft: rgba(30, 107, 82, 0.08);
+  --warn-bg: rgba(176, 95, 45, 0.08);
+  --warn-line: rgba(176, 95, 45, 0.16);
+  --warn-text: #714228;
   --shadow: 0 18px 40px rgba(44, 52, 46, 0.08);
   --radius: 22px;
 }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+
 body {
   font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
   color: var(--text);
@@ -23,7 +28,7 @@ body {
 }
 
 .shell {
-  max-width: 1500px;
+  max-width: 1520px;
   margin: 0 auto;
   padding: 32px 24px 60px;
 }
@@ -44,7 +49,7 @@ body {
 
 .hero p {
   margin: 0;
-  max-width: 860px;
+  max-width: 920px;
   color: rgba(248, 251, 247, 0.82);
   font-size: 15px;
   line-height: 1.8;
@@ -155,20 +160,21 @@ button {
   border: 1px solid var(--line);
 }
 
-.note {
+.note,
+.inventory-warning {
   margin-top: 18px;
   padding: 14px 16px;
   border-radius: 16px;
-  background: rgba(176, 95, 45, 0.08);
-  border: 1px solid rgba(176, 95, 45, 0.12);
-  color: #714228;
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-line);
+  color: var(--warn-text);
   font-size: 13px;
   line-height: 1.7;
 }
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -207,7 +213,7 @@ button {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 16px;
 }
 
@@ -251,6 +257,87 @@ button {
   margin-bottom: 12px;
 }
 
+.project-section {
+  margin-bottom: 16px;
+}
+
+.project-section-title {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.inventory-card {
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(30, 107, 82, 0.1);
+  background: linear-gradient(180deg, rgba(240, 246, 242, 0.9), rgba(255, 255, 255, 0.98));
+}
+
+.inventory-card.is-unconfigured {
+  border-color: var(--warn-line);
+  background: linear-gradient(180deg, rgba(255, 247, 240, 0.9), rgba(255, 255, 255, 0.98));
+}
+
+.inventory-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.inventory-card-head span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.inventory-card-head strong {
+  font-size: 22px;
+  color: var(--brand);
+}
+
+.inventory-card.is-unconfigured .inventory-card-head strong {
+  color: var(--warn-text);
+  font-size: 18px;
+}
+
+.inventory-sub,
+.inventory-note,
+.inventory-transit,
+.inventory-empty {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.inventory-sub {
+  color: var(--muted);
+}
+
+.inventory-transit {
+  margin-top: 8px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.inventory-note {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.inventory-empty {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px dashed rgba(50, 72, 60, 0.22);
+  color: var(--muted);
+}
+
 .project-table,
 .detail-table {
   width: 100%;
@@ -281,7 +368,7 @@ button {
 }
 
 .detail-table {
-  min-width: 1100px;
+  min-width: 1220px;
   font-size: 13px;
 }
 
@@ -328,10 +415,8 @@ button {
     padding: 18px;
   }
 
-  .metrics {
-    grid-template-columns: 1fr;
-  }
-
+  .metrics,
+  .inventory-grid,
   .project-grid {
     grid-template-columns: 1fr;
   }
