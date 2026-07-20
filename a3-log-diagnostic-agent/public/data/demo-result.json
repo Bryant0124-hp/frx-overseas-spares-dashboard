@@ -1,0 +1,70 @@
+{
+  "sn": "DEMO-A3-DEVICE-001",
+  "model": "AUTO-DETECTED",
+  "source": "synthetic-demo",
+  "generatedAt": "2026-01-01T00:00:00.000Z",
+  "healthScore": 72,
+  "status": "warning",
+  "summary": "合成演示检测到网络链路波动与差分数据丢包；这不是任何真实设备的诊断结果。",
+  "metrics": {
+    "files": 42,
+    "lines": 125000,
+    "bytes": 8400000,
+    "findings": 35
+  },
+  "coverage": [
+    "RTK / GNSS",
+    "网络 / Wi-Fi",
+    "导航 / 路径",
+    "串口 / VCU",
+    "CAN / 电机",
+    "系统 / 资源"
+  ],
+  "findings": [
+    {
+      "id": "demo-network",
+      "category": "网络 / Wi-Fi",
+      "severity": "medium",
+      "title": "合成示例：网络链路波动",
+      "count": 23,
+      "impact": "可能造成遥测延迟。",
+      "cause": "演示数据模拟信号质量不稳定。",
+      "actions": [
+        "检查天线与网络覆盖",
+        "关联设备在线率"
+      ],
+      "firstSeen": "2026-01-01T00:00:01.000Z",
+      "lastSeen": "2026-01-01T00:05:00.000Z",
+      "samples": [
+        {
+          "file": "synthetic/network.log",
+          "time": "2026-01-01T00:00:01.000Z",
+          "text": "synthetic demo: link quality degraded"
+        }
+      ]
+    },
+    {
+      "id": "demo-rtk",
+      "category": "RTK / GNSS",
+      "severity": "low",
+      "title": "合成示例：差分帧丢失",
+      "count": 12,
+      "impact": "可能短时降低定位质量。",
+      "cause": "演示数据模拟无线链路丢包。",
+      "actions": [
+        "检查基站覆盖",
+        "核对天线连接"
+      ],
+      "firstSeen": "2026-01-01T00:02:00.000Z",
+      "lastSeen": "2026-01-01T00:04:30.000Z",
+      "samples": [
+        {
+          "file": "synthetic/rtk.log",
+          "time": "2026-01-01T00:02:00.000Z",
+          "text": "synthetic demo: correction frame lost"
+        }
+      ]
+    }
+  ],
+  "disclaimer": "完全合成的公开演示数据，不对应任何真实设备、客户或日志。"
+}
