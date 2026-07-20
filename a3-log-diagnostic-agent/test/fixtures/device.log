@@ -1,0 +1,4 @@
+[2026-01-01T00:00:01.000] synthetic_rtk: failed to check crc of message
+[2026-01-01T00:00:02.000] synthetic_rtk: [frame-info] rate:97.0 sum:100 lost:3
+[2026-01-01T00:00:03.000] synthetic_nav: json.exception.parse_error.101
+[2026-01-01T00:00:04.000] synthetic_config: password=synthetic-value secretKey=00000000000000000000000000000000
