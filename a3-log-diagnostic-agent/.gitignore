@@ -1,0 +1,14 @@
+node_modules/
+.env
+runtime/
+reports/
+logs/
+*.pem
+*.key
+id_rsa*
+known_hosts
+*.tar
+*.tar.gz
+*.zip
+*.log
+!test/fixtures/*.log
