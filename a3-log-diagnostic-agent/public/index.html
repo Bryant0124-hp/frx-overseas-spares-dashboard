@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="输入设备 SN，自动采集并分析 A3 设备日志">
+  <title>A3 Pulse · 智能日志诊断中心</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div><div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark"><i></i><i></i><i></i></span><span>A3 <b>PULSE</b></span></a>
+    <div class="system-state"><span class="pulse-dot"></span><span id="systemText">诊断网络在线</span><small>SECURE / REDACTED</small></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span>01</span> SN-DRIVEN DIAGNOSTIC AGENT</div>
+      <h1>一串 SN，<em>看清整台设备。</em></h1>
+      <p>自动贯通设备通道、日志采集、协议识别与根因定位。让每一次故障判断，都有时间线和原始证据支撑。</p>
+      <form id="scanForm" class="scan-form">
+        <label for="snInput">设备序列号</label>
+        <div class="input-shell">
+          <span class="corner tl"></span><span class="corner br"></span>
+          <input id="snInput" autocomplete="off" spellcheck="false" value="" placeholder="输入任意 A3 设备 SN">
+          <button id="scanButton" type="submit"><span>开始诊断</span><b>↗</b></button>
+        </div>
+        <div class="form-meta"><span>自动遍历 UOP 产品并识别车型、ProductKey 与区域</span><button type="button" id="demoButton">载入脱敏实测样本</button></div>
+      </form>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="radar"><span class="radar-sweep"></span><span class="radar-core"></span><i class="node n1"></i><i class="node n2"></i><i class="node n3"></i></div>
+        <div class="float-card fc-1"><b>5715</b><span>日志文件</span></div>
+        <div class="float-card fc-2"><b>7</b><span>协议域</span></div>
+      </div>
+    </section>
+
+    <section id="progressPanel" class="progress-panel hidden">
+      <div class="progress-head"><span id="phaseName">建立安全通道</span><b id="progressValue">0%</b></div>
+      <div class="progress-track"><i id="progressBar"></i></div>
+      <div class="pipeline">
+        <div data-step="connecting"><i>01</i><b>识别设备</b><span>车型 · 区域</span></div>
+        <div data-step="collecting"><i>02</i><b>采集日志</b><span>SSH · 校验</span></div>
+        <div data-step="analyzing"><i>03</i><b>协议分析</b><span>关联 · 去噪</span></div>
+        <div data-step="done"><i>04</i><b>生成结论</b><span>根因 · 建议</span></div>
+      </div>
+      <p id="progressMessage">准备中…</p>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="result-heading">
+        <div><span class="section-index">02 / DIAGNOSTIC OUTPUT</span><h2><span id="deviceModel">AUTO-DETECTED</span> 诊断全景</h2><p id="deviceSn">DEMO-A3-DEVICE-001</p></div>
+        <div class="health-ring" id="healthRing"><div><b id="healthScore">--</b><span>健康指数</span></div></div>
+      </div>
+
+      <div class="metric-grid">
+        <article><span>扫描文件</span><b id="metricFiles">0</b><i>FILES</i></article>
+        <article><span>解析行数</span><b id="metricLines">0</b><i>LINES</i></article>
+        <article><span>异常证据</span><b id="metricFindings">0</b><i>EVENTS</i></article>
+        <article><span>覆盖协议</span><b id="metricCoverage">0</b><i>DOMAINS</i></article>
+      </div>
+
+      <div class="insight-grid">
+        <article class="primary-insight">
+          <div class="card-kicker">AGENT VERDICT <span id="statusBadge">ATTENTION</span></div>
+          <h3 id="summaryTitle">正在生成结论</h3>
+          <p id="summaryText"></p>
+          <div class="signal-chart" id="signalChart"></div>
+        </article>
+        <article class="coverage-card">
+          <div class="card-kicker">SYSTEM COVERAGE</div>
+          <div id="coverageList" class="coverage-list"></div>
+        </article>
+      </div>
+
+      <div class="findings-head"><div><span class="section-index">03 / EVIDENCE CHAIN</span><h2>问题定位与处置建议</h2></div><div class="legend"><span><i class="critical"></i>严重</span><span><i class="high"></i>高</span><span><i class="medium"></i>中</span></div></div>
+      <div id="findingList" class="finding-list"></div>
+      <p class="disclaimer" id="disclaimer"></p>
+    </section>
+  </main>
+  <footer><span>A3 PULSE / LOG INTELLIGENCE</span><span>凭据不进入浏览器 · 输出自动脱敏 · 证据可追溯</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
+
